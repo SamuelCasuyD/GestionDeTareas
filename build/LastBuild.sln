@@ -1,0 +1,31 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("FAE04EC0-301F-11D3-BF4B-00C04F79EFBC") = "wsgestiontareas", "wsgestiontareas\wsgestiontareas.csproj", "{6f612d4c-8e69-4149-a32c-8b1fe7558699}"
+EndProject
+Project("FAE04EC0-301F-11D3-BF4B-00C04F79EFBC") = "developermenu", "developermenu\developermenu.csproj", "{00000000-0000-0000-0000-000000000000}"
+EndProject
+Project("FAE04EC0-301F-11D3-BF4B-00C04F79EFBC") = "GeneXus.Programs.Common", "GeneXus.Programs.Common\GeneXus.Programs.Common.csproj", "{0844a2a2-7d1a-4a19-b380-483a87ad8584}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	{6f612d4c-8e69-4149-a32c-8b1fe7558699}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+	{6f612d4c-8e69-4149-a32c-8b1fe7558699}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	{6f612d4c-8e69-4149-a32c-8b1fe7558699}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	{6f612d4c-8e69-4149-a32c-8b1fe7558699}.Release|Any CPU.Build.0 = Release|Any CPU
+	{00000000-0000-0000-0000-000000000000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+	{00000000-0000-0000-0000-000000000000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	{00000000-0000-0000-0000-000000000000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	{00000000-0000-0000-0000-000000000000}.Release|Any CPU.Build.0 = Release|Any CPU
+	{0844a2a2-7d1a-4a19-b380-483a87ad8584}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+	{0844a2a2-7d1a-4a19-b380-483a87ad8584}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	{0844a2a2-7d1a-4a19-b380-483a87ad8584}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	{0844a2a2-7d1a-4a19-b380-483a87ad8584}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\trgestiontableros_bc.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\trgestiontableros_bc\obj\Release\trgestiontableros_bc.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\trgestiontableros_bc\obj\Release\trgestiontableros_bc.dll

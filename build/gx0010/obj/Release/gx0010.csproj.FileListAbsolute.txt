@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\gx0010.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\gx0010\obj\Release\gx0010.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\gx0010\obj\Release\gx0010.dll

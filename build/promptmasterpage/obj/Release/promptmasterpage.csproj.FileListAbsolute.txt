@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\promptmasterpage.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\promptmasterpage\obj\Release\promptmasterpage.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\promptmasterpage\obj\Release\promptmasterpage.dll
