@@ -73,17 +73,21 @@ namespace GeneXus.Programs {
          state.Add("gxTpr_Initialized");
          state.Add("gxTpr_Trgestiontableros_id_Z");
          state.Add("gxTpr_Trgestiontableros_nombre_Z");
+         state.Add("gxTpr_Trgestiontableros_tipotablero_Z");
          state.Add("gxTpr_Trgestiontableros_fechainicio_Z_Nullable");
          state.Add("gxTpr_Trgestiontableros_fechafin_Z_Nullable");
          state.Add("gxTpr_Trgestiontableros_fechacreacion_Z_Nullable");
          state.Add("gxTpr_Trgestiontableros_fechamodificacion_Z_Nullable");
+         state.Add("gxTpr_Trgestiontableros_estado_Z");
          state.Add("gxTpr_Trgestiontableros_nombre_N");
          state.Add("gxTpr_Trgestiontableros_comentario_N");
          state.Add("gxTpr_Trgestiontableros_descripcion_N");
+         state.Add("gxTpr_Trgestiontableros_tipotablero_N");
          state.Add("gxTpr_Trgestiontableros_fechainicio_N");
          state.Add("gxTpr_Trgestiontableros_fechafin_N");
          state.Add("gxTpr_Trgestiontableros_fechacreacion_N");
          state.Add("gxTpr_Trgestiontableros_fechamodificacion_N");
+         state.Add("gxTpr_Trgestiontableros_estado_N");
          return state ;
       }
 
@@ -95,25 +99,31 @@ namespace GeneXus.Programs {
          gxTv_SdtTrGestionTableros_Trgestiontableros_nombre = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_nombre ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_comentario = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_comentario ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion ;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion ;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_estado ;
          gxTv_SdtTrGestionTableros_Mode = sdt.gxTv_SdtTrGestionTableros_Mode ;
          gxTv_SdtTrGestionTableros_Initialized = sdt.gxTv_SdtTrGestionTableros_Initialized ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_id_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_id_Z ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_Z ;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_Z ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_Z ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_Z ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_Z ;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_N ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_comentario_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_comentario_N ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N ;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_N ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_N ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_N ;
          gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_N ;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N ;
          return  ;
       }
 
@@ -139,6 +149,8 @@ namespace GeneXus.Programs {
          AddObjectProperty("TrGestionTableros_Comentario_N", gxTv_SdtTrGestionTableros_Trgestiontableros_comentario_N, false, includeNonInitialized);
          AddObjectProperty("TrGestionTableros_Descripcion", gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion, false, includeNonInitialized);
          AddObjectProperty("TrGestionTableros_Descripcion_N", gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N, false, includeNonInitialized);
+         AddObjectProperty("TrGestionTableros_TipoTablero", gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero, false, includeNonInitialized);
+         AddObjectProperty("TrGestionTableros_TipoTablero_N", gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N, false, includeNonInitialized);
          sDateCnv = "";
          sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio)), 10, 0));
          sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
@@ -183,12 +195,15 @@ namespace GeneXus.Programs {
          sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
          AddObjectProperty("TrGestionTableros_FechaModificacion", sDateCnv, false, includeNonInitialized);
          AddObjectProperty("TrGestionTableros_FechaModificacion_N", gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_N, false, includeNonInitialized);
+         AddObjectProperty("TrGestionTableros_Estado", gxTv_SdtTrGestionTableros_Trgestiontableros_estado, false, includeNonInitialized);
+         AddObjectProperty("TrGestionTableros_Estado_N", gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N, false, includeNonInitialized);
          if ( includeState )
          {
             AddObjectProperty("Mode", gxTv_SdtTrGestionTableros_Mode, false, includeNonInitialized);
             AddObjectProperty("Initialized", gxTv_SdtTrGestionTableros_Initialized, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_ID_Z", gxTv_SdtTrGestionTableros_Trgestiontableros_id_Z, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_Nombre_Z", gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_Z, false, includeNonInitialized);
+            AddObjectProperty("TrGestionTableros_TipoTablero_Z", gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z, false, includeNonInitialized);
             sDateCnv = "";
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "0000", 1, 4-StringUtil.Len( sNumToPad)) + sNumToPad;
@@ -229,13 +244,16 @@ namespace GeneXus.Programs {
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Day( gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_Z)), 10, 0));
             sDateCnv = sDateCnv + StringUtil.Substring( "00", 1, 2-StringUtil.Len( sNumToPad)) + sNumToPad;
             AddObjectProperty("TrGestionTableros_FechaModificacion_Z", sDateCnv, false, includeNonInitialized);
+            AddObjectProperty("TrGestionTableros_Estado_Z", gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_Nombre_N", gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_N, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_Comentario_N", gxTv_SdtTrGestionTableros_Trgestiontableros_comentario_N, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_Descripcion_N", gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N, false, includeNonInitialized);
+            AddObjectProperty("TrGestionTableros_TipoTablero_N", gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_FechaInicio_N", gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_N, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_FechaFin_N", gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_N, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_FechaCreacion_N", gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_N, false, includeNonInitialized);
             AddObjectProperty("TrGestionTableros_FechaModificacion_N", gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_N, false, includeNonInitialized);
+            AddObjectProperty("TrGestionTableros_Estado_N", gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N, false, includeNonInitialized);
          }
          return  ;
       }
@@ -261,6 +279,11 @@ namespace GeneXus.Programs {
             gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N = 0;
             gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion ;
          }
+         if ( sdt.IsDirty("TrGestionTableros_TipoTablero") )
+         {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N = 0;
+            gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero ;
+         }
          if ( sdt.IsDirty("TrGestionTableros_FechaInicio") )
          {
             gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_N = 0;
@@ -281,6 +304,11 @@ namespace GeneXus.Programs {
             gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_N = 0;
             gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion ;
          }
+         if ( sdt.IsDirty("TrGestionTableros_Estado") )
+         {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N = 0;
+            gxTv_SdtTrGestionTableros_Trgestiontableros_estado = sdt.gxTv_SdtTrGestionTableros_Trgestiontableros_estado ;
+         }
          return  ;
       }
 
@@ -298,10 +326,12 @@ namespace GeneXus.Programs {
                gxTv_SdtTrGestionTableros_Mode = "INS";
                this.gxTv_SdtTrGestionTableros_Trgestiontableros_id_Z_SetNull( );
                this.gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_Z_SetNull( );
+               this.gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z_SetNull( );
                this.gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_Z_SetNull( );
                this.gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_Z_SetNull( );
                this.gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_Z_SetNull( );
                this.gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_Z_SetNull( );
+               this.gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z_SetNull( );
             }
             gxTv_SdtTrGestionTableros_Trgestiontableros_id = (Guid)(value);
             SetDirty("Trgestiontableros_id");
@@ -391,6 +421,34 @@ namespace GeneXus.Programs {
       public bool gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_IsNull( )
       {
          return (gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N==1) ;
+      }
+
+      [  SoapElement( ElementName = "TrGestionTableros_TipoTablero" )]
+      [  XmlElement( ElementName = "TrGestionTableros_TipoTablero"   )]
+      public short gxTpr_Trgestiontableros_tipotablero
+      {
+         get {
+            return gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero ;
+         }
+
+         set {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N = 0;
+            gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero = value;
+            SetDirty("Trgestiontableros_tipotablero");
+         }
+
+      }
+
+      public void gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_SetNull( )
+      {
+         gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N = 1;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero = 0;
+         return  ;
+      }
+
+      public bool gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_IsNull( )
+      {
+         return (gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N==1) ;
       }
 
       [  SoapElement( ElementName = "TrGestionTableros_FechaInicio" )]
@@ -585,6 +643,34 @@ namespace GeneXus.Programs {
          return (gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_N==1) ;
       }
 
+      [  SoapElement( ElementName = "TrGestionTableros_Estado" )]
+      [  XmlElement( ElementName = "TrGestionTableros_Estado"   )]
+      public bool gxTpr_Trgestiontableros_estado
+      {
+         get {
+            return gxTv_SdtTrGestionTableros_Trgestiontableros_estado ;
+         }
+
+         set {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N = 0;
+            gxTv_SdtTrGestionTableros_Trgestiontableros_estado = value;
+            SetDirty("Trgestiontableros_estado");
+         }
+
+      }
+
+      public void gxTv_SdtTrGestionTableros_Trgestiontableros_estado_SetNull( )
+      {
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N = 1;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado = false;
+         return  ;
+      }
+
+      public bool gxTv_SdtTrGestionTableros_Trgestiontableros_estado_IsNull( )
+      {
+         return (gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N==1) ;
+      }
+
       [  SoapElement( ElementName = "Mode" )]
       [  XmlElement( ElementName = "Mode"   )]
       public String gxTpr_Mode
@@ -685,6 +771,32 @@ namespace GeneXus.Programs {
       }
 
       public bool gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_Z_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "TrGestionTableros_TipoTablero_Z" )]
+      [  XmlElement( ElementName = "TrGestionTableros_TipoTablero_Z"   )]
+      public short gxTpr_Trgestiontableros_tipotablero_Z
+      {
+         get {
+            return gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z ;
+         }
+
+         set {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z = value;
+            SetDirty("Trgestiontableros_tipotablero_Z");
+         }
+
+      }
+
+      public void gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z_SetNull( )
+      {
+         gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z = 0;
+         return  ;
+      }
+
+      public bool gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z_IsNull( )
       {
          return false ;
       }
@@ -869,6 +981,32 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "TrGestionTableros_Estado_Z" )]
+      [  XmlElement( ElementName = "TrGestionTableros_Estado_Z"   )]
+      public bool gxTpr_Trgestiontableros_estado_Z
+      {
+         get {
+            return gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z ;
+         }
+
+         set {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z = value;
+            SetDirty("Trgestiontableros_estado_Z");
+         }
+
+      }
+
+      public void gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z_SetNull( )
+      {
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z = false;
+         return  ;
+      }
+
+      public bool gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z_IsNull( )
+      {
+         return false ;
+      }
+
       [  SoapElement( ElementName = "TrGestionTableros_Nombre_N" )]
       [  XmlElement( ElementName = "TrGestionTableros_Nombre_N"   )]
       public short gxTpr_Trgestiontableros_nombre_N
@@ -943,6 +1081,32 @@ namespace GeneXus.Programs {
       }
 
       public bool gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N_IsNull( )
+      {
+         return false ;
+      }
+
+      [  SoapElement( ElementName = "TrGestionTableros_TipoTablero_N" )]
+      [  XmlElement( ElementName = "TrGestionTableros_TipoTablero_N"   )]
+      public short gxTpr_Trgestiontableros_tipotablero_N
+      {
+         get {
+            return gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N ;
+         }
+
+         set {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N = value;
+            SetDirty("Trgestiontableros_tipotablero_N");
+         }
+
+      }
+
+      public void gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N_SetNull( )
+      {
+         gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N = 0;
+         return  ;
+      }
+
+      public bool gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N_IsNull( )
       {
          return false ;
       }
@@ -1051,6 +1215,32 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "TrGestionTableros_Estado_N" )]
+      [  XmlElement( ElementName = "TrGestionTableros_Estado_N"   )]
+      public short gxTpr_Trgestiontableros_estado_N
+      {
+         get {
+            return gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N ;
+         }
+
+         set {
+            gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N = value;
+            SetDirty("Trgestiontableros_estado_N");
+         }
+
+      }
+
+      public void gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N_SetNull( )
+      {
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N = 0;
+         return  ;
+      }
+
+      public bool gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N_IsNull( )
+      {
+         return false ;
+      }
+
       public void initialize( )
       {
          gxTv_SdtTrGestionTableros_Trgestiontableros_id = (Guid)(Guid.Empty);
@@ -1079,14 +1269,18 @@ namespace GeneXus.Programs {
          return  ;
       }
 
+      private short gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero ;
       private short gxTv_SdtTrGestionTableros_Initialized ;
+      private short gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_comentario_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N ;
+      private short gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_fechainicio_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_N ;
+      private short gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N ;
       private String gxTv_SdtTrGestionTableros_Trgestiontableros_nombre ;
       private String gxTv_SdtTrGestionTableros_Mode ;
       private String gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_Z ;
@@ -1100,6 +1294,8 @@ namespace GeneXus.Programs {
       private DateTime gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_Z ;
       private DateTime gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_Z ;
       private DateTime gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_Z ;
+      private bool gxTv_SdtTrGestionTableros_Trgestiontableros_estado ;
+      private bool gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z ;
       private String gxTv_SdtTrGestionTableros_Trgestiontableros_comentario ;
       private String gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion ;
       private Guid gxTv_SdtTrGestionTableros_Trgestiontableros_id ;
@@ -1171,7 +1367,21 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "TrGestionTableros_FechaInicio" , Order = 4 )]
+      [DataMember( Name = "TrGestionTableros_TipoTablero" , Order = 4 )]
+      [GxSeudo()]
+      public Nullable<short> gxTpr_Trgestiontableros_tipotablero
+      {
+         get {
+            return sdt.gxTpr_Trgestiontableros_tipotablero ;
+         }
+
+         set {
+            sdt.gxTpr_Trgestiontableros_tipotablero = (short)(value.HasValue ? value.Value : 0);
+         }
+
+      }
+
+      [DataMember( Name = "TrGestionTableros_FechaInicio" , Order = 5 )]
       [GxSeudo()]
       public String gxTpr_Trgestiontableros_fechainicio
       {
@@ -1185,7 +1395,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "TrGestionTableros_FechaFin" , Order = 5 )]
+      [DataMember( Name = "TrGestionTableros_FechaFin" , Order = 6 )]
       [GxSeudo()]
       public String gxTpr_Trgestiontableros_fechafin
       {
@@ -1199,7 +1409,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "TrGestionTableros_FechaCreacion" , Order = 6 )]
+      [DataMember( Name = "TrGestionTableros_FechaCreacion" , Order = 7 )]
       [GxSeudo()]
       public String gxTpr_Trgestiontableros_fechacreacion
       {
@@ -1213,7 +1423,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "TrGestionTableros_FechaModificacion" , Order = 7 )]
+      [DataMember( Name = "TrGestionTableros_FechaModificacion" , Order = 8 )]
       [GxSeudo()]
       public String gxTpr_Trgestiontableros_fechamodificacion
       {
@@ -1223,6 +1433,20 @@ namespace GeneXus.Programs {
 
          set {
             sdt.gxTpr_Trgestiontableros_fechamodificacion = DateTimeUtil.CToD2( value);
+         }
+
+      }
+
+      [DataMember( Name = "TrGestionTableros_Estado" , Order = 9 )]
+      [GxSeudo()]
+      public bool gxTpr_Trgestiontableros_estado
+      {
+         get {
+            return sdt.gxTpr_Trgestiontableros_estado ;
+         }
+
+         set {
+            sdt.gxTpr_Trgestiontableros_estado = value;
          }
 
       }
@@ -1248,7 +1472,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      [DataMember( Name = "gx_md5_hash", Order = 8 )]
+      [DataMember( Name = "gx_md5_hash", Order = 10 )]
       public string Hash
       {
          get {

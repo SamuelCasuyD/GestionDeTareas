@@ -18,7 +18,9 @@
 		<ProjectReference Include=".\..\rwdrecentlinks\rwdrecentlinks.csproj" />
 		<ProjectReference Include=".\..\rwdpromptmasterpage\rwdpromptmasterpage.csproj" />
 		<ProjectReference Include=".\..\gx0010\gx0010.csproj" />
+		<ProjectReference Include=".\..\gx0020\gx0020.csproj" />
 		<ProjectReference Include=".\..\trgestiontableros\trgestiontableros.csproj" />
+		<ProjectReference Include=".\..\trgestiontareas\trgestiontareas.csproj" />
 		<ProjectReference Include=".\..\GeneXus.Programs.Common\GeneXus.Programs.Common.csproj" />
 
 	</ItemGroup>

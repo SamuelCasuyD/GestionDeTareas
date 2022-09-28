@@ -279,7 +279,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20229228502771", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202292722393768", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -371,7 +371,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("recentlinks.js", "?20229228502772", false, true);
+            context.AddJavascriptSource("recentlinks.js", "?202292722393769", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -1333,7 +1333,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20229228502781", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202292722393778", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1350,7 +1350,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("recentlinks.js", "?20229228502781", false, true);
+            context.AddJavascriptSource("recentlinks.js", "?202292722393779", false, true);
          }
          /* End function include_jscripts */
       }

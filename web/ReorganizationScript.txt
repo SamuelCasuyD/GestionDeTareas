@@ -1,2 +1,5 @@
-ALTER TABLE TABLERO.[TrGestionTableros] DROP CONSTRAINT TrGestionTableros_IDTrGestionTableros_DEFAULT
+CREATE TABLE TABLERO.[TrGestionTareas] ([TrGestionTareas_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrGestionTareas_IDTablero] uniqueidentifier NOT NULL , [TrGestionTareas_Nombre] nchar(100) NULL , [TrGestionTareas_Descripcion] NVARCHAR(MAX) NULL , [TrGestionTareas_FechaInicio] datetime NULL , [TrGestionTareas_FechaFin] datetime NULL , [TrGestionTareas_FechaCreacion] datetime NULL , [TrGestionTareas_FechaModificacion] datetime NULL , PRIMARY KEY([TrGestionTareas_ID]))
+CREATE NONCLUSTERED INDEX [ITRGESTIONTAREAS1] ON TABLERO.[TrGestionTareas] ([TrGestionTareas_IDTablero] )
+
+ALTER TABLE TABLERO.[TrGestionTareas] ADD CONSTRAINT [ITRGESTIONTAREAS1] FOREIGN KEY ([TrGestionTareas_IDTablero]) REFERENCES TABLERO.[TrGestionTableros] ([TrGestionTableros_ID])
 

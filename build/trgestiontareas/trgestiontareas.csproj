@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+
+	<PropertyGroup>
+		<AssemblyName>trgestiontareas</AssemblyName>
+		<ProjectGuid>{47c73d89-d654-40e1-9005-b8ed45e4910e}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<PostgresqlSupport>false</PostgresqlSupport>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include=".\..\GeneXus.Programs.Common\GeneXus.Programs.Common.csproj" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="GeneXus.dll" > 
+			<HintPath>$(WebBinDirectory)\GeneXus.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include = "$(WebDirectory)\trgestiontareas.cs" />
+
+	</ItemGroup>
+	
+	<Import Project="..\DotNetBaseProject.targets"/>
+</Project>

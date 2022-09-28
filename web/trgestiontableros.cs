@@ -161,6 +161,7 @@ namespace GeneXus.Programs {
 
       protected override void createObjects( )
       {
+         chkTrGestionTableros_Estado = new GXCheckbox();
       }
 
       public override void webExecute( )
@@ -206,6 +207,9 @@ namespace GeneXus.Programs {
 
       protected void fix_multi_value_controls( )
       {
+         A10TrGestionTableros_Estado = StringUtil.StrToBool( StringUtil.BoolToStr( A10TrGestionTableros_Estado));
+         n10TrGestionTableros_Estado = false;
+         AssignAttri("", false, "A10TrGestionTableros_Estado", A10TrGestionTableros_Estado);
       }
 
       protected void Draw( )
@@ -392,15 +396,32 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 FormCell", "left", "top", "", "", "div");
          /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+edtTrGestionTableros_TipoTablero_Internalname+"\"", "", "div");
+         /* Attribute/Variable Label */
+         GxWebStd.gx_label_element( context, edtTrGestionTableros_TipoTablero_Internalname, "Tableros_Tipo Tablero", "col-sm-3 AttributeLabel", 1, true, "");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
+         /* Single line edit */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_TipoTablero_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(A9TrGestionTableros_TipoTablero), 4, 0, ".", "")), ((edtTrGestionTableros_TipoTablero_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(A9TrGestionTableros_TipoTablero), "ZZZ9")) : context.localUtil.Format( (decimal)(A9TrGestionTableros_TipoTablero), "ZZZ9")), TempTags+" onchange=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_TipoTablero_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_TipoTablero_Enabled, 0, "number", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_TrGestionTableros.htm");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 FormCell", "left", "top", "", "", "div");
+         /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+edtTrGestionTableros_FechaInicio_Internalname+"\"", "", "div");
          /* Attribute/Variable Label */
          GxWebStd.gx_label_element( context, edtTrGestionTableros_FechaInicio_Internalname, "Tableros_Fecha Inicio", "col-sm-3 AttributeLabel", 1, true, "");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 59,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTableros_FechaInicio_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaInicio_Internalname, context.localUtil.Format(A3TrGestionTableros_FechaInicio, "99/99/9999"), context.localUtil.Format( A3TrGestionTableros_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaInicio_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaInicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaInicio_Internalname, context.localUtil.Format(A3TrGestionTableros_FechaInicio, "99/99/9999"), context.localUtil.Format( A3TrGestionTableros_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,59);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaInicio_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaInicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTableros_FechaInicio_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTableros_FechaInicio_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTableros.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -418,9 +439,9 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 59,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 64,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTableros_FechaFin_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaFin_Internalname, context.localUtil.Format(A4TrGestionTableros_FechaFin, "99/99/9999"), context.localUtil.Format( A4TrGestionTableros_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,59);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaFin_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaFin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaFin_Internalname, context.localUtil.Format(A4TrGestionTableros_FechaFin, "99/99/9999"), context.localUtil.Format( A4TrGestionTableros_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,64);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaFin_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaFin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTableros_FechaFin_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTableros_FechaFin_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTableros.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -438,9 +459,9 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 64,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 69,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTableros_FechaCreacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaCreacion_Internalname, context.localUtil.Format(A7TrGestionTableros_FechaCreacion, "99/99/9999"), context.localUtil.Format( A7TrGestionTableros_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,64);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaCreacion_Internalname, context.localUtil.Format(A7TrGestionTableros_FechaCreacion, "99/99/9999"), context.localUtil.Format( A7TrGestionTableros_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,69);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTableros_FechaCreacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTableros_FechaCreacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTableros.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -458,11 +479,30 @@ namespace GeneXus.Programs {
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
          /* Single line edit */
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 69,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 74,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTableros_FechaModificacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaModificacion_Internalname, context.localUtil.Format(A8TrGestionTableros_FechaModificacion, "99/99/9999"), context.localUtil.Format( A8TrGestionTableros_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,69);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTableros_FechaModificacion_Internalname, context.localUtil.Format(A8TrGestionTableros_FechaModificacion, "99/99/9999"), context.localUtil.Format( A8TrGestionTableros_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,74);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTableros_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTableros_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTableros.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTableros_FechaModificacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTableros_FechaModificacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTableros.htm");
          context.WriteHtmlTextNl( "</div>") ;
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         GxWebStd.gx_div_end( context, "left", "top", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12 FormCell", "left", "top", "", "", "div");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "form-group gx-form-group", "left", "top", ""+" data-gx-for=\""+chkTrGestionTableros_Estado_Internalname+"\"", "", "div");
+         /* Attribute/Variable Label */
+         GxWebStd.gx_label_element( context, chkTrGestionTableros_Estado_Internalname, "Gestion Tableros_Estado", "col-sm-3 AttributeLabel", 1, true, "");
+         /* Div Control */
+         GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-sm-9 gx-attribute", "left", "top", "", "", "div");
+         /* Check box */
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 79,'',false,'',0)\"";
+         ClassString = "Attribute";
+         StyleString = "";
+         GxWebStd.gx_checkbox_ctrl( context, chkTrGestionTableros_Estado_Internalname, StringUtil.BoolToStr( A10TrGestionTableros_Estado), "", "Gestion Tableros_Estado", 1, chkTrGestionTableros_Estado.Enabled, "true", "", StyleString, ClassString, "", "", TempTags+" onclick="+"\"gx.fn.checkboxClick(79, this, 'true', 'false',"+"''"+");"+"gx.evt.onchange(this, event);\""+" onblur=\""+""+";gx.evt.onblur(this,79);\"");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -478,21 +518,21 @@ namespace GeneXus.Programs {
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-action-group Confirm", "left", "top", " "+"data-gx-actiongroup-type=\"toolbar\""+" ", "", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 74,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 84,'',false,'',0)\"";
          ClassString = "BtnEnter";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirm", bttBtn_enter_Jsonclick, 5, "Confirm", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTableros.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 76,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 86,'',false,'',0)\"";
          ClassString = "BtnCancel";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancel", bttBtn_cancel_Jsonclick, 1, "Cancel", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTableros.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
-         TempTags = "  onfocus=\"gx.evt.onfocus(this, 78,'',false,'',0)\"";
+         TempTags = "  onfocus=\"gx.evt.onfocus(this, 88,'',false,'',0)\"";
          ClassString = "BtnDelete";
          StyleString = "";
          GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Delete", bttBtn_delete_Jsonclick, 5, "Delete", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTableros.htm");
@@ -537,6 +577,8 @@ namespace GeneXus.Programs {
             Z1TrGestionTableros_ID = (Guid)(StringUtil.StrToGuid( cgiGet( "Z1TrGestionTableros_ID")));
             Z2TrGestionTableros_Nombre = cgiGet( "Z2TrGestionTableros_Nombre");
             n2TrGestionTableros_Nombre = (String.IsNullOrEmpty(StringUtil.RTrim( A2TrGestionTableros_Nombre)) ? true : false);
+            Z9TrGestionTableros_TipoTablero = (short)(context.localUtil.CToN( cgiGet( "Z9TrGestionTableros_TipoTablero"), ".", ","));
+            n9TrGestionTableros_TipoTablero = ((0==A9TrGestionTableros_TipoTablero) ? true : false);
             Z3TrGestionTableros_FechaInicio = context.localUtil.CToD( cgiGet( "Z3TrGestionTableros_FechaInicio"), 0);
             n3TrGestionTableros_FechaInicio = ((DateTime.MinValue==A3TrGestionTableros_FechaInicio) ? true : false);
             Z4TrGestionTableros_FechaFin = context.localUtil.CToD( cgiGet( "Z4TrGestionTableros_FechaFin"), 0);
@@ -545,6 +587,8 @@ namespace GeneXus.Programs {
             n7TrGestionTableros_FechaCreacion = ((DateTime.MinValue==A7TrGestionTableros_FechaCreacion) ? true : false);
             Z8TrGestionTableros_FechaModificacion = context.localUtil.CToD( cgiGet( "Z8TrGestionTableros_FechaModificacion"), 0);
             n8TrGestionTableros_FechaModificacion = ((DateTime.MinValue==A8TrGestionTableros_FechaModificacion) ? true : false);
+            Z10TrGestionTableros_Estado = StringUtil.StrToBool( cgiGet( "Z10TrGestionTableros_Estado"));
+            n10TrGestionTableros_Estado = ((false==A10TrGestionTableros_Estado) ? true : false);
             IsConfirmed = (short)(context.localUtil.CToN( cgiGet( "IsConfirmed"), ".", ","));
             IsModified = (short)(context.localUtil.CToN( cgiGet( "IsModified"), ".", ","));
             Gx_mode = cgiGet( "Mode");
@@ -582,6 +626,24 @@ namespace GeneXus.Programs {
             n5TrGestionTableros_Descripcion = false;
             AssignAttri("", false, "A5TrGestionTableros_Descripcion", A5TrGestionTableros_Descripcion);
             n5TrGestionTableros_Descripcion = (String.IsNullOrEmpty(StringUtil.RTrim( A5TrGestionTableros_Descripcion)) ? true : false);
+            if ( ( ( context.localUtil.CToN( cgiGet( edtTrGestionTableros_TipoTablero_Internalname), ".", ",") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtTrGestionTableros_TipoTablero_Internalname), ".", ",") > Convert.ToDecimal( 9999 )) ) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "TRGESTIONTABLEROS_TIPOTABLERO");
+               AnyError = 1;
+               GX_FocusControl = edtTrGestionTableros_TipoTablero_Internalname;
+               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+               wbErr = true;
+               A9TrGestionTableros_TipoTablero = 0;
+               n9TrGestionTableros_TipoTablero = false;
+               AssignAttri("", false, "A9TrGestionTableros_TipoTablero", StringUtil.LTrimStr( (decimal)(A9TrGestionTableros_TipoTablero), 4, 0));
+            }
+            else
+            {
+               A9TrGestionTableros_TipoTablero = (short)(context.localUtil.CToN( cgiGet( edtTrGestionTableros_TipoTablero_Internalname), ".", ","));
+               n9TrGestionTableros_TipoTablero = false;
+               AssignAttri("", false, "A9TrGestionTableros_TipoTablero", StringUtil.LTrimStr( (decimal)(A9TrGestionTableros_TipoTablero), 4, 0));
+            }
+            n9TrGestionTableros_TipoTablero = ((0==A9TrGestionTableros_TipoTablero) ? true : false);
             if ( context.localUtil.VCDate( cgiGet( edtTrGestionTableros_FechaInicio_Internalname), 1) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Gestion Tableros_Fecha Inicio"}), 1, "TRGESTIONTABLEROS_FECHAINICIO");
@@ -654,6 +716,10 @@ namespace GeneXus.Programs {
                AssignAttri("", false, "A8TrGestionTableros_FechaModificacion", context.localUtil.Format(A8TrGestionTableros_FechaModificacion, "99/99/9999"));
             }
             n8TrGestionTableros_FechaModificacion = ((DateTime.MinValue==A8TrGestionTableros_FechaModificacion) ? true : false);
+            A10TrGestionTableros_Estado = StringUtil.StrToBool( cgiGet( chkTrGestionTableros_Estado_Internalname));
+            n10TrGestionTableros_Estado = false;
+            AssignAttri("", false, "A10TrGestionTableros_Estado", A10TrGestionTableros_Estado);
+            n10TrGestionTableros_Estado = ((false==A10TrGestionTableros_Estado) ? true : false);
             /* Read subfile selected row values. */
             /* Read hidden variables. */
             GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
@@ -841,18 +907,22 @@ namespace GeneXus.Programs {
             if ( ! IsIns( ) )
             {
                Z2TrGestionTableros_Nombre = T00013_A2TrGestionTableros_Nombre[0];
+               Z9TrGestionTableros_TipoTablero = T00013_A9TrGestionTableros_TipoTablero[0];
                Z3TrGestionTableros_FechaInicio = T00013_A3TrGestionTableros_FechaInicio[0];
                Z4TrGestionTableros_FechaFin = T00013_A4TrGestionTableros_FechaFin[0];
                Z7TrGestionTableros_FechaCreacion = T00013_A7TrGestionTableros_FechaCreacion[0];
                Z8TrGestionTableros_FechaModificacion = T00013_A8TrGestionTableros_FechaModificacion[0];
+               Z10TrGestionTableros_Estado = T00013_A10TrGestionTableros_Estado[0];
             }
             else
             {
                Z2TrGestionTableros_Nombre = A2TrGestionTableros_Nombre;
+               Z9TrGestionTableros_TipoTablero = A9TrGestionTableros_TipoTablero;
                Z3TrGestionTableros_FechaInicio = A3TrGestionTableros_FechaInicio;
                Z4TrGestionTableros_FechaFin = A4TrGestionTableros_FechaFin;
                Z7TrGestionTableros_FechaCreacion = A7TrGestionTableros_FechaCreacion;
                Z8TrGestionTableros_FechaModificacion = A8TrGestionTableros_FechaModificacion;
+               Z10TrGestionTableros_Estado = A10TrGestionTableros_Estado;
             }
          }
          if ( GX_JID == -6 )
@@ -861,10 +931,12 @@ namespace GeneXus.Programs {
             Z2TrGestionTableros_Nombre = A2TrGestionTableros_Nombre;
             Z6TrGestionTableros_Comentario = A6TrGestionTableros_Comentario;
             Z5TrGestionTableros_Descripcion = A5TrGestionTableros_Descripcion;
+            Z9TrGestionTableros_TipoTablero = A9TrGestionTableros_TipoTablero;
             Z3TrGestionTableros_FechaInicio = A3TrGestionTableros_FechaInicio;
             Z4TrGestionTableros_FechaFin = A4TrGestionTableros_FechaFin;
             Z7TrGestionTableros_FechaCreacion = A7TrGestionTableros_FechaCreacion;
             Z8TrGestionTableros_FechaModificacion = A8TrGestionTableros_FechaModificacion;
+            Z10TrGestionTableros_Estado = A10TrGestionTableros_Estado;
          }
       }
 
@@ -912,6 +984,9 @@ namespace GeneXus.Programs {
             A5TrGestionTableros_Descripcion = T00014_A5TrGestionTableros_Descripcion[0];
             n5TrGestionTableros_Descripcion = T00014_n5TrGestionTableros_Descripcion[0];
             AssignAttri("", false, "A5TrGestionTableros_Descripcion", A5TrGestionTableros_Descripcion);
+            A9TrGestionTableros_TipoTablero = T00014_A9TrGestionTableros_TipoTablero[0];
+            n9TrGestionTableros_TipoTablero = T00014_n9TrGestionTableros_TipoTablero[0];
+            AssignAttri("", false, "A9TrGestionTableros_TipoTablero", StringUtil.LTrimStr( (decimal)(A9TrGestionTableros_TipoTablero), 4, 0));
             A3TrGestionTableros_FechaInicio = T00014_A3TrGestionTableros_FechaInicio[0];
             n3TrGestionTableros_FechaInicio = T00014_n3TrGestionTableros_FechaInicio[0];
             AssignAttri("", false, "A3TrGestionTableros_FechaInicio", context.localUtil.Format(A3TrGestionTableros_FechaInicio, "99/99/9999"));
@@ -924,6 +999,9 @@ namespace GeneXus.Programs {
             A8TrGestionTableros_FechaModificacion = T00014_A8TrGestionTableros_FechaModificacion[0];
             n8TrGestionTableros_FechaModificacion = T00014_n8TrGestionTableros_FechaModificacion[0];
             AssignAttri("", false, "A8TrGestionTableros_FechaModificacion", context.localUtil.Format(A8TrGestionTableros_FechaModificacion, "99/99/9999"));
+            A10TrGestionTableros_Estado = T00014_A10TrGestionTableros_Estado[0];
+            n10TrGestionTableros_Estado = T00014_n10TrGestionTableros_Estado[0];
+            AssignAttri("", false, "A10TrGestionTableros_Estado", A10TrGestionTableros_Estado);
             ZM011( -6) ;
          }
          pr_default.close(2);
@@ -1011,6 +1089,9 @@ namespace GeneXus.Programs {
             A5TrGestionTableros_Descripcion = T00013_A5TrGestionTableros_Descripcion[0];
             n5TrGestionTableros_Descripcion = T00013_n5TrGestionTableros_Descripcion[0];
             AssignAttri("", false, "A5TrGestionTableros_Descripcion", A5TrGestionTableros_Descripcion);
+            A9TrGestionTableros_TipoTablero = T00013_A9TrGestionTableros_TipoTablero[0];
+            n9TrGestionTableros_TipoTablero = T00013_n9TrGestionTableros_TipoTablero[0];
+            AssignAttri("", false, "A9TrGestionTableros_TipoTablero", StringUtil.LTrimStr( (decimal)(A9TrGestionTableros_TipoTablero), 4, 0));
             A3TrGestionTableros_FechaInicio = T00013_A3TrGestionTableros_FechaInicio[0];
             n3TrGestionTableros_FechaInicio = T00013_n3TrGestionTableros_FechaInicio[0];
             AssignAttri("", false, "A3TrGestionTableros_FechaInicio", context.localUtil.Format(A3TrGestionTableros_FechaInicio, "99/99/9999"));
@@ -1023,6 +1104,9 @@ namespace GeneXus.Programs {
             A8TrGestionTableros_FechaModificacion = T00013_A8TrGestionTableros_FechaModificacion[0];
             n8TrGestionTableros_FechaModificacion = T00013_n8TrGestionTableros_FechaModificacion[0];
             AssignAttri("", false, "A8TrGestionTableros_FechaModificacion", context.localUtil.Format(A8TrGestionTableros_FechaModificacion, "99/99/9999"));
+            A10TrGestionTableros_Estado = T00013_A10TrGestionTableros_Estado[0];
+            n10TrGestionTableros_Estado = T00013_n10TrGestionTableros_Estado[0];
+            AssignAttri("", false, "A10TrGestionTableros_Estado", A10TrGestionTableros_Estado);
             Z1TrGestionTableros_ID = (Guid)(A1TrGestionTableros_ID);
             sMode1 = Gx_mode;
             Gx_mode = "DSP";
@@ -1360,13 +1444,24 @@ namespace GeneXus.Programs {
                AnyError = 1;
                return  ;
             }
-            if ( (pr_default.getStatus(0) == 101) || ( StringUtil.StrCmp(Z2TrGestionTableros_Nombre, T00012_A2TrGestionTableros_Nombre[0]) != 0 ) || ( Z3TrGestionTableros_FechaInicio != T00012_A3TrGestionTableros_FechaInicio[0] ) || ( Z4TrGestionTableros_FechaFin != T00012_A4TrGestionTableros_FechaFin[0] ) || ( Z7TrGestionTableros_FechaCreacion != T00012_A7TrGestionTableros_FechaCreacion[0] ) || ( Z8TrGestionTableros_FechaModificacion != T00012_A8TrGestionTableros_FechaModificacion[0] ) )
+            Gx_longc = false;
+            if ( (pr_default.getStatus(0) == 101) || ( StringUtil.StrCmp(Z2TrGestionTableros_Nombre, T00012_A2TrGestionTableros_Nombre[0]) != 0 ) || ( Z9TrGestionTableros_TipoTablero != T00012_A9TrGestionTableros_TipoTablero[0] ) || ( Z3TrGestionTableros_FechaInicio != T00012_A3TrGestionTableros_FechaInicio[0] ) || ( Z4TrGestionTableros_FechaFin != T00012_A4TrGestionTableros_FechaFin[0] ) || ( Z7TrGestionTableros_FechaCreacion != T00012_A7TrGestionTableros_FechaCreacion[0] ) )
+            {
+               Gx_longc = true;
+            }
+            if ( Gx_longc || ( Z8TrGestionTableros_FechaModificacion != T00012_A8TrGestionTableros_FechaModificacion[0] ) || ( Z10TrGestionTableros_Estado != T00012_A10TrGestionTableros_Estado[0] ) )
             {
                if ( StringUtil.StrCmp(Z2TrGestionTableros_Nombre, T00012_A2TrGestionTableros_Nombre[0]) != 0 )
                {
                   GXUtil.WriteLog("trgestiontableros:[seudo value changed for attri]"+"TrGestionTableros_Nombre");
                   GXUtil.WriteLogRaw("Old: ",Z2TrGestionTableros_Nombre);
                   GXUtil.WriteLogRaw("Current: ",T00012_A2TrGestionTableros_Nombre[0]);
+               }
+               if ( Z9TrGestionTableros_TipoTablero != T00012_A9TrGestionTableros_TipoTablero[0] )
+               {
+                  GXUtil.WriteLog("trgestiontableros:[seudo value changed for attri]"+"TrGestionTableros_TipoTablero");
+                  GXUtil.WriteLogRaw("Old: ",Z9TrGestionTableros_TipoTablero);
+                  GXUtil.WriteLogRaw("Current: ",T00012_A9TrGestionTableros_TipoTablero[0]);
                }
                if ( Z3TrGestionTableros_FechaInicio != T00012_A3TrGestionTableros_FechaInicio[0] )
                {
@@ -1391,6 +1486,12 @@ namespace GeneXus.Programs {
                   GXUtil.WriteLog("trgestiontableros:[seudo value changed for attri]"+"TrGestionTableros_FechaModificacion");
                   GXUtil.WriteLogRaw("Old: ",Z8TrGestionTableros_FechaModificacion);
                   GXUtil.WriteLogRaw("Current: ",T00012_A8TrGestionTableros_FechaModificacion[0]);
+               }
+               if ( Z10TrGestionTableros_Estado != T00012_A10TrGestionTableros_Estado[0] )
+               {
+                  GXUtil.WriteLog("trgestiontableros:[seudo value changed for attri]"+"TrGestionTableros_Estado");
+                  GXUtil.WriteLogRaw("Old: ",Z10TrGestionTableros_Estado);
+                  GXUtil.WriteLogRaw("Current: ",T00012_A10TrGestionTableros_Estado[0]);
                }
                GX_msglist.addItem(context.GetMessage( "GXM_waschg", new   object[]  {"TrGestionTableros"}), "RecordWasChanged", 1, "");
                AnyError = 1;
@@ -1419,7 +1520,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T00018 */
-                     pr_default.execute(6, new Object[] {A1TrGestionTableros_ID, n2TrGestionTableros_Nombre, A2TrGestionTableros_Nombre, n6TrGestionTableros_Comentario, A6TrGestionTableros_Comentario, n5TrGestionTableros_Descripcion, A5TrGestionTableros_Descripcion, n3TrGestionTableros_FechaInicio, A3TrGestionTableros_FechaInicio, n4TrGestionTableros_FechaFin, A4TrGestionTableros_FechaFin, n7TrGestionTableros_FechaCreacion, A7TrGestionTableros_FechaCreacion, n8TrGestionTableros_FechaModificacion, A8TrGestionTableros_FechaModificacion});
+                     pr_default.execute(6, new Object[] {A1TrGestionTableros_ID, n2TrGestionTableros_Nombre, A2TrGestionTableros_Nombre, n6TrGestionTableros_Comentario, A6TrGestionTableros_Comentario, n5TrGestionTableros_Descripcion, A5TrGestionTableros_Descripcion, n9TrGestionTableros_TipoTablero, A9TrGestionTableros_TipoTablero, n3TrGestionTableros_FechaInicio, A3TrGestionTableros_FechaInicio, n4TrGestionTableros_FechaFin, A4TrGestionTableros_FechaFin, n7TrGestionTableros_FechaCreacion, A7TrGestionTableros_FechaCreacion, n8TrGestionTableros_FechaModificacion, A8TrGestionTableros_FechaModificacion, n10TrGestionTableros_Estado, A10TrGestionTableros_Estado});
                      pr_default.close(6);
                      dsDefault.SmartCacheProvider.SetUpdated("TrGestionTableros") ;
                      if ( (pr_default.getStatus(6) == 1) )
@@ -1474,7 +1575,7 @@ namespace GeneXus.Programs {
                   if ( AnyError == 0 )
                   {
                      /* Using cursor T00019 */
-                     pr_default.execute(7, new Object[] {n2TrGestionTableros_Nombre, A2TrGestionTableros_Nombre, n6TrGestionTableros_Comentario, A6TrGestionTableros_Comentario, n5TrGestionTableros_Descripcion, A5TrGestionTableros_Descripcion, n3TrGestionTableros_FechaInicio, A3TrGestionTableros_FechaInicio, n4TrGestionTableros_FechaFin, A4TrGestionTableros_FechaFin, n7TrGestionTableros_FechaCreacion, A7TrGestionTableros_FechaCreacion, n8TrGestionTableros_FechaModificacion, A8TrGestionTableros_FechaModificacion, A1TrGestionTableros_ID});
+                     pr_default.execute(7, new Object[] {n2TrGestionTableros_Nombre, A2TrGestionTableros_Nombre, n6TrGestionTableros_Comentario, A6TrGestionTableros_Comentario, n5TrGestionTableros_Descripcion, A5TrGestionTableros_Descripcion, n9TrGestionTableros_TipoTablero, A9TrGestionTableros_TipoTablero, n3TrGestionTableros_FechaInicio, A3TrGestionTableros_FechaInicio, n4TrGestionTableros_FechaFin, A4TrGestionTableros_FechaFin, n7TrGestionTableros_FechaCreacion, A7TrGestionTableros_FechaCreacion, n8TrGestionTableros_FechaModificacion, A8TrGestionTableros_FechaModificacion, n10TrGestionTableros_Estado, A10TrGestionTableros_Estado, A1TrGestionTableros_ID});
                      pr_default.close(7);
                      dsDefault.SmartCacheProvider.SetUpdated("TrGestionTableros") ;
                      if ( (pr_default.getStatus(7) == 103) )
@@ -1577,6 +1678,17 @@ namespace GeneXus.Programs {
       {
          standaloneModal( ) ;
          /* No delete mode formulas found. */
+         if ( AnyError == 0 )
+         {
+            /* Using cursor T000111 */
+            pr_default.execute(9, new Object[] {A1TrGestionTableros_ID});
+            if ( (pr_default.getStatus(9) != 101) )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_del", new   object[]  {"Tr Gestion Tareas"}), "CannotDeleteReferencedRecord", 1, "");
+               AnyError = 1;
+            }
+            pr_default.close(9);
+         }
       }
 
       protected void EndLevel011( )
@@ -1616,13 +1728,13 @@ namespace GeneXus.Programs {
 
       public void ScanStart011( )
       {
-         /* Using cursor T000111 */
-         pr_default.execute(9);
+         /* Using cursor T000112 */
+         pr_default.execute(10);
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(9) != 101) )
+         if ( (pr_default.getStatus(10) != 101) )
          {
             RcdFound1 = 1;
-            A1TrGestionTableros_ID = (Guid)((Guid)(T000111_A1TrGestionTableros_ID[0]));
+            A1TrGestionTableros_ID = (Guid)((Guid)(T000112_A1TrGestionTableros_ID[0]));
             AssignAttri("", false, "A1TrGestionTableros_ID", A1TrGestionTableros_ID.ToString());
          }
          /* Load Subordinate Levels */
@@ -1631,19 +1743,19 @@ namespace GeneXus.Programs {
       protected void ScanNext011( )
       {
          /* Scan next routine */
-         pr_default.readNext(9);
+         pr_default.readNext(10);
          RcdFound1 = 0;
-         if ( (pr_default.getStatus(9) != 101) )
+         if ( (pr_default.getStatus(10) != 101) )
          {
             RcdFound1 = 1;
-            A1TrGestionTableros_ID = (Guid)((Guid)(T000111_A1TrGestionTableros_ID[0]));
+            A1TrGestionTableros_ID = (Guid)((Guid)(T000112_A1TrGestionTableros_ID[0]));
             AssignAttri("", false, "A1TrGestionTableros_ID", A1TrGestionTableros_ID.ToString());
          }
       }
 
       protected void ScanEnd011( )
       {
-         pr_default.close(9);
+         pr_default.close(10);
       }
 
       protected void AfterConfirm011( )
@@ -1686,6 +1798,8 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtTrGestionTableros_Comentario_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtTrGestionTableros_Comentario_Enabled), 5, 0), true);
          edtTrGestionTableros_Descripcion_Enabled = 0;
          AssignProp("", false, edtTrGestionTableros_Descripcion_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtTrGestionTableros_Descripcion_Enabled), 5, 0), true);
+         edtTrGestionTableros_TipoTablero_Enabled = 0;
+         AssignProp("", false, edtTrGestionTableros_TipoTablero_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtTrGestionTableros_TipoTablero_Enabled), 5, 0), true);
          edtTrGestionTableros_FechaInicio_Enabled = 0;
          AssignProp("", false, edtTrGestionTableros_FechaInicio_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtTrGestionTableros_FechaInicio_Enabled), 5, 0), true);
          edtTrGestionTableros_FechaFin_Enabled = 0;
@@ -1694,6 +1808,8 @@ namespace GeneXus.Programs {
          AssignProp("", false, edtTrGestionTableros_FechaCreacion_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtTrGestionTableros_FechaCreacion_Enabled), 5, 0), true);
          edtTrGestionTableros_FechaModificacion_Enabled = 0;
          AssignProp("", false, edtTrGestionTableros_FechaModificacion_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(edtTrGestionTableros_FechaModificacion_Enabled), 5, 0), true);
+         chkTrGestionTableros_Estado.Enabled = 0;
+         AssignProp("", false, chkTrGestionTableros_Estado_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(chkTrGestionTableros_Estado.Enabled), 5, 0), true);
       }
 
       protected void send_integrity_lvl_hashes011( )
@@ -1738,7 +1854,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?20229228502844", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202292722393849", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1788,10 +1904,12 @@ namespace GeneXus.Programs {
          send_integrity_footer_hashes( ) ;
          GxWebStd.gx_hidden_field( context, "Z1TrGestionTableros_ID", Z1TrGestionTableros_ID.ToString());
          GxWebStd.gx_hidden_field( context, "Z2TrGestionTableros_Nombre", StringUtil.RTrim( Z2TrGestionTableros_Nombre));
+         GxWebStd.gx_hidden_field( context, "Z9TrGestionTableros_TipoTablero", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z9TrGestionTableros_TipoTablero), 4, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "Z3TrGestionTableros_FechaInicio", context.localUtil.DToC( Z3TrGestionTableros_FechaInicio, 0, "/"));
          GxWebStd.gx_hidden_field( context, "Z4TrGestionTableros_FechaFin", context.localUtil.DToC( Z4TrGestionTableros_FechaFin, 0, "/"));
          GxWebStd.gx_hidden_field( context, "Z7TrGestionTableros_FechaCreacion", context.localUtil.DToC( Z7TrGestionTableros_FechaCreacion, 0, "/"));
          GxWebStd.gx_hidden_field( context, "Z8TrGestionTableros_FechaModificacion", context.localUtil.DToC( Z8TrGestionTableros_FechaModificacion, 0, "/"));
+         GxWebStd.gx_boolean_hidden_field( context, "Z10TrGestionTableros_Estado", Z10TrGestionTableros_Estado);
          GxWebStd.gx_hidden_field( context, "IsConfirmed", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsConfirmed), 4, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "IsModified", StringUtil.LTrim( StringUtil.NToC( (decimal)(IsModified), 4, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "Mode", StringUtil.RTrim( Gx_mode));
@@ -1878,6 +1996,10 @@ namespace GeneXus.Programs {
          n5TrGestionTableros_Descripcion = false;
          AssignAttri("", false, "A5TrGestionTableros_Descripcion", A5TrGestionTableros_Descripcion);
          n5TrGestionTableros_Descripcion = (String.IsNullOrEmpty(StringUtil.RTrim( A5TrGestionTableros_Descripcion)) ? true : false);
+         A9TrGestionTableros_TipoTablero = 0;
+         n9TrGestionTableros_TipoTablero = false;
+         AssignAttri("", false, "A9TrGestionTableros_TipoTablero", StringUtil.LTrimStr( (decimal)(A9TrGestionTableros_TipoTablero), 4, 0));
+         n9TrGestionTableros_TipoTablero = ((0==A9TrGestionTableros_TipoTablero) ? true : false);
          A3TrGestionTableros_FechaInicio = DateTime.MinValue;
          n3TrGestionTableros_FechaInicio = false;
          AssignAttri("", false, "A3TrGestionTableros_FechaInicio", context.localUtil.Format(A3TrGestionTableros_FechaInicio, "99/99/9999"));
@@ -1894,11 +2016,17 @@ namespace GeneXus.Programs {
          n8TrGestionTableros_FechaModificacion = false;
          AssignAttri("", false, "A8TrGestionTableros_FechaModificacion", context.localUtil.Format(A8TrGestionTableros_FechaModificacion, "99/99/9999"));
          n8TrGestionTableros_FechaModificacion = ((DateTime.MinValue==A8TrGestionTableros_FechaModificacion) ? true : false);
+         A10TrGestionTableros_Estado = false;
+         n10TrGestionTableros_Estado = false;
+         AssignAttri("", false, "A10TrGestionTableros_Estado", A10TrGestionTableros_Estado);
+         n10TrGestionTableros_Estado = ((false==A10TrGestionTableros_Estado) ? true : false);
          Z2TrGestionTableros_Nombre = "";
+         Z9TrGestionTableros_TipoTablero = 0;
          Z3TrGestionTableros_FechaInicio = DateTime.MinValue;
          Z4TrGestionTableros_FechaFin = DateTime.MinValue;
          Z7TrGestionTableros_FechaCreacion = DateTime.MinValue;
          Z8TrGestionTableros_FechaModificacion = DateTime.MinValue;
+         Z10TrGestionTableros_Estado = false;
       }
 
       protected void InitAll011( )
@@ -1924,7 +2052,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20229228502848", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202292722393853", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1940,7 +2068,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("trgestiontableros.js", "?20229228502848", false, true);
+         context.AddJavascriptSource("trgestiontableros.js", "?202292722393853", false, true);
          /* End function include_jscripts */
       }
 
@@ -1958,10 +2086,12 @@ namespace GeneXus.Programs {
          edtTrGestionTableros_Nombre_Internalname = "TRGESTIONTABLEROS_NOMBRE";
          edtTrGestionTableros_Comentario_Internalname = "TRGESTIONTABLEROS_COMENTARIO";
          edtTrGestionTableros_Descripcion_Internalname = "TRGESTIONTABLEROS_DESCRIPCION";
+         edtTrGestionTableros_TipoTablero_Internalname = "TRGESTIONTABLEROS_TIPOTABLERO";
          edtTrGestionTableros_FechaInicio_Internalname = "TRGESTIONTABLEROS_FECHAINICIO";
          edtTrGestionTableros_FechaFin_Internalname = "TRGESTIONTABLEROS_FECHAFIN";
          edtTrGestionTableros_FechaCreacion_Internalname = "TRGESTIONTABLEROS_FECHACREACION";
          edtTrGestionTableros_FechaModificacion_Internalname = "TRGESTIONTABLEROS_FECHAMODIFICACION";
+         chkTrGestionTableros_Estado_Internalname = "TRGESTIONTABLEROS_ESTADO";
          divFormcontainer_Internalname = "FORMCONTAINER";
          bttBtn_enter_Internalname = "BTN_ENTER";
          bttBtn_cancel_Internalname = "BTN_CANCEL";
@@ -1988,6 +2118,7 @@ namespace GeneXus.Programs {
          bttBtn_cancel_Visible = 1;
          bttBtn_enter_Enabled = 1;
          bttBtn_enter_Visible = 1;
+         chkTrGestionTableros_Estado.Enabled = 1;
          edtTrGestionTableros_FechaModificacion_Jsonclick = "";
          edtTrGestionTableros_FechaModificacion_Enabled = 1;
          edtTrGestionTableros_FechaCreacion_Jsonclick = "";
@@ -1996,6 +2127,8 @@ namespace GeneXus.Programs {
          edtTrGestionTableros_FechaFin_Enabled = 1;
          edtTrGestionTableros_FechaInicio_Jsonclick = "";
          edtTrGestionTableros_FechaInicio_Enabled = 1;
+         edtTrGestionTableros_TipoTablero_Jsonclick = "";
+         edtTrGestionTableros_TipoTablero_Enabled = 1;
          edtTrGestionTableros_Descripcion_Enabled = 1;
          edtTrGestionTableros_Comentario_Enabled = 1;
          edtTrGestionTableros_Nombre_Jsonclick = "";
@@ -2021,6 +2154,14 @@ namespace GeneXus.Programs {
 
       protected void init_web_controls( )
       {
+         chkTrGestionTableros_Estado.Name = "TRGESTIONTABLEROS_ESTADO";
+         chkTrGestionTableros_Estado.WebTags = "";
+         chkTrGestionTableros_Estado.Caption = "";
+         AssignProp("", false, chkTrGestionTableros_Estado_Internalname, "TitleCaption", chkTrGestionTableros_Estado.Caption, true);
+         chkTrGestionTableros_Estado.CheckedValue = "false";
+         A10TrGestionTableros_Estado = StringUtil.StrToBool( StringUtil.BoolToStr( A10TrGestionTableros_Estado));
+         n10TrGestionTableros_Estado = false;
+         AssignAttri("", false, "A10TrGestionTableros_Estado", A10TrGestionTableros_Estado);
          /* End function init_web_controls */
       }
 
@@ -2063,23 +2204,29 @@ namespace GeneXus.Programs {
          Draw( ) ;
          send_integrity_footer_hashes( ) ;
          dynload_actions( ) ;
+         A10TrGestionTableros_Estado = StringUtil.StrToBool( StringUtil.BoolToStr( A10TrGestionTableros_Estado));
+         n10TrGestionTableros_Estado = false;
          /*  Sending validation outputs */
          AssignAttri("", false, "A2TrGestionTableros_Nombre", StringUtil.RTrim( A2TrGestionTableros_Nombre));
          AssignAttri("", false, "A6TrGestionTableros_Comentario", A6TrGestionTableros_Comentario);
          AssignAttri("", false, "A5TrGestionTableros_Descripcion", A5TrGestionTableros_Descripcion);
+         AssignAttri("", false, "A9TrGestionTableros_TipoTablero", StringUtil.LTrim( StringUtil.NToC( (decimal)(A9TrGestionTableros_TipoTablero), 4, 0, ".", "")));
          AssignAttri("", false, "A3TrGestionTableros_FechaInicio", context.localUtil.Format(A3TrGestionTableros_FechaInicio, "99/99/9999"));
          AssignAttri("", false, "A4TrGestionTableros_FechaFin", context.localUtil.Format(A4TrGestionTableros_FechaFin, "99/99/9999"));
          AssignAttri("", false, "A7TrGestionTableros_FechaCreacion", context.localUtil.Format(A7TrGestionTableros_FechaCreacion, "99/99/9999"));
          AssignAttri("", false, "A8TrGestionTableros_FechaModificacion", context.localUtil.Format(A8TrGestionTableros_FechaModificacion, "99/99/9999"));
+         AssignAttri("", false, "A10TrGestionTableros_Estado", A10TrGestionTableros_Estado);
          AssignAttri("", false, "Gx_mode", StringUtil.RTrim( Gx_mode));
          GxWebStd.gx_hidden_field( context, "Z1TrGestionTableros_ID", Z1TrGestionTableros_ID.ToString());
          GxWebStd.gx_hidden_field( context, "Z2TrGestionTableros_Nombre", StringUtil.RTrim( Z2TrGestionTableros_Nombre));
          GxWebStd.gx_hidden_field( context, "Z6TrGestionTableros_Comentario", Z6TrGestionTableros_Comentario);
          GxWebStd.gx_hidden_field( context, "Z5TrGestionTableros_Descripcion", Z5TrGestionTableros_Descripcion);
+         GxWebStd.gx_hidden_field( context, "Z9TrGestionTableros_TipoTablero", StringUtil.LTrim( StringUtil.NToC( (decimal)(Z9TrGestionTableros_TipoTablero), 4, 0, ".", "")));
          GxWebStd.gx_hidden_field( context, "Z3TrGestionTableros_FechaInicio", context.localUtil.Format(Z3TrGestionTableros_FechaInicio, "99/99/9999"));
          GxWebStd.gx_hidden_field( context, "Z4TrGestionTableros_FechaFin", context.localUtil.Format(Z4TrGestionTableros_FechaFin, "99/99/9999"));
          GxWebStd.gx_hidden_field( context, "Z7TrGestionTableros_FechaCreacion", context.localUtil.Format(Z7TrGestionTableros_FechaCreacion, "99/99/9999"));
          GxWebStd.gx_hidden_field( context, "Z8TrGestionTableros_FechaModificacion", context.localUtil.Format(Z8TrGestionTableros_FechaModificacion, "99/99/9999"));
+         GxWebStd.gx_hidden_field( context, "Z10TrGestionTableros_Estado", StringUtil.BoolToStr( Z10TrGestionTableros_Estado));
          AssignProp("", false, bttBtn_delete_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(bttBtn_delete_Enabled), 5, 0), true);
          AssignProp("", false, bttBtn_enter_Internalname, "Enabled", StringUtil.LTrimStr( (decimal)(bttBtn_enter_Enabled), 5, 0), true);
          SendCloseFormHiddens( ) ;
@@ -2092,20 +2239,20 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("ENTER","{handler:'UserMainFullajax',iparms:[{postForm:true}]");
-         setEventMetadata("ENTER",",oparms:[]}");
-         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[]");
-         setEventMetadata("REFRESH",",oparms:[]}");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_ID","{handler:'Valid_Trgestiontableros_id',iparms:[{av:'A1TrGestionTableros_ID',fld:'TRGESTIONTABLEROS_ID',pic:''},{av:'Gx_mode',fld:'vMODE',pic:'@!'}]");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_ID",",oparms:[{av:'A2TrGestionTableros_Nombre',fld:'TRGESTIONTABLEROS_NOMBRE',pic:''},{av:'A6TrGestionTableros_Comentario',fld:'TRGESTIONTABLEROS_COMENTARIO',pic:''},{av:'A5TrGestionTableros_Descripcion',fld:'TRGESTIONTABLEROS_DESCRIPCION',pic:''},{av:'A3TrGestionTableros_FechaInicio',fld:'TRGESTIONTABLEROS_FECHAINICIO',pic:''},{av:'A4TrGestionTableros_FechaFin',fld:'TRGESTIONTABLEROS_FECHAFIN',pic:''},{av:'A7TrGestionTableros_FechaCreacion',fld:'TRGESTIONTABLEROS_FECHACREACION',pic:''},{av:'A8TrGestionTableros_FechaModificacion',fld:'TRGESTIONTABLEROS_FECHAMODIFICACION',pic:''},{av:'Gx_mode',fld:'vMODE',pic:'@!'},{av:'Z1TrGestionTableros_ID'},{av:'Z2TrGestionTableros_Nombre'},{av:'Z6TrGestionTableros_Comentario'},{av:'Z5TrGestionTableros_Descripcion'},{av:'Z3TrGestionTableros_FechaInicio'},{av:'Z4TrGestionTableros_FechaFin'},{av:'Z7TrGestionTableros_FechaCreacion'},{av:'Z8TrGestionTableros_FechaModificacion'},{ctrl:'BTN_DELETE',prop:'Enabled'},{ctrl:'BTN_ENTER',prop:'Enabled'}]}");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAINICIO","{handler:'Valid_Trgestiontableros_fechainicio',iparms:[]");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAINICIO",",oparms:[]}");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAFIN","{handler:'Valid_Trgestiontableros_fechafin',iparms:[]");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAFIN",",oparms:[]}");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHACREACION","{handler:'Valid_Trgestiontableros_fechacreacion',iparms:[]");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHACREACION",",oparms:[]}");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAMODIFICACION","{handler:'Valid_Trgestiontableros_fechamodificacion',iparms:[]");
-         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAMODIFICACION",",oparms:[]}");
+         setEventMetadata("ENTER","{handler:'UserMainFullajax',iparms:[{postForm:true},{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]");
+         setEventMetadata("ENTER",",oparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]}");
+         setEventMetadata("REFRESH","{handler:'Refresh',iparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]");
+         setEventMetadata("REFRESH",",oparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]}");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_ID","{handler:'Valid_Trgestiontableros_id',iparms:[{av:'A1TrGestionTableros_ID',fld:'TRGESTIONTABLEROS_ID',pic:''},{av:'Gx_mode',fld:'vMODE',pic:'@!'},{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_ID",",oparms:[{av:'A2TrGestionTableros_Nombre',fld:'TRGESTIONTABLEROS_NOMBRE',pic:''},{av:'A6TrGestionTableros_Comentario',fld:'TRGESTIONTABLEROS_COMENTARIO',pic:''},{av:'A5TrGestionTableros_Descripcion',fld:'TRGESTIONTABLEROS_DESCRIPCION',pic:''},{av:'A9TrGestionTableros_TipoTablero',fld:'TRGESTIONTABLEROS_TIPOTABLERO',pic:'ZZZ9'},{av:'A3TrGestionTableros_FechaInicio',fld:'TRGESTIONTABLEROS_FECHAINICIO',pic:''},{av:'A4TrGestionTableros_FechaFin',fld:'TRGESTIONTABLEROS_FECHAFIN',pic:''},{av:'A7TrGestionTableros_FechaCreacion',fld:'TRGESTIONTABLEROS_FECHACREACION',pic:''},{av:'A8TrGestionTableros_FechaModificacion',fld:'TRGESTIONTABLEROS_FECHAMODIFICACION',pic:''},{av:'Gx_mode',fld:'vMODE',pic:'@!'},{av:'Z1TrGestionTableros_ID'},{av:'Z2TrGestionTableros_Nombre'},{av:'Z6TrGestionTableros_Comentario'},{av:'Z5TrGestionTableros_Descripcion'},{av:'Z9TrGestionTableros_TipoTablero'},{av:'Z3TrGestionTableros_FechaInicio'},{av:'Z4TrGestionTableros_FechaFin'},{av:'Z7TrGestionTableros_FechaCreacion'},{av:'Z8TrGestionTableros_FechaModificacion'},{av:'Z10TrGestionTableros_Estado'},{ctrl:'BTN_DELETE',prop:'Enabled'},{ctrl:'BTN_ENTER',prop:'Enabled'},{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]}");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAINICIO","{handler:'Valid_Trgestiontableros_fechainicio',iparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAINICIO",",oparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]}");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAFIN","{handler:'Valid_Trgestiontableros_fechafin',iparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAFIN",",oparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]}");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHACREACION","{handler:'Valid_Trgestiontableros_fechacreacion',iparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHACREACION",",oparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]}");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAMODIFICACION","{handler:'Valid_Trgestiontableros_fechamodificacion',iparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]");
+         setEventMetadata("VALID_TRGESTIONTABLEROS_FECHAMODIFICACION",",oparms:[{av:'A10TrGestionTableros_Estado',fld:'TRGESTIONTABLEROS_ESTADO',pic:''}]}");
          return  ;
       }
 
@@ -2175,6 +2322,8 @@ namespace GeneXus.Programs {
          T00014_n6TrGestionTableros_Comentario = new bool[] {false} ;
          T00014_A5TrGestionTableros_Descripcion = new String[] {""} ;
          T00014_n5TrGestionTableros_Descripcion = new bool[] {false} ;
+         T00014_A9TrGestionTableros_TipoTablero = new short[1] ;
+         T00014_n9TrGestionTableros_TipoTablero = new bool[] {false} ;
          T00014_A3TrGestionTableros_FechaInicio = new DateTime[] {DateTime.MinValue} ;
          T00014_n3TrGestionTableros_FechaInicio = new bool[] {false} ;
          T00014_A4TrGestionTableros_FechaFin = new DateTime[] {DateTime.MinValue} ;
@@ -2183,6 +2332,8 @@ namespace GeneXus.Programs {
          T00014_n7TrGestionTableros_FechaCreacion = new bool[] {false} ;
          T00014_A8TrGestionTableros_FechaModificacion = new DateTime[] {DateTime.MinValue} ;
          T00014_n8TrGestionTableros_FechaModificacion = new bool[] {false} ;
+         T00014_A10TrGestionTableros_Estado = new bool[] {false} ;
+         T00014_n10TrGestionTableros_Estado = new bool[] {false} ;
          T00015_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
          T00013_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
          T00013_A2TrGestionTableros_Nombre = new String[] {""} ;
@@ -2191,6 +2342,8 @@ namespace GeneXus.Programs {
          T00013_n6TrGestionTableros_Comentario = new bool[] {false} ;
          T00013_A5TrGestionTableros_Descripcion = new String[] {""} ;
          T00013_n5TrGestionTableros_Descripcion = new bool[] {false} ;
+         T00013_A9TrGestionTableros_TipoTablero = new short[1] ;
+         T00013_n9TrGestionTableros_TipoTablero = new bool[] {false} ;
          T00013_A3TrGestionTableros_FechaInicio = new DateTime[] {DateTime.MinValue} ;
          T00013_n3TrGestionTableros_FechaInicio = new bool[] {false} ;
          T00013_A4TrGestionTableros_FechaFin = new DateTime[] {DateTime.MinValue} ;
@@ -2199,6 +2352,8 @@ namespace GeneXus.Programs {
          T00013_n7TrGestionTableros_FechaCreacion = new bool[] {false} ;
          T00013_A8TrGestionTableros_FechaModificacion = new DateTime[] {DateTime.MinValue} ;
          T00013_n8TrGestionTableros_FechaModificacion = new bool[] {false} ;
+         T00013_A10TrGestionTableros_Estado = new bool[] {false} ;
+         T00013_n10TrGestionTableros_Estado = new bool[] {false} ;
          sMode1 = "";
          T00016_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
          T00017_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
@@ -2209,6 +2364,8 @@ namespace GeneXus.Programs {
          T00012_n6TrGestionTableros_Comentario = new bool[] {false} ;
          T00012_A5TrGestionTableros_Descripcion = new String[] {""} ;
          T00012_n5TrGestionTableros_Descripcion = new bool[] {false} ;
+         T00012_A9TrGestionTableros_TipoTablero = new short[1] ;
+         T00012_n9TrGestionTableros_TipoTablero = new bool[] {false} ;
          T00012_A3TrGestionTableros_FechaInicio = new DateTime[] {DateTime.MinValue} ;
          T00012_n3TrGestionTableros_FechaInicio = new bool[] {false} ;
          T00012_A4TrGestionTableros_FechaFin = new DateTime[] {DateTime.MinValue} ;
@@ -2217,7 +2374,10 @@ namespace GeneXus.Programs {
          T00012_n7TrGestionTableros_FechaCreacion = new bool[] {false} ;
          T00012_A8TrGestionTableros_FechaModificacion = new DateTime[] {DateTime.MinValue} ;
          T00012_n8TrGestionTableros_FechaModificacion = new bool[] {false} ;
-         T000111_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
+         T00012_A10TrGestionTableros_Estado = new bool[] {false} ;
+         T00012_n10TrGestionTableros_Estado = new bool[] {false} ;
+         T000111_A12TrGestionTareas_ID = new long[1] ;
+         T000112_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -2232,16 +2392,16 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.trgestiontableros__default(),
             new Object[][] {
                 new Object[] {
-               T00012_A1TrGestionTableros_ID, T00012_A2TrGestionTableros_Nombre, T00012_n2TrGestionTableros_Nombre, T00012_A6TrGestionTableros_Comentario, T00012_n6TrGestionTableros_Comentario, T00012_A5TrGestionTableros_Descripcion, T00012_n5TrGestionTableros_Descripcion, T00012_A3TrGestionTableros_FechaInicio, T00012_n3TrGestionTableros_FechaInicio, T00012_A4TrGestionTableros_FechaFin,
-               T00012_n4TrGestionTableros_FechaFin, T00012_A7TrGestionTableros_FechaCreacion, T00012_n7TrGestionTableros_FechaCreacion, T00012_A8TrGestionTableros_FechaModificacion, T00012_n8TrGestionTableros_FechaModificacion
+               T00012_A1TrGestionTableros_ID, T00012_A2TrGestionTableros_Nombre, T00012_n2TrGestionTableros_Nombre, T00012_A6TrGestionTableros_Comentario, T00012_n6TrGestionTableros_Comentario, T00012_A5TrGestionTableros_Descripcion, T00012_n5TrGestionTableros_Descripcion, T00012_A9TrGestionTableros_TipoTablero, T00012_n9TrGestionTableros_TipoTablero, T00012_A3TrGestionTableros_FechaInicio,
+               T00012_n3TrGestionTableros_FechaInicio, T00012_A4TrGestionTableros_FechaFin, T00012_n4TrGestionTableros_FechaFin, T00012_A7TrGestionTableros_FechaCreacion, T00012_n7TrGestionTableros_FechaCreacion, T00012_A8TrGestionTableros_FechaModificacion, T00012_n8TrGestionTableros_FechaModificacion, T00012_A10TrGestionTableros_Estado, T00012_n10TrGestionTableros_Estado
                }
                , new Object[] {
-               T00013_A1TrGestionTableros_ID, T00013_A2TrGestionTableros_Nombre, T00013_n2TrGestionTableros_Nombre, T00013_A6TrGestionTableros_Comentario, T00013_n6TrGestionTableros_Comentario, T00013_A5TrGestionTableros_Descripcion, T00013_n5TrGestionTableros_Descripcion, T00013_A3TrGestionTableros_FechaInicio, T00013_n3TrGestionTableros_FechaInicio, T00013_A4TrGestionTableros_FechaFin,
-               T00013_n4TrGestionTableros_FechaFin, T00013_A7TrGestionTableros_FechaCreacion, T00013_n7TrGestionTableros_FechaCreacion, T00013_A8TrGestionTableros_FechaModificacion, T00013_n8TrGestionTableros_FechaModificacion
+               T00013_A1TrGestionTableros_ID, T00013_A2TrGestionTableros_Nombre, T00013_n2TrGestionTableros_Nombre, T00013_A6TrGestionTableros_Comentario, T00013_n6TrGestionTableros_Comentario, T00013_A5TrGestionTableros_Descripcion, T00013_n5TrGestionTableros_Descripcion, T00013_A9TrGestionTableros_TipoTablero, T00013_n9TrGestionTableros_TipoTablero, T00013_A3TrGestionTableros_FechaInicio,
+               T00013_n3TrGestionTableros_FechaInicio, T00013_A4TrGestionTableros_FechaFin, T00013_n4TrGestionTableros_FechaFin, T00013_A7TrGestionTableros_FechaCreacion, T00013_n7TrGestionTableros_FechaCreacion, T00013_A8TrGestionTableros_FechaModificacion, T00013_n8TrGestionTableros_FechaModificacion, T00013_A10TrGestionTableros_Estado, T00013_n10TrGestionTableros_Estado
                }
                , new Object[] {
-               T00014_A1TrGestionTableros_ID, T00014_A2TrGestionTableros_Nombre, T00014_n2TrGestionTableros_Nombre, T00014_A6TrGestionTableros_Comentario, T00014_n6TrGestionTableros_Comentario, T00014_A5TrGestionTableros_Descripcion, T00014_n5TrGestionTableros_Descripcion, T00014_A3TrGestionTableros_FechaInicio, T00014_n3TrGestionTableros_FechaInicio, T00014_A4TrGestionTableros_FechaFin,
-               T00014_n4TrGestionTableros_FechaFin, T00014_A7TrGestionTableros_FechaCreacion, T00014_n7TrGestionTableros_FechaCreacion, T00014_A8TrGestionTableros_FechaModificacion, T00014_n8TrGestionTableros_FechaModificacion
+               T00014_A1TrGestionTableros_ID, T00014_A2TrGestionTableros_Nombre, T00014_n2TrGestionTableros_Nombre, T00014_A6TrGestionTableros_Comentario, T00014_n6TrGestionTableros_Comentario, T00014_A5TrGestionTableros_Descripcion, T00014_n5TrGestionTableros_Descripcion, T00014_A9TrGestionTableros_TipoTablero, T00014_n9TrGestionTableros_TipoTablero, T00014_A3TrGestionTableros_FechaInicio,
+               T00014_n3TrGestionTableros_FechaInicio, T00014_A4TrGestionTableros_FechaFin, T00014_n4TrGestionTableros_FechaFin, T00014_A7TrGestionTableros_FechaCreacion, T00014_n7TrGestionTableros_FechaCreacion, T00014_A8TrGestionTableros_FechaModificacion, T00014_n8TrGestionTableros_FechaModificacion, T00014_A10TrGestionTableros_Estado, T00014_n10TrGestionTableros_Estado
                }
                , new Object[] {
                T00015_A1TrGestionTableros_ID
@@ -2259,12 +2419,16 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               T000111_A1TrGestionTableros_ID
+               T000111_A12TrGestionTareas_ID
+               }
+               , new Object[] {
+               T000112_A1TrGestionTableros_ID
                }
             }
          );
       }
 
+      private short Z9TrGestionTableros_TipoTablero ;
       private short GxWebError ;
       private short gxcookieaux ;
       private short IsConfirmed ;
@@ -2272,11 +2436,13 @@ namespace GeneXus.Programs {
       private short AnyError ;
       private short nKeyPressed ;
       private short initialized ;
+      private short A9TrGestionTableros_TipoTablero ;
       private short GX_JID ;
       private short RcdFound1 ;
       private short nIsDirty_1 ;
       private short Gx_BScreen ;
       private short gxajaxcallmode ;
+      private short ZZ9TrGestionTableros_TipoTablero ;
       private int trnEnded ;
       private int bttBtn_first_Visible ;
       private int bttBtn_previous_Visible ;
@@ -2287,6 +2453,7 @@ namespace GeneXus.Programs {
       private int edtTrGestionTableros_Nombre_Enabled ;
       private int edtTrGestionTableros_Comentario_Enabled ;
       private int edtTrGestionTableros_Descripcion_Enabled ;
+      private int edtTrGestionTableros_TipoTablero_Enabled ;
       private int edtTrGestionTableros_FechaInicio_Enabled ;
       private int edtTrGestionTableros_FechaFin_Enabled ;
       private int edtTrGestionTableros_FechaCreacion_Enabled ;
@@ -2332,6 +2499,8 @@ namespace GeneXus.Programs {
       private String edtTrGestionTableros_Nombre_Jsonclick ;
       private String edtTrGestionTableros_Comentario_Internalname ;
       private String edtTrGestionTableros_Descripcion_Internalname ;
+      private String edtTrGestionTableros_TipoTablero_Internalname ;
+      private String edtTrGestionTableros_TipoTablero_Jsonclick ;
       private String edtTrGestionTableros_FechaInicio_Internalname ;
       private String edtTrGestionTableros_FechaInicio_Jsonclick ;
       private String edtTrGestionTableros_FechaFin_Internalname ;
@@ -2340,6 +2509,7 @@ namespace GeneXus.Programs {
       private String edtTrGestionTableros_FechaCreacion_Jsonclick ;
       private String edtTrGestionTableros_FechaModificacion_Internalname ;
       private String edtTrGestionTableros_FechaModificacion_Jsonclick ;
+      private String chkTrGestionTableros_Estado_Internalname ;
       private String bttBtn_enter_Internalname ;
       private String bttBtn_enter_Jsonclick ;
       private String bttBtn_cancel_Internalname ;
@@ -2368,16 +2538,22 @@ namespace GeneXus.Programs {
       private DateTime ZZ4TrGestionTableros_FechaFin ;
       private DateTime ZZ7TrGestionTableros_FechaCreacion ;
       private DateTime ZZ8TrGestionTableros_FechaModificacion ;
+      private bool Z10TrGestionTableros_Estado ;
       private bool entryPointCalled ;
       private bool toggleJsOutput ;
       private bool wbErr ;
+      private bool A10TrGestionTableros_Estado ;
+      private bool n10TrGestionTableros_Estado ;
       private bool n2TrGestionTableros_Nombre ;
+      private bool n9TrGestionTableros_TipoTablero ;
       private bool n3TrGestionTableros_FechaInicio ;
       private bool n4TrGestionTableros_FechaFin ;
       private bool n7TrGestionTableros_FechaCreacion ;
       private bool n8TrGestionTableros_FechaModificacion ;
       private bool n6TrGestionTableros_Comentario ;
       private bool n5TrGestionTableros_Descripcion ;
+      private bool Gx_longc ;
+      private bool ZZ10TrGestionTableros_Estado ;
       private String A6TrGestionTableros_Comentario ;
       private String A5TrGestionTableros_Descripcion ;
       private String Z6TrGestionTableros_Comentario ;
@@ -2388,6 +2564,7 @@ namespace GeneXus.Programs {
       private Guid A1TrGestionTableros_ID ;
       private Guid ZZ1TrGestionTableros_ID ;
       private IGxDataStore dsDefault ;
+      private GXCheckbox chkTrGestionTableros_Estado ;
       private IDataStoreProvider pr_default ;
       private Guid[] T00014_A1TrGestionTableros_ID ;
       private String[] T00014_A2TrGestionTableros_Nombre ;
@@ -2396,6 +2573,8 @@ namespace GeneXus.Programs {
       private bool[] T00014_n6TrGestionTableros_Comentario ;
       private String[] T00014_A5TrGestionTableros_Descripcion ;
       private bool[] T00014_n5TrGestionTableros_Descripcion ;
+      private short[] T00014_A9TrGestionTableros_TipoTablero ;
+      private bool[] T00014_n9TrGestionTableros_TipoTablero ;
       private DateTime[] T00014_A3TrGestionTableros_FechaInicio ;
       private bool[] T00014_n3TrGestionTableros_FechaInicio ;
       private DateTime[] T00014_A4TrGestionTableros_FechaFin ;
@@ -2404,6 +2583,8 @@ namespace GeneXus.Programs {
       private bool[] T00014_n7TrGestionTableros_FechaCreacion ;
       private DateTime[] T00014_A8TrGestionTableros_FechaModificacion ;
       private bool[] T00014_n8TrGestionTableros_FechaModificacion ;
+      private bool[] T00014_A10TrGestionTableros_Estado ;
+      private bool[] T00014_n10TrGestionTableros_Estado ;
       private Guid[] T00015_A1TrGestionTableros_ID ;
       private Guid[] T00013_A1TrGestionTableros_ID ;
       private String[] T00013_A2TrGestionTableros_Nombre ;
@@ -2412,6 +2593,8 @@ namespace GeneXus.Programs {
       private bool[] T00013_n6TrGestionTableros_Comentario ;
       private String[] T00013_A5TrGestionTableros_Descripcion ;
       private bool[] T00013_n5TrGestionTableros_Descripcion ;
+      private short[] T00013_A9TrGestionTableros_TipoTablero ;
+      private bool[] T00013_n9TrGestionTableros_TipoTablero ;
       private DateTime[] T00013_A3TrGestionTableros_FechaInicio ;
       private bool[] T00013_n3TrGestionTableros_FechaInicio ;
       private DateTime[] T00013_A4TrGestionTableros_FechaFin ;
@@ -2420,6 +2603,8 @@ namespace GeneXus.Programs {
       private bool[] T00013_n7TrGestionTableros_FechaCreacion ;
       private DateTime[] T00013_A8TrGestionTableros_FechaModificacion ;
       private bool[] T00013_n8TrGestionTableros_FechaModificacion ;
+      private bool[] T00013_A10TrGestionTableros_Estado ;
+      private bool[] T00013_n10TrGestionTableros_Estado ;
       private Guid[] T00016_A1TrGestionTableros_ID ;
       private Guid[] T00017_A1TrGestionTableros_ID ;
       private Guid[] T00012_A1TrGestionTableros_ID ;
@@ -2429,6 +2614,8 @@ namespace GeneXus.Programs {
       private bool[] T00012_n6TrGestionTableros_Comentario ;
       private String[] T00012_A5TrGestionTableros_Descripcion ;
       private bool[] T00012_n5TrGestionTableros_Descripcion ;
+      private short[] T00012_A9TrGestionTableros_TipoTablero ;
+      private bool[] T00012_n9TrGestionTableros_TipoTablero ;
       private DateTime[] T00012_A3TrGestionTableros_FechaInicio ;
       private bool[] T00012_n3TrGestionTableros_FechaInicio ;
       private DateTime[] T00012_A4TrGestionTableros_FechaFin ;
@@ -2437,7 +2624,10 @@ namespace GeneXus.Programs {
       private bool[] T00012_n7TrGestionTableros_FechaCreacion ;
       private DateTime[] T00012_A8TrGestionTableros_FechaModificacion ;
       private bool[] T00012_n8TrGestionTableros_FechaModificacion ;
-      private Guid[] T000111_A1TrGestionTableros_ID ;
+      private bool[] T00012_A10TrGestionTableros_Estado ;
+      private bool[] T00012_n10TrGestionTableros_Estado ;
+      private long[] T000111_A12TrGestionTareas_ID ;
+      private Guid[] T000112_A1TrGestionTableros_ID ;
       private GXWebForm Form ;
    }
 
@@ -2457,6 +2647,7 @@ namespace GeneXus.Programs {
          ,new UpdateCursor(def[7])
          ,new UpdateCursor(def[8])
          ,new ForEachCursor(def[9])
+         ,new ForEachCursor(def[10])
        };
     }
 
@@ -2495,20 +2686,24 @@ namespace GeneXus.Programs {
           new Object[] {"@TrGestionTableros_Nombre",SqlDbType.NChar,100,0} ,
           new Object[] {"@TrGestionTableros_Comentario",SqlDbType.NVarChar,2097152,0} ,
           new Object[] {"@TrGestionTableros_Descripcion",SqlDbType.NVarChar,2097152,0} ,
+          new Object[] {"@TrGestionTableros_TipoTablero",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@TrGestionTableros_FechaInicio",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaFin",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaCreacion",SqlDbType.DateTime,8,0} ,
-          new Object[] {"@TrGestionTableros_FechaModificacion",SqlDbType.DateTime,8,0}
+          new Object[] {"@TrGestionTableros_FechaModificacion",SqlDbType.DateTime,8,0} ,
+          new Object[] {"@TrGestionTableros_Estado",SqlDbType.Bit,4,0}
           } ;
           Object[] prmT00019 ;
           prmT00019 = new Object[] {
           new Object[] {"@TrGestionTableros_Nombre",SqlDbType.NChar,100,0} ,
           new Object[] {"@TrGestionTableros_Comentario",SqlDbType.NVarChar,2097152,0} ,
           new Object[] {"@TrGestionTableros_Descripcion",SqlDbType.NVarChar,2097152,0} ,
+          new Object[] {"@TrGestionTableros_TipoTablero",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@TrGestionTableros_FechaInicio",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaFin",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaCreacion",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaModificacion",SqlDbType.DateTime,8,0} ,
+          new Object[] {"@TrGestionTableros_Estado",SqlDbType.Bit,4,0} ,
           new Object[] {"@TrGestionTableros_ID",SqlDbType.UniqueIdentifier,4,0}
           } ;
           Object[] prmT000110 ;
@@ -2517,18 +2712,23 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmT000111 ;
           prmT000111 = new Object[] {
+          new Object[] {"@TrGestionTableros_ID",SqlDbType.UniqueIdentifier,4,0}
+          } ;
+          Object[] prmT000112 ;
+          prmT000112 = new Object[] {
           } ;
           def= new CursorDef[] {
-              new CursorDef("T00012", "SELECT [TrGestionTableros_ID], [TrGestionTableros_Nombre], [TrGestionTableros_Comentario], [TrGestionTableros_Descripcion], [TrGestionTableros_FechaInicio], [TrGestionTableros_FechaFin], [TrGestionTableros_FechaCreacion], [TrGestionTableros_FechaModificacion] FROM TABLERO.[TrGestionTableros] WITH (UPDLOCK) WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID ",true, GxErrorMask.GX_NOMASK, false, this,prmT00012,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T00013", "SELECT [TrGestionTableros_ID], [TrGestionTableros_Nombre], [TrGestionTableros_Comentario], [TrGestionTableros_Descripcion], [TrGestionTableros_FechaInicio], [TrGestionTableros_FechaFin], [TrGestionTableros_FechaCreacion], [TrGestionTableros_FechaModificacion] FROM TABLERO.[TrGestionTableros] WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID ",true, GxErrorMask.GX_NOMASK, false, this,prmT00013,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("T00014", "SELECT TM1.[TrGestionTableros_ID], TM1.[TrGestionTableros_Nombre], TM1.[TrGestionTableros_Comentario], TM1.[TrGestionTableros_Descripcion], TM1.[TrGestionTableros_FechaInicio], TM1.[TrGestionTableros_FechaFin], TM1.[TrGestionTableros_FechaCreacion], TM1.[TrGestionTableros_FechaModificacion] FROM TABLERO.[TrGestionTableros] TM1 WHERE TM1.[TrGestionTableros_ID] = @TrGestionTableros_ID ORDER BY TM1.[TrGestionTableros_ID]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00014,100, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("T00012", "SELECT [TrGestionTableros_ID], [TrGestionTableros_Nombre], [TrGestionTableros_Comentario], [TrGestionTableros_Descripcion], [TrGestionTableros_TipoTablero], [TrGestionTableros_FechaInicio], [TrGestionTableros_FechaFin], [TrGestionTableros_FechaCreacion], [TrGestionTableros_FechaModificacion], [TrGestionTableros_Estado] FROM TABLERO.[TrGestionTableros] WITH (UPDLOCK) WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID ",true, GxErrorMask.GX_NOMASK, false, this,prmT00012,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T00013", "SELECT [TrGestionTableros_ID], [TrGestionTableros_Nombre], [TrGestionTableros_Comentario], [TrGestionTableros_Descripcion], [TrGestionTableros_TipoTablero], [TrGestionTableros_FechaInicio], [TrGestionTableros_FechaFin], [TrGestionTableros_FechaCreacion], [TrGestionTableros_FechaModificacion], [TrGestionTableros_Estado] FROM TABLERO.[TrGestionTableros] WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID ",true, GxErrorMask.GX_NOMASK, false, this,prmT00013,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T00014", "SELECT TM1.[TrGestionTableros_ID], TM1.[TrGestionTableros_Nombre], TM1.[TrGestionTableros_Comentario], TM1.[TrGestionTableros_Descripcion], TM1.[TrGestionTableros_TipoTablero], TM1.[TrGestionTableros_FechaInicio], TM1.[TrGestionTableros_FechaFin], TM1.[TrGestionTableros_FechaCreacion], TM1.[TrGestionTableros_FechaModificacion], TM1.[TrGestionTableros_Estado] FROM TABLERO.[TrGestionTableros] TM1 WHERE TM1.[TrGestionTableros_ID] = @TrGestionTableros_ID ORDER BY TM1.[TrGestionTableros_ID]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT00014,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("T00015", "SELECT [TrGestionTableros_ID] FROM TABLERO.[TrGestionTableros] WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00015,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("T00016", "SELECT TOP 1 [TrGestionTableros_ID] FROM TABLERO.[TrGestionTableros] WHERE ( [TrGestionTableros_ID] > @TrGestionTableros_ID) ORDER BY [TrGestionTableros_ID]  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00016,1, GxCacheFrequency.OFF ,true,true )
              ,new CursorDef("T00017", "SELECT TOP 1 [TrGestionTableros_ID] FROM TABLERO.[TrGestionTableros] WHERE ( [TrGestionTableros_ID] < @TrGestionTableros_ID) ORDER BY [TrGestionTableros_ID] DESC  OPTION (FAST 1)",true, GxErrorMask.GX_NOMASK, false, this,prmT00017,1, GxCacheFrequency.OFF ,true,true )
-             ,new CursorDef("T00018", "INSERT INTO TABLERO.[TrGestionTableros]([TrGestionTableros_ID], [TrGestionTableros_Nombre], [TrGestionTableros_Comentario], [TrGestionTableros_Descripcion], [TrGestionTableros_FechaInicio], [TrGestionTableros_FechaFin], [TrGestionTableros_FechaCreacion], [TrGestionTableros_FechaModificacion]) VALUES(@TrGestionTableros_ID, @TrGestionTableros_Nombre, @TrGestionTableros_Comentario, @TrGestionTableros_Descripcion, @TrGestionTableros_FechaInicio, @TrGestionTableros_FechaFin, @TrGestionTableros_FechaCreacion, @TrGestionTableros_FechaModificacion)", GxErrorMask.GX_NOMASK,prmT00018)
-             ,new CursorDef("T00019", "UPDATE TABLERO.[TrGestionTableros] SET [TrGestionTableros_Nombre]=@TrGestionTableros_Nombre, [TrGestionTableros_Comentario]=@TrGestionTableros_Comentario, [TrGestionTableros_Descripcion]=@TrGestionTableros_Descripcion, [TrGestionTableros_FechaInicio]=@TrGestionTableros_FechaInicio, [TrGestionTableros_FechaFin]=@TrGestionTableros_FechaFin, [TrGestionTableros_FechaCreacion]=@TrGestionTableros_FechaCreacion, [TrGestionTableros_FechaModificacion]=@TrGestionTableros_FechaModificacion  WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID", GxErrorMask.GX_NOMASK,prmT00019)
+             ,new CursorDef("T00018", "INSERT INTO TABLERO.[TrGestionTableros]([TrGestionTableros_ID], [TrGestionTableros_Nombre], [TrGestionTableros_Comentario], [TrGestionTableros_Descripcion], [TrGestionTableros_TipoTablero], [TrGestionTableros_FechaInicio], [TrGestionTableros_FechaFin], [TrGestionTableros_FechaCreacion], [TrGestionTableros_FechaModificacion], [TrGestionTableros_Estado]) VALUES(@TrGestionTableros_ID, @TrGestionTableros_Nombre, @TrGestionTableros_Comentario, @TrGestionTableros_Descripcion, @TrGestionTableros_TipoTablero, @TrGestionTableros_FechaInicio, @TrGestionTableros_FechaFin, @TrGestionTableros_FechaCreacion, @TrGestionTableros_FechaModificacion, @TrGestionTableros_Estado)", GxErrorMask.GX_NOMASK,prmT00018)
+             ,new CursorDef("T00019", "UPDATE TABLERO.[TrGestionTableros] SET [TrGestionTableros_Nombre]=@TrGestionTableros_Nombre, [TrGestionTableros_Comentario]=@TrGestionTableros_Comentario, [TrGestionTableros_Descripcion]=@TrGestionTableros_Descripcion, [TrGestionTableros_TipoTablero]=@TrGestionTableros_TipoTablero, [TrGestionTableros_FechaInicio]=@TrGestionTableros_FechaInicio, [TrGestionTableros_FechaFin]=@TrGestionTableros_FechaFin, [TrGestionTableros_FechaCreacion]=@TrGestionTableros_FechaCreacion, [TrGestionTableros_FechaModificacion]=@TrGestionTableros_FechaModificacion, [TrGestionTableros_Estado]=@TrGestionTableros_Estado  WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID", GxErrorMask.GX_NOMASK,prmT00019)
              ,new CursorDef("T000110", "DELETE FROM TABLERO.[TrGestionTableros]  WHERE [TrGestionTableros_ID] = @TrGestionTableros_ID", GxErrorMask.GX_NOMASK,prmT000110)
-             ,new CursorDef("T000111", "SELECT [TrGestionTableros_ID] FROM TABLERO.[TrGestionTableros] ORDER BY [TrGestionTableros_ID]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("T000111", "SELECT TOP 1 [TrGestionTareas_ID] FROM TABLERO.[TrGestionTareas] WHERE [TrGestionTareas_IDTablero] = @TrGestionTableros_ID ",true, GxErrorMask.GX_NOMASK, false, this,prmT000111,1, GxCacheFrequency.OFF ,true,true )
+             ,new CursorDef("T000112", "SELECT [TrGestionTableros_ID] FROM TABLERO.[TrGestionTableros] ORDER BY [TrGestionTableros_ID]  OPTION (FAST 100)",true, GxErrorMask.GX_NOMASK, false, this,prmT000112,100, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -2547,7 +2747,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
                 ((String[]) buf[5])[0] = rslt.getLongVarchar(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
+                ((short[]) buf[7])[0] = rslt.getShort(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
                 ((DateTime[]) buf[9])[0] = rslt.getGXDate(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
@@ -2555,6 +2755,10 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
                 ((DateTime[]) buf[13])[0] = rslt.getGXDate(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
+                ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
+                ((bool[]) buf[16])[0] = rslt.wasNull(9);
+                ((bool[]) buf[17])[0] = rslt.getBool(10) ;
+                ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 1 :
                 ((Guid[]) buf[0])[0] = rslt.getGuid(1) ;
@@ -2564,7 +2768,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
                 ((String[]) buf[5])[0] = rslt.getLongVarchar(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
+                ((short[]) buf[7])[0] = rslt.getShort(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
                 ((DateTime[]) buf[9])[0] = rslt.getGXDate(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
@@ -2572,6 +2776,10 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
                 ((DateTime[]) buf[13])[0] = rslt.getGXDate(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
+                ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
+                ((bool[]) buf[16])[0] = rslt.wasNull(9);
+                ((bool[]) buf[17])[0] = rslt.getBool(10) ;
+                ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 2 :
                 ((Guid[]) buf[0])[0] = rslt.getGuid(1) ;
@@ -2581,7 +2789,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[4])[0] = rslt.wasNull(3);
                 ((String[]) buf[5])[0] = rslt.getLongVarchar(4) ;
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((DateTime[]) buf[7])[0] = rslt.getGXDate(5) ;
+                ((short[]) buf[7])[0] = rslt.getShort(5) ;
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
                 ((DateTime[]) buf[9])[0] = rslt.getGXDate(6) ;
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
@@ -2589,6 +2797,10 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
                 ((DateTime[]) buf[13])[0] = rslt.getGXDate(8) ;
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
+                ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
+                ((bool[]) buf[16])[0] = rslt.wasNull(9);
+                ((bool[]) buf[17])[0] = rslt.getBool(10) ;
+                ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 3 :
                 ((Guid[]) buf[0])[0] = rslt.getGuid(1) ;
@@ -2600,6 +2812,9 @@ namespace GeneXus.Programs {
                 ((Guid[]) buf[0])[0] = rslt.getGuid(1) ;
                 return;
              case 9 :
+                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                return;
+             case 10 :
                 ((Guid[]) buf[0])[0] = rslt.getGuid(1) ;
                 return;
        }
@@ -2657,11 +2872,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[7] )
                 {
-                   stmt.setNull( 5 , SqlDbType.DateTime );
+                   stmt.setNull( 5 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(5, (DateTime)parms[8]);
+                   stmt.SetParameter(5, (short)parms[8]);
                 }
                 if ( (bool)parms[9] )
                 {
@@ -2686,6 +2901,22 @@ namespace GeneXus.Programs {
                 else
                 {
                    stmt.SetParameter(8, (DateTime)parms[14]);
+                }
+                if ( (bool)parms[15] )
+                {
+                   stmt.setNull( 9 , SqlDbType.DateTime );
+                }
+                else
+                {
+                   stmt.SetParameter(9, (DateTime)parms[16]);
+                }
+                if ( (bool)parms[17] )
+                {
+                   stmt.setNull( 10 , SqlDbType.Bit );
+                }
+                else
+                {
+                   stmt.SetParameter(10, (bool)parms[18]);
                 }
                 return;
              case 7 :
@@ -2715,11 +2946,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[6] )
                 {
-                   stmt.setNull( 4 , SqlDbType.DateTime );
+                   stmt.setNull( 4 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(4, (DateTime)parms[7]);
+                   stmt.SetParameter(4, (short)parms[7]);
                 }
                 if ( (bool)parms[8] )
                 {
@@ -2745,9 +2976,28 @@ namespace GeneXus.Programs {
                 {
                    stmt.SetParameter(7, (DateTime)parms[13]);
                 }
-                stmt.SetParameter(8, (Guid)parms[14]);
+                if ( (bool)parms[14] )
+                {
+                   stmt.setNull( 8 , SqlDbType.DateTime );
+                }
+                else
+                {
+                   stmt.SetParameter(8, (DateTime)parms[15]);
+                }
+                if ( (bool)parms[16] )
+                {
+                   stmt.setNull( 9 , SqlDbType.Bit );
+                }
+                else
+                {
+                   stmt.SetParameter(9, (bool)parms[17]);
+                }
+                stmt.SetParameter(10, (Guid)parms[18]);
                 return;
              case 8 :
+                stmt.SetParameter(1, (Guid)parms[0]);
+                return;
+             case 9 :
                 stmt.SetParameter(1, (Guid)parms[0]);
                 return;
        }

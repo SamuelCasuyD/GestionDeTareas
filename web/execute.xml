@@ -7,4 +7,10 @@
     <ObjDesc>Tr Gestion Tableros</ObjDesc>
     <ObjLink>trgestiontableros.aspx</ObjLink>
   </Object>
+  <Object>
+    <ObjCls>0</ObjCls>
+    <ObjName>TrGestionTareas</ObjName>
+    <ObjDesc>Tr Gestion Tareas</ObjDesc>
+    <ObjLink>trgestiontareas.aspx</ObjLink>
+  </Object>
 </Objects>
