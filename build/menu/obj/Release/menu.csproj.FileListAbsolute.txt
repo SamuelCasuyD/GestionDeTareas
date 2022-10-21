@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\menu\obj\Release\menu.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\menu.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\menu\obj\Release\menu.dll

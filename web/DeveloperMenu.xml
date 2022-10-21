@@ -15,4 +15,88 @@
       <ObjDesc>Tr Gestion Tareas</ObjDesc>
       <ObjLink>trgestiontareas.aspx</ObjLink>
    </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>K2BChangePassword</ObjName>
+      <ObjDesc>K2 BChange Password</ObjDesc>
+      <ObjLink>k2bchangepassword.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>SelectedItem</ObjName>
+      <ObjDesc>Selected Item</ObjDesc>
+      <ObjLink>selecteditem.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>SelectedItemTag</ObjName>
+      <ObjDesc>Selected Item Tag</ObjDesc>
+      <ObjLink>selecteditemtag.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WebPanelDesignerLayoutOrion</ObjName>
+      <ObjDesc>Web Panel Designer Layout</ObjDesc>
+      <ObjLink>webpaneldesignerlayoutorion.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>K2BHome</ObjName>
+      <ObjDesc>Application home page</ObjDesc>
+      <ObjLink>k2bhome.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>K2BToolsIndexAdminRWD</ObjName>
+      <ObjDesc>K2 BTools Index Admin RWD</ObjDesc>
+      <ObjLink>k2btoolsindexadminrwd.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WebPanelDesignerLayoutOrionWW</ObjName>
+      <ObjDesc>Layout with a User Interface similar to a WorkWith.</ObjDesc>
+      <ObjLink>webpaneldesignerlayoutorionww.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WPDLayoutOrion_SelectionRight</ObjName>
+      <ObjDesc>Grid with selection on the right</ObjDesc>
+      <ObjLink>wpdlayoutorion_selectionright.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WPDLayoutOrion_SelectionBottom</ObjName>
+      <ObjDesc>Grid with selection below</ObjDesc>
+      <ObjLink>wpdlayoutorion_selectionbottom.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WPDLayoutOrion_SelectionTab</ObjName>
+      <ObjDesc>Grid with selected items in tab</ObjDesc>
+      <ObjLink>wpdlayoutorion_selectiontab.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WebPanelDesignerLayoutOrionAlwaysVisibleFilters</ObjName>
+      <ObjDesc>Web Panel Designer Layout Orion Always Visible Filters</ObjDesc>
+      <ObjLink>webpaneldesignerlayoutorionalwaysvisiblefilters.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>WizardBasicLayoutOrion</ObjName>
+      <ObjDesc>Wizard Basic Layout Orion</ObjDesc>
+      <ObjLink>wizardbasiclayoutorion.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>K2BT_ViewAllNotifications</ObjName>
+      <ObjDesc>K2 BT_View All Notifications</ObjDesc>
+      <ObjLink>k2bt_viewallnotifications.aspx</ObjLink>
+   </Object>
+   <Object>
+      <ObjCls>13</ObjCls>
+      <ObjName>Inicio</ObjName>
+      <ObjDesc>Inicio</ObjDesc>
+      <ObjLink>inicio.aspx</ObjLink>
+   </Object>
 </Objects>

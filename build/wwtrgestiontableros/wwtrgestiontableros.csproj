@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+
+	<PropertyGroup>
+		<AssemblyName>wwtrgestiontableros</AssemblyName>
+		<ProjectGuid>{2d135658-6e98-4ad5-87d6-6c96e3de6f71}</ProjectGuid>
+		<OutputType>Library</OutputType>
+		<PostgresqlSupport>false</PostgresqlSupport>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include=".\..\GeneXus.Programs.Common\GeneXus.Programs.Common.csproj" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="GeneXus.dll" > 
+			<HintPath>$(WebBinDirectory)\GeneXus.dll</HintPath>
+		</Reference>
+		<Reference Include="GeneXus.dll" > 
+			<HintPath>$(WebBinDirectory)\GeneXus.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+	<ItemGroup>
+		<Compile Include = "$(WebDirectory)\k2bretrieverowsperpage.cs" />
+		<Compile Include = "$(WebDirectory)\wwtrgestiontableros.cs" />
+		<Compile Include = "$(WebDirectory)\k2bsavegridcolumns.cs" />
+		<Compile Include = "$(WebDirectory)\k2bloadrowsperpage.cs" />
+		<Compile Include = "$(WebDirectory)\k2bremoveexceldocument.cs" />
+		<Compile Include = "$(WebDirectory)\k2bpersistrowsperpage.cs" />
+		<Compile Include = "$(WebDirectory)\k2bretrievegridcolumns.cs" />
+		<Compile Include = "$(WebDirectory)\reportwwtrgestiontableros.cs" />
+		<Compile Include = "$(WebDirectory)\k2bisauthorizedactivity.cs" />
+		<Compile Include = "$(WebDirectory)\k2bloadgridstate.cs" />
+		<Compile Include = "$(WebDirectory)\k2bisauthorizedactivitylist.cs" />
+		<Compile Include = "$(WebDirectory)\k2bsessionset.cs" />
+		<Compile Include = "$(WebDirectory)\k2bsaverowsperpage.cs" />
+		<Compile Include = "$(WebDirectory)\k2btoolsmessagequeuegetallmessages.cs" />
+		<Compile Include = "$(WebDirectory)\k2bpersistgridcolumns.cs" />
+		<Compile Include = "$(WebDirectory)\k2bsettrncontextbyname.cs" />
+		<Compile Include = "$(WebDirectory)\k2bloadgridcolumns.cs" />
+		<Compile Include = "$(WebDirectory)\k2bsessionget.cs" />
+		<Compile Include = "$(WebDirectory)\exportwwtrgestiontableros.cs" />
+		<Compile Include = "$(WebDirectory)\k2bisauthorizedactivityname.cs" />
+		<Compile Include = "$(WebDirectory)\k2bsavegridstate.cs" />
+		<Compile Include = "$(WebDirectory)\k2bgetcontext.cs" />
+
+	</ItemGroup>
+	
+	<Import Project="..\DotNetBaseProject.targets"/>
+</Project>

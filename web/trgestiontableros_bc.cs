@@ -30,7 +30,7 @@ namespace GeneXus.Programs {
          DataStoreUtil.LoadDataStores( context);
          dsDefault = context.GetDataStore("Default");
          IsMain = true;
-         context.SetDefaultTheme("Carmine");
+         context.SetDefaultTheme("K2BOrion");
       }
 
       public trgestiontableros_bc( IGxContext context )
@@ -59,6 +59,8 @@ namespace GeneXus.Programs {
       {
          if ( trnEnded == 1 )
          {
+            /* Execute user event: After Trn */
+            E11012 ();
             trnEnded = 0;
             standaloneNotModal( ) ;
             standaloneModal( ) ;
@@ -109,9 +111,19 @@ namespace GeneXus.Programs {
          }
       }
 
+      protected void E12012( )
+      {
+         /* Start Routine */
+      }
+
+      protected void E11012( )
+      {
+         /* After Trn Routine */
+      }
+
       protected void ZM011( short GX_JID )
       {
-         if ( ( GX_JID == 6 ) || ( GX_JID == 0 ) )
+         if ( ( GX_JID == 9 ) || ( GX_JID == 0 ) )
          {
             Z2TrGestionTableros_Nombre = A2TrGestionTableros_Nombre;
             Z9TrGestionTableros_TipoTablero = A9TrGestionTableros_TipoTablero;
@@ -121,7 +133,7 @@ namespace GeneXus.Programs {
             Z8TrGestionTableros_FechaModificacion = A8TrGestionTableros_FechaModificacion;
             Z10TrGestionTableros_Estado = A10TrGestionTableros_Estado;
          }
-         if ( GX_JID == -6 )
+         if ( GX_JID == -9 )
          {
             Z1TrGestionTableros_ID = (Guid)(A1TrGestionTableros_ID);
             Z2TrGestionTableros_Nombre = A2TrGestionTableros_Nombre;
@@ -138,10 +150,18 @@ namespace GeneXus.Programs {
 
       protected void standaloneNotModal( )
       {
+         AV7GUID = (Guid)(Guid.NewGuid( ));
       }
 
       protected void standaloneModal( )
       {
+         if ( IsIns( )  )
+         {
+            A1TrGestionTableros_ID = (Guid)(AV7GUID);
+         }
+         if ( ( StringUtil.StrCmp(Gx_mode, "INS") == 0 ) && ( Gx_BScreen == 0 ) )
+         {
+         }
       }
 
       protected void Load011( )
@@ -169,7 +189,7 @@ namespace GeneXus.Programs {
             n8TrGestionTableros_FechaModificacion = BC00014_n8TrGestionTableros_FechaModificacion[0];
             A10TrGestionTableros_Estado = BC00014_A10TrGestionTableros_Estado[0];
             n10TrGestionTableros_Estado = BC00014_n10TrGestionTableros_Estado[0];
-            ZM011( -6) ;
+            ZM011( -9) ;
          }
          pr_default.close(2);
          OnLoadActions011( ) ;
@@ -185,22 +205,27 @@ namespace GeneXus.Programs {
          standaloneModal( ) ;
          if ( ! ( (DateTime.MinValue==A3TrGestionTableros_FechaInicio) || ( A3TrGestionTableros_FechaInicio >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tableros_Fecha Inicio is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Field Fecha Inicio is out of range", "OutOfRange", 1, "");
             AnyError = 1;
          }
          if ( ! ( (DateTime.MinValue==A4TrGestionTableros_FechaFin) || ( A4TrGestionTableros_FechaFin >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tableros_Fecha Fin is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Field Fecha Fin is out of range", "OutOfRange", 1, "");
             AnyError = 1;
          }
          if ( ! ( (DateTime.MinValue==A7TrGestionTableros_FechaCreacion) || ( A7TrGestionTableros_FechaCreacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tableros_Fecha Creacion is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Field Fecha Creacion del tablero is out of range", "OutOfRange", 1, "");
             AnyError = 1;
          }
          if ( ! ( (DateTime.MinValue==A8TrGestionTableros_FechaModificacion) || ( A8TrGestionTableros_FechaModificacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tableros_Fecha Modificacion is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Field Fecha Modificacion del tablero is out of range", "OutOfRange", 1, "");
+            AnyError = 1;
+         }
+         if ( ! ( ( A10TrGestionTableros_Estado == 1 ) || ( A10TrGestionTableros_Estado == 2 ) || ( A10TrGestionTableros_Estado == 3 ) || ( A10TrGestionTableros_Estado == 4 ) || ( A10TrGestionTableros_Estado == 5 ) || (0==A10TrGestionTableros_Estado) ) )
+         {
+            GX_msglist.addItem("Field Estado del tablero is out of range", "OutOfRange", 1, "");
             AnyError = 1;
          }
       }
@@ -234,7 +259,7 @@ namespace GeneXus.Programs {
          pr_default.execute(1, new Object[] {A1TrGestionTableros_ID});
          if ( (pr_default.getStatus(1) != 101) )
          {
-            ZM011( 6) ;
+            ZM011( 9) ;
             RcdFound1 = 1;
             A1TrGestionTableros_ID = (Guid)((Guid)(BC00013_A1TrGestionTableros_ID[0]));
             A2TrGestionTableros_Nombre = BC00013_A2TrGestionTableros_Nombre[0];
@@ -674,7 +699,7 @@ namespace GeneXus.Programs {
          n7TrGestionTableros_FechaCreacion = false;
          A8TrGestionTableros_FechaModificacion = DateTime.MinValue;
          n8TrGestionTableros_FechaModificacion = false;
-         A10TrGestionTableros_Estado = false;
+         A10TrGestionTableros_Estado = 0;
          n10TrGestionTableros_Estado = false;
          Z2TrGestionTableros_Nombre = "";
          Z9TrGestionTableros_TipoTablero = 0;
@@ -682,7 +707,7 @@ namespace GeneXus.Programs {
          Z4TrGestionTableros_FechaFin = DateTime.MinValue;
          Z7TrGestionTableros_FechaCreacion = DateTime.MinValue;
          Z8TrGestionTableros_FechaModificacion = DateTime.MinValue;
-         Z10TrGestionTableros_Estado = false;
+         Z10TrGestionTableros_Estado = 0;
       }
 
       protected void InitAll011( )
@@ -817,7 +842,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z1TrGestionTableros_ID = (Guid)(A1TrGestionTableros_ID);
          }
-         ZM011( -6) ;
+         ZM011( -9) ;
          OnLoadActions011( ) ;
          AddRow011( ) ;
          ScanKeyEnd011( ) ;
@@ -846,7 +871,7 @@ namespace GeneXus.Programs {
             Gx_mode = "UPD";
             Z1TrGestionTableros_ID = (Guid)(A1TrGestionTableros_ID);
          }
-         ZM011( -6) ;
+         ZM011( -9) ;
          OnLoadActions011( ) ;
          AddRow011( ) ;
          ScanKeyEnd011( ) ;
@@ -1221,6 +1246,7 @@ namespace GeneXus.Programs {
          A6TrGestionTableros_Comentario = "";
          Z5TrGestionTableros_Descripcion = "";
          A5TrGestionTableros_Descripcion = "";
+         AV7GUID = (Guid)(Guid.Empty);
          BC00014_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
          BC00014_A2TrGestionTableros_Nombre = new String[] {""} ;
          BC00014_n2TrGestionTableros_Nombre = new bool[] {false} ;
@@ -1238,7 +1264,7 @@ namespace GeneXus.Programs {
          BC00014_n7TrGestionTableros_FechaCreacion = new bool[] {false} ;
          BC00014_A8TrGestionTableros_FechaModificacion = new DateTime[] {DateTime.MinValue} ;
          BC00014_n8TrGestionTableros_FechaModificacion = new bool[] {false} ;
-         BC00014_A10TrGestionTableros_Estado = new bool[] {false} ;
+         BC00014_A10TrGestionTableros_Estado = new short[1] ;
          BC00014_n10TrGestionTableros_Estado = new bool[] {false} ;
          BC00015_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
          BC00013_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
@@ -1258,7 +1284,7 @@ namespace GeneXus.Programs {
          BC00013_n7TrGestionTableros_FechaCreacion = new bool[] {false} ;
          BC00013_A8TrGestionTableros_FechaModificacion = new DateTime[] {DateTime.MinValue} ;
          BC00013_n8TrGestionTableros_FechaModificacion = new bool[] {false} ;
-         BC00013_A10TrGestionTableros_Estado = new bool[] {false} ;
+         BC00013_A10TrGestionTableros_Estado = new short[1] ;
          BC00013_n10TrGestionTableros_Estado = new bool[] {false} ;
          sMode1 = "";
          BC00012_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
@@ -1278,7 +1304,7 @@ namespace GeneXus.Programs {
          BC00012_n7TrGestionTableros_FechaCreacion = new bool[] {false} ;
          BC00012_A8TrGestionTableros_FechaModificacion = new DateTime[] {DateTime.MinValue} ;
          BC00012_n8TrGestionTableros_FechaModificacion = new bool[] {false} ;
-         BC00012_A10TrGestionTableros_Estado = new bool[] {false} ;
+         BC00012_A10TrGestionTableros_Estado = new short[1] ;
          BC00012_n10TrGestionTableros_Estado = new bool[] {false} ;
          BC00019_A12TrGestionTareas_ID = new long[1] ;
          BC000110_A1TrGestionTableros_ID = new Guid[] {Guid.Empty} ;
@@ -1298,7 +1324,7 @@ namespace GeneXus.Programs {
          BC000110_n7TrGestionTableros_FechaCreacion = new bool[] {false} ;
          BC000110_A8TrGestionTableros_FechaModificacion = new DateTime[] {DateTime.MinValue} ;
          BC000110_n8TrGestionTableros_FechaModificacion = new bool[] {false} ;
-         BC000110_A10TrGestionTableros_Estado = new bool[] {false} ;
+         BC000110_A10TrGestionTableros_Estado = new short[1] ;
          BC000110_n10TrGestionTableros_Estado = new bool[] {false} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
@@ -1336,6 +1362,8 @@ namespace GeneXus.Programs {
          );
          INITTRN();
          /* Execute Start event if defined. */
+         /* Execute user event: Start */
+         E12012 ();
          standaloneNotModal( ) ;
       }
 
@@ -1346,6 +1374,9 @@ namespace GeneXus.Programs {
       private short GX_JID ;
       private short Z9TrGestionTableros_TipoTablero ;
       private short A9TrGestionTableros_TipoTablero ;
+      private short Z10TrGestionTableros_Estado ;
+      private short A10TrGestionTableros_Estado ;
+      private short Gx_BScreen ;
       private short RcdFound1 ;
       private short nIsDirty_1 ;
       private int trnEnded ;
@@ -1364,8 +1395,6 @@ namespace GeneXus.Programs {
       private DateTime A7TrGestionTableros_FechaCreacion ;
       private DateTime Z8TrGestionTableros_FechaModificacion ;
       private DateTime A8TrGestionTableros_FechaModificacion ;
-      private bool Z10TrGestionTableros_Estado ;
-      private bool A10TrGestionTableros_Estado ;
       private bool n2TrGestionTableros_Nombre ;
       private bool n6TrGestionTableros_Comentario ;
       private bool n5TrGestionTableros_Descripcion ;
@@ -1383,6 +1412,7 @@ namespace GeneXus.Programs {
       private String A5TrGestionTableros_Descripcion ;
       private Guid Z1TrGestionTableros_ID ;
       private Guid A1TrGestionTableros_ID ;
+      private Guid AV7GUID ;
       private SdtTrGestionTableros bcTrGestionTableros ;
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
@@ -1403,7 +1433,7 @@ namespace GeneXus.Programs {
       private bool[] BC00014_n7TrGestionTableros_FechaCreacion ;
       private DateTime[] BC00014_A8TrGestionTableros_FechaModificacion ;
       private bool[] BC00014_n8TrGestionTableros_FechaModificacion ;
-      private bool[] BC00014_A10TrGestionTableros_Estado ;
+      private short[] BC00014_A10TrGestionTableros_Estado ;
       private bool[] BC00014_n10TrGestionTableros_Estado ;
       private Guid[] BC00015_A1TrGestionTableros_ID ;
       private Guid[] BC00013_A1TrGestionTableros_ID ;
@@ -1423,7 +1453,7 @@ namespace GeneXus.Programs {
       private bool[] BC00013_n7TrGestionTableros_FechaCreacion ;
       private DateTime[] BC00013_A8TrGestionTableros_FechaModificacion ;
       private bool[] BC00013_n8TrGestionTableros_FechaModificacion ;
-      private bool[] BC00013_A10TrGestionTableros_Estado ;
+      private short[] BC00013_A10TrGestionTableros_Estado ;
       private bool[] BC00013_n10TrGestionTableros_Estado ;
       private Guid[] BC00012_A1TrGestionTableros_ID ;
       private String[] BC00012_A2TrGestionTableros_Nombre ;
@@ -1442,7 +1472,7 @@ namespace GeneXus.Programs {
       private bool[] BC00012_n7TrGestionTableros_FechaCreacion ;
       private DateTime[] BC00012_A8TrGestionTableros_FechaModificacion ;
       private bool[] BC00012_n8TrGestionTableros_FechaModificacion ;
-      private bool[] BC00012_A10TrGestionTableros_Estado ;
+      private short[] BC00012_A10TrGestionTableros_Estado ;
       private bool[] BC00012_n10TrGestionTableros_Estado ;
       private long[] BC00019_A12TrGestionTareas_ID ;
       private Guid[] BC000110_A1TrGestionTableros_ID ;
@@ -1462,7 +1492,7 @@ namespace GeneXus.Programs {
       private bool[] BC000110_n7TrGestionTableros_FechaCreacion ;
       private DateTime[] BC000110_A8TrGestionTableros_FechaModificacion ;
       private bool[] BC000110_n8TrGestionTableros_FechaModificacion ;
-      private bool[] BC000110_A10TrGestionTableros_Estado ;
+      private short[] BC000110_A10TrGestionTableros_Estado ;
       private bool[] BC000110_n10TrGestionTableros_Estado ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
@@ -1518,7 +1548,7 @@ namespace GeneXus.Programs {
           new Object[] {"@TrGestionTableros_FechaFin",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaCreacion",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaModificacion",SqlDbType.DateTime,8,0} ,
-          new Object[] {"@TrGestionTableros_Estado",SqlDbType.Bit,4,0}
+          new Object[] {"@TrGestionTableros_Estado",SqlDbType.SmallInt,4,0}
           } ;
           Object[] prmBC00017 ;
           prmBC00017 = new Object[] {
@@ -1530,7 +1560,7 @@ namespace GeneXus.Programs {
           new Object[] {"@TrGestionTableros_FechaFin",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaCreacion",SqlDbType.DateTime,8,0} ,
           new Object[] {"@TrGestionTableros_FechaModificacion",SqlDbType.DateTime,8,0} ,
-          new Object[] {"@TrGestionTableros_Estado",SqlDbType.Bit,4,0} ,
+          new Object[] {"@TrGestionTableros_Estado",SqlDbType.SmallInt,4,0} ,
           new Object[] {"@TrGestionTableros_ID",SqlDbType.UniqueIdentifier,4,0}
           } ;
           Object[] prmBC00018 ;
@@ -1583,7 +1613,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
-                ((bool[]) buf[17])[0] = rslt.getBool(10) ;
+                ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 1 :
@@ -1604,7 +1634,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
-                ((bool[]) buf[17])[0] = rslt.getBool(10) ;
+                ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 2 :
@@ -1625,7 +1655,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
-                ((bool[]) buf[17])[0] = rslt.getBool(10) ;
+                ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
              case 3 :
@@ -1652,7 +1682,7 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
                 ((DateTime[]) buf[15])[0] = rslt.getGXDate(9) ;
                 ((bool[]) buf[16])[0] = rslt.wasNull(9);
-                ((bool[]) buf[17])[0] = rslt.getBool(10) ;
+                ((short[]) buf[17])[0] = rslt.getShort(10) ;
                 ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
        }
@@ -1744,11 +1774,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[17] )
                 {
-                   stmt.setNull( 10 , SqlDbType.Bit );
+                   stmt.setNull( 10 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(10, (bool)parms[18]);
+                   stmt.SetParameter(10, (short)parms[18]);
                 }
                 return;
              case 5 :
@@ -1818,11 +1848,11 @@ namespace GeneXus.Programs {
                 }
                 if ( (bool)parms[16] )
                 {
-                   stmt.setNull( 9 , SqlDbType.Bit );
+                   stmt.setNull( 9 , SqlDbType.SmallInt );
                 }
                 else
                 {
-                   stmt.SetParameter(9, (bool)parms[17]);
+                   stmt.SetParameter(9, (short)parms[17]);
                 }
                 stmt.SetParameter(10, (Guid)parms[18]);
                 return;

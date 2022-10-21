@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\reporttrgestiontablerostrgestiontareaswc.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\reporttrgestiontablerostrgestiontareaswc\obj\Release\reporttrgestiontablerostrgestiontareaswc.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\reporttrgestiontablerostrgestiontareaswc\obj\Release\reporttrgestiontablerostrgestiontareaswc.dll

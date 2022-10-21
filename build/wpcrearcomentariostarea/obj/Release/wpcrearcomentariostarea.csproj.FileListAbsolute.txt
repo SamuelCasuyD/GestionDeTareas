@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\wpcrearcomentariostarea.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpcrearcomentariostarea\obj\Release\wpcrearcomentariostarea.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpcrearcomentariostarea\obj\Release\wpcrearcomentariostarea.dll

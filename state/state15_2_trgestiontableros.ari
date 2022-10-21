@@ -24,9 +24,14 @@ ij_object_dependency(trgestiontableros,[],[],[],1).
  
 obj_parms_i([],[]).
  
+ij_usercontrol_directory_i('K2BControlBeautify').
  
 has_silent_trn_i(trgestiontableros_bc).
  
  
  
+module_info_i('GeneXus\Common','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus\Common','AssemblyName','GeneXus.dll').
+module_info_i('GeneXus','CSHARP_NAME_SPACE','GeneXus.Core').
+module_info_i('GeneXus','AssemblyName','GeneXus.dll').
  

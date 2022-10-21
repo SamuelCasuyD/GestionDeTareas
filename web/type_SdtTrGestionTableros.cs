@@ -60,6 +60,7 @@ namespace GeneXus.Programs {
          metadata.Set("Name", "TrGestionTableros");
          metadata.Set("BT", "TrGestionTableros");
          metadata.Set("PK", "[ \"TrGestionTableros_ID\" ]");
+         metadata.Set("PKAssigned", "[ \"TrGestionTableros_ID\" ]");
          metadata.Set("AllowInsert", "True");
          metadata.Set("AllowUpdate", "True");
          metadata.Set("AllowDelete", "True");
@@ -645,7 +646,7 @@ namespace GeneXus.Programs {
 
       [  SoapElement( ElementName = "TrGestionTableros_Estado" )]
       [  XmlElement( ElementName = "TrGestionTableros_Estado"   )]
-      public bool gxTpr_Trgestiontableros_estado
+      public short gxTpr_Trgestiontableros_estado
       {
          get {
             return gxTv_SdtTrGestionTableros_Trgestiontableros_estado ;
@@ -662,7 +663,7 @@ namespace GeneXus.Programs {
       public void gxTv_SdtTrGestionTableros_Trgestiontableros_estado_SetNull( )
       {
          gxTv_SdtTrGestionTableros_Trgestiontableros_estado_N = 1;
-         gxTv_SdtTrGestionTableros_Trgestiontableros_estado = false;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado = 0;
          return  ;
       }
 
@@ -983,7 +984,7 @@ namespace GeneXus.Programs {
 
       [  SoapElement( ElementName = "TrGestionTableros_Estado_Z" )]
       [  XmlElement( ElementName = "TrGestionTableros_Estado_Z"   )]
-      public bool gxTpr_Trgestiontableros_estado_Z
+      public short gxTpr_Trgestiontableros_estado_Z
       {
          get {
             return gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z ;
@@ -998,7 +999,7 @@ namespace GeneXus.Programs {
 
       public void gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z_SetNull( )
       {
-         gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z = false;
+         gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z = 0;
          return  ;
       }
 
@@ -1270,8 +1271,10 @@ namespace GeneXus.Programs {
       }
 
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero ;
+      private short gxTv_SdtTrGestionTableros_Trgestiontableros_estado ;
       private short gxTv_SdtTrGestionTableros_Initialized ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_tipotablero_Z ;
+      private short gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_nombre_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_comentario_N ;
       private short gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion_N ;
@@ -1294,8 +1297,6 @@ namespace GeneXus.Programs {
       private DateTime gxTv_SdtTrGestionTableros_Trgestiontableros_fechafin_Z ;
       private DateTime gxTv_SdtTrGestionTableros_Trgestiontableros_fechacreacion_Z ;
       private DateTime gxTv_SdtTrGestionTableros_Trgestiontableros_fechamodificacion_Z ;
-      private bool gxTv_SdtTrGestionTableros_Trgestiontableros_estado ;
-      private bool gxTv_SdtTrGestionTableros_Trgestiontableros_estado_Z ;
       private String gxTv_SdtTrGestionTableros_Trgestiontableros_comentario ;
       private String gxTv_SdtTrGestionTableros_Trgestiontableros_descripcion ;
       private Guid gxTv_SdtTrGestionTableros_Trgestiontableros_id ;
@@ -1439,14 +1440,14 @@ namespace GeneXus.Programs {
 
       [DataMember( Name = "TrGestionTableros_Estado" , Order = 9 )]
       [GxSeudo()]
-      public bool gxTpr_Trgestiontableros_estado
+      public Nullable<short> gxTpr_Trgestiontableros_estado
       {
          get {
             return sdt.gxTpr_Trgestiontableros_estado ;
          }
 
          set {
-            sdt.gxTpr_Trgestiontableros_estado = value;
+            sdt.gxTpr_Trgestiontableros_estado = (short)(value.HasValue ? value.Value : 0);
          }
 
       }

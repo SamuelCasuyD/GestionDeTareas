@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\tretiquetas.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\tretiquetas\obj\Release\tretiquetas.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\tretiquetas\obj\Release\tretiquetas.dll

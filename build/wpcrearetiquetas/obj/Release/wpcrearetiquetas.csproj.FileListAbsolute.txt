@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\wpcrearetiquetas.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpcrearetiquetas\obj\Release\wpcrearetiquetas.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpcrearetiquetas\obj\Release\wpcrearetiquetas.dll

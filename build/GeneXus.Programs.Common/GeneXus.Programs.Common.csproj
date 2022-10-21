@@ -21,13 +21,29 @@
 
 	</ItemGroup>
 	<ItemGroup>
+		<Compile Include = "$(WebDirectory)\gxdomaink2bsesitem.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bstandardactivitytype.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2btrnmode.cs" />
 		<Compile Include = "$(WebDirectory)\gxdomainaccion.cs" />
-		<Compile Include = "$(WebDirectory)\SoapParm.cs" />
-		<Compile Include = "$(WebDirectory)\GxWebStd.cs" />
 		<Compile Include = "$(WebDirectory)\GxFullTextSearchReindexer.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomainestadosgenerales.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bsymbols.cs" />
+		<Compile Include = "$(WebDirectory)\GxWebStd.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomainestadoeliminado.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2btrnreturnmode.cs" />
 		<Compile Include = "$(WebDirectory)\type_SdtTrGestionTableros.cs" />
-		<Compile Include = "$(WebDirectory)\GxModelInfoProvider.cs" />
+		<Compile Include = "$(WebDirectory)\k2btools\gxdomaink2bt_webnotificationids.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bhttpmethod.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bpage.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bcomponenttype.cs" />
+		<Compile Include = "$(WebDirectory)\SoapParm.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bbtntooltip.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bthemeclasses.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2btoolsmessagetype.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2baftertrnnavigation.cs" />
+		<Compile Include = "$(WebDirectory)\gxdomaink2bfiltertype.cs" />
 		<Compile Include = "$(WebDirectory)\GxObjectCollection.cs" />
+		<Compile Include = "$(WebDirectory)\GxModelInfoProvider.cs" />
 
 	</ItemGroup>
 	

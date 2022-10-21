@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\trtareasetiquetas.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\trtareasetiquetas\obj\Release\trtareasetiquetas.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\trtareasetiquetas\obj\Release\trtareasetiquetas.dll

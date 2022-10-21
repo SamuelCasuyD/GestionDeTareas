@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\wptablerocreartarea.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wptablerocreartarea\obj\Release\wptablerocreartarea.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wptablerocreartarea\obj\Release\wptablerocreartarea.dll

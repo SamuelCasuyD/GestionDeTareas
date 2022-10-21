@@ -1,5 +1,11 @@
-CREATE TABLE TABLERO.[TrGestionTareas] ([TrGestionTareas_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrGestionTareas_IDTablero] uniqueidentifier NOT NULL , [TrGestionTareas_Nombre] nchar(100) NULL , [TrGestionTareas_Descripcion] NVARCHAR(MAX) NULL , [TrGestionTareas_FechaInicio] datetime NULL , [TrGestionTareas_FechaFin] datetime NULL , [TrGestionTareas_FechaCreacion] datetime NULL , [TrGestionTareas_FechaModificacion] datetime NULL , PRIMARY KEY([TrGestionTareas_ID]))
-CREATE NONCLUSTERED INDEX [ITRGESTIONTAREAS1] ON TABLERO.[TrGestionTareas] ([TrGestionTareas_IDTablero] )
+CREATE TABLE TABLERO.[GXA0005] ([TrTareaComentarios_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrTareaComentarios_IDTarea] decimal( 13) NULL , [TrTareaComentarios_Descripcion] NVARCHAR(MAX) NULL , [TrTareaComentarios_Estado] smallint NULL , [TrTareaComentarios_FechaCreacion] datetime NULL , [TrTareaComentarios_FechaModificacion] datetime NULL )
+SET IDENTITY_INSERT TABLERO.[GXA0005] ON
+INSERT INTO TABLERO.[GXA0005] ([TrTareaComentarios_ID], [TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion]) SELECT [TrTareaComentarios_ID], [TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion] FROM TABLERO.[TrTareaComentarios] T1
+SET IDENTITY_INSERT TABLERO.[GXA0005] OFF
+DROP TABLE TABLERO.[TrTareaComentarios]
+sp_rename 'TABLERO.[GXA0005]', 'TrTareaComentarios'
+ALTER TABLE TABLERO.[TrTareaComentarios] ADD PRIMARY KEY([TrTareaComentarios_ID])
+CREATE NONCLUSTERED INDEX [ITRTAREACOMENTARIOS1] ON TABLERO.[TrTareaComentarios] ([TrTareaComentarios_IDTarea] )
 
-ALTER TABLE TABLERO.[TrGestionTareas] ADD CONSTRAINT [ITRGESTIONTAREAS1] FOREIGN KEY ([TrGestionTareas_IDTablero]) REFERENCES TABLERO.[TrGestionTableros] ([TrGestionTableros_ID])
+ALTER TABLE TABLERO.[TrTareaComentarios] ADD CONSTRAINT [ITRTAREACOMENTARIOS1] FOREIGN KEY ([TrTareaComentarios_IDTarea]) REFERENCES TABLERO.[TrGestionTareas] ([TrGestionTareas_ID])
 

@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\webpaneldesignerlayoutorionalwaysvisiblefilters.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\webpaneldesignerlayoutorionalwaysvisiblefilters\obj\Release\webpaneldesignerlayoutorionalwaysvisiblefilters.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\webpaneldesignerlayoutorionalwaysvisiblefilters\obj\Release\webpaneldesignerlayoutorionalwaysvisiblefilters.dll

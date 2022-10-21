@@ -1,0 +1,150 @@
+div.K2BWizardSteps
+{
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:2px;
+}
+
+div.K2BWizardSteps ul
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	display: flex;
+	padding:5px;
+	
+	
+}
+
+div.K2BWizardSteps div
+{
+	width: 120px;
+    text-align: center;
+	
+}
+
+div.K2BWizardSteps li.StepAllowClick:hover
+{
+	
+	cursor:pointer;
+}
+
+div.K2BWizardSteps li.StepAllowClick:hover
+{
+	
+	cursor:pointer;
+}
+div.K2BWizardSteps span.WizardTitle 
+{
+	
+	font-family:Arial;
+	font-size:13px;
+	
+}
+
+div.K2BWizardSteps li.StepSelected span.WizardNumber
+{
+	height:40px;
+	width: 40px;
+	margin-bottom:1px;
+	
+}
+
+div.K2BWizardSteps.WizardCompleted li:last-child.StepCompleted span.WizardNumber
+{
+	background-repeat:no-repeat;
+	background-size:20px;
+	background-position-x:7px;
+	background-position-y:10px;
+	
+	
+}
+
+
+div.K2BWizardSteps span.WizardNumber
+{
+	font-family:Rockwell;
+	font-size:19px;
+	border-radius: 50%;
+	text-align:center;
+	margin: 0 auto;
+	height:34px;
+	width: 34px;
+	border-style:solid;
+	border-width:3px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	margin-bottom:5px;
+	
+	
+	
+}
+
+div.K2BWizardSteps div
+{
+	display:block;
+	position:relative;
+	z-index:3;
+}
+
+
+div.K2BWizardSteps li.StepSelected
+{
+	top:0px;
+	
+	
+}
+div.K2BWizardSteps li
+{
+	position:relative;
+	top:3px;
+}
+
+div.K2BWizardSteps li:after
+{
+	position:absolute;
+	content: "";
+	height: 2px;
+	width:100%;
+	left:123px;
+	transform:translateX(-50%);
+	top:16px;
+	z-index:1;
+		
+}
+
+div.K2BWizardSteps li.StepSelected:after
+{
+	
+	top:19px;
+}
+
+div.K2BWizardSteps li:last-child:after
+{
+	display:none;
+}
+
+
+@media (max-width: 736px) 
+{
+	
+	div.K2BWizardSteps li
+	{
+		display:none;
+	}
+	
+	div.K2BWizardSteps li.StepSelected
+	{
+		display:block;
+	}
+	
+	div.K2BWizardSteps li.StepSelected:after
+	{
+	
+		display:none;
+	}
+	
+}
+

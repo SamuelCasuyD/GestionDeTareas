@@ -493,7 +493,7 @@ namespace GeneXus.Programs {
                context.WriteHtmlText( " src=\"") ;
                if ( String.IsNullOrEmpty(StringUtil.RTrim( sURL)) )
                {
-                  sURL = context.convertURL( context.GetImagePath( "blank.jpg", "", context.GetTheme( )));
+                  sURL = context.convertURL( context.GetImagePath( "9784d812-9421-46ac-b184-6ae232539adc", "", context.GetTheme( )));
                }
             }
             else
@@ -577,7 +577,7 @@ namespace GeneXus.Programs {
                   context.WriteHtmlText( "\"") ;
                }
                context.WriteHtmlText( "><img border=\"0\" src=\"") ;
-               context.WriteHtmlText( context.convertURL( context.GetImagePath( "download.gif", "", context.GetTheme( )))) ;
+               context.WriteHtmlText( context.convertURL( context.GetImagePath( "d2edc97d-28a1-42b1-bc49-da6d6495f3d7", "", context.GetTheme( )))) ;
                context.WriteHtmlText( "\" alt=\"Download\""+GXUtil.HtmlEndTag( HTMLElement.IMG)) ;
                context.WriteHtmlText( "</a>") ;
             }

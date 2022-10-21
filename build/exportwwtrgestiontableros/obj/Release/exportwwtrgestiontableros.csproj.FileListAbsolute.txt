@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\exportwwtrgestiontableros.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\exportwwtrgestiontableros\obj\Release\exportwwtrgestiontableros.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\exportwwtrgestiontableros\obj\Release\exportwwtrgestiontableros.dll

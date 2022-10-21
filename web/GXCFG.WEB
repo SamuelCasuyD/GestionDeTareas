@@ -25,7 +25,7 @@
       <add  key="DateFormat" value="MDY"/>
       <add  key="YearLimit" value="1940"/>
       <add  key="TimeAmPmFormat" value="12"/>
-      <add  key="VER_STAMP" value="20220928.043756"/>
+      <add  key="VER_STAMP" value="20221021.033542"/>
       <add  key="CS_BLOB_PATH" value="PublicTempStorage"/>
       <add  key="TMPMEDIA_DIR" value="PrivateTempStorage"/>
       <add  key="PRINT_LAYOUT_METADATA_DIR" value="LayoutMetadata"/>
@@ -37,7 +37,7 @@
       <add  key="DATE_FMT" value="MDY"/>
       <add  key="CTOD_DATE_FMT" value="L"/>
       <add  key="Culture" value="en-US"/>
-      <add  key="Theme" value="Carmine"/>
+      <add  key="Theme" value="K2BOrion"/>
       <add  key="EnableIntegratedSecurity" value="0"/>
       <add  key="MAX_CURSOR" value="100"/>
       <add  key="STATIC_CONTENT" value=""/>
@@ -52,11 +52,11 @@
       <add  key="EXPOSE_METADATA" value="0"/>
       <add  key="SMART_CACHING" value="0"/>
       <add  key="wcf:serviceHostingEnvironment:useClassicReadEntityBodyMode" value="true"/>
-      <add  key="CACHE_INVALIDATION_TOKEN" value="202292722394198"/>
+      <add  key="CACHE_INVALIDATION_TOKEN" value="2022102021474895"/>
    </appSettings>
    <languages >
       <English  code="eng" time_fmt="12" decimal_point="." thousand_sep="," date_fmt="MDY" culture="en-US"/>
-      <Spanish  code="spa" time_fmt="24" decimal_point="." thousand_sep="," date_fmt="DMY" culture="es-ES"/>
+      <Spanish  code="spa" time_fmt="24" decimal_point="," thousand_sep="." date_fmt="DMY" culture="es-ES"/>
    </languages>
    <log4net  configSource="log.config"/>
    <system.web>

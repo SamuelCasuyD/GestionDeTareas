@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\wpcreartableros.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpcreartableros\obj\Release\wpcreartableros.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpcreartableros\obj\Release\wpcreartableros.dll

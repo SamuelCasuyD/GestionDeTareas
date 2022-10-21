@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\k2btoolscomponentplaceholder.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\k2btoolscomponentplaceholder\obj\Release\k2btoolscomponentplaceholder.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\k2btoolscomponentplaceholder\obj\Release\k2btoolscomponentplaceholder.dll

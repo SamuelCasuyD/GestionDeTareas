@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\wpdlayoutorion_selectionbottom.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpdlayoutorion_selectionbottom\obj\Release\wpdlayoutorion_selectionbottom.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\wpdlayoutorion_selectionbottom\obj\Release\wpdlayoutorion_selectionbottom.dll

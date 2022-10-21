@@ -5,8 +5,31 @@
 </ItemGroup>
 
 <ItemGroup>
+ 	<Compile Include="$(WebDirectory)\type_SdtCrearTablero_SDT.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtGestionEtiquetas_SDT.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtGestionTableros_SDT_GestionTableros_SDTItem.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtGestionTareas_SDT.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BActivity.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BActivityList_K2BActivityListItem.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BAttributeValue_Item.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BContext.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BGridState.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BGridState_FilterValue.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BMultiLevelMenu_K2BMultiLevelMenuItem.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BNumericRangeSet_Item.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BProgramNames_ProgramName.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BSearchResult_Item.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BTabOptions_K2BTabOptionsItem.cs" />
+ 	<Compile Include="$(WebDirectory)\k2btools\integrationprocedures\type_SdtWebNotificationSDT_Notification.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BTrnContext.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BTrnContext_Attribute.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BTrnNavigation.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BWizardSteps_K2BWizardStepsItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtLinkList_LinkItem.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtSearchableTransactions_SearchableTransactionsItem.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtTransactionContext.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtTransactionContext_Attribute.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtTrComentarioTarea_SDT.cs" />
 
 </ItemGroup>
 

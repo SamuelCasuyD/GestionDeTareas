@@ -1,0 +1,3 @@
+C:\Model_KB\TABLEROS_WEB\CSharpModel\web\bin\k2btoolstabstitlecomponent.dll
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\k2btoolstabstitlecomponent\obj\Release\k2btoolstabstitlecomponent.csprojResolveAssemblyReference.cache
+C:\Model_KB\TABLEROS_WEB\CSharpModel\build\k2btoolstabstitlecomponent\obj\Release\k2btoolstabstitlecomponent.dll
