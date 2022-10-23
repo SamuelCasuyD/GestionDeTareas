@@ -215,14 +215,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185793", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?2022102211344327", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -518,83 +518,34 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock3_Internalname, "Tipo de tablero : ", "", "", lblTextblock3_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_tipotablero_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TopAttributeContainer", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
-            /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 58,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_tipotablero_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV16TrGestionTableros_TipoTablero), 4, 0, ".", "")), ((edtavTrgestiontableros_tipotablero_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV16TrGestionTableros_TipoTablero), "ZZZ9")) : context.localUtil.Format( (decimal)(AV16TrGestionTableros_TipoTablero), "ZZZ9")), TempTags+" onchange=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onblur(this,58);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_tipotablero_Jsonclick, 0, "Attribute_Trn", "", "", "", "", 1, edtavTrgestiontableros_tipotablero_Enabled, 0, "number", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock4_Internalname, "Fecha de inicio : ", "", "", lblTextblock4_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_fechainicio_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TopAttributeContainer", "left", "top", "", "", "div");
             /* Div Control */
+            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_fechainiciofieldcontainer_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_SideTextContainer", "left", "top", "", "", "div");
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTrgestiontableros_fechainicio_var_lefttext_Internalname, "Fecha de inicio : ", "", "", lblTrgestiontableros_fechainicio_var_lefttext_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "SideLabel", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
+            /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 66,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 57,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontableros_fechainicio_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechainicio_Internalname, context.localUtil.Format(AV17TrGestionTableros_FechaInicio, "99/99/9999"), context.localUtil.Format( AV17TrGestionTableros_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,66);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechainicio_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechainicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechainicio_Internalname, context.localUtil.Format(AV17TrGestionTableros_FechaInicio, "99/99/9999"), context.localUtil.Format( AV17TrGestionTableros_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,57);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechainicio_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechainicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontableros_fechainicio_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontableros_fechainicio_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpActualizarTablero.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock5_Internalname, "Fecha de fin : ", "", "", lblTextblock5_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_fechafin_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TopAttributeContainer", "left", "top", "", "", "div");
+            GxWebStd.gx_label_ctrl( context, lblTrgestiontableros_fechafin_var_lefttext_Internalname, "Fecha de fin : ", "", "", lblTrgestiontableros_fechafin_var_lefttext_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "SideLabel", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 74,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 60,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontableros_fechafin_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechafin_Internalname, context.localUtil.Format(AV18TrGestionTableros_FechaFin, "99/99/9999"), context.localUtil.Format( AV18TrGestionTableros_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,74);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechafin_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechafin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechafin_Internalname, context.localUtil.Format(AV18TrGestionTableros_FechaFin, "99/99/9999"), context.localUtil.Format( AV18TrGestionTableros_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,60);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechafin_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechafin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontableros_fechafin_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontableros_fechafin_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpActualizarTablero.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock8_Internalname, "Fecha de creación : ", "", "", lblTextblock8_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             /* Div Control */
@@ -604,64 +555,59 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_fechacreacion_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TopAttributeContainer", "left", "top", "", "", "div");
             /* Div Control */
+            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_fechacreacionfieldcontainer_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_SideTextContainer", "left", "top", "", "", "div");
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTrgestiontableros_fechacreacion_var_lefttext_Internalname, "Fecha de creación : ", "", "", lblTrgestiontableros_fechacreacion_var_lefttext_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "SideLabel", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
+            /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 82,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 67,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontableros_fechacreacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechacreacion_Internalname, context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"), context.localUtil.Format( AV21TrGestionTableros_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,82);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechacreacion_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechacreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechacreacion_Internalname, context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"), context.localUtil.Format( AV21TrGestionTableros_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,67);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechacreacion_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechacreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontableros_fechacreacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontableros_fechacreacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpActualizarTablero.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock7_Internalname, "Fecha de modificación : ", "", "", lblTextblock7_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_fechamodificacion_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TopAttributeContainer", "left", "top", "", "", "div");
+            GxWebStd.gx_label_ctrl( context, lblTrgestiontableros_fechamodificacion_var_lefttext_Internalname, "Fecha de modificación : ", "", "", lblTrgestiontableros_fechamodificacion_var_lefttext_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "SideLabel", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 90,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 70,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontableros_fechamodificacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechamodificacion_Internalname, context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"), context.localUtil.Format( AV24TrGestionTableros_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,90);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechamodificacion_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechamodificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechamodificacion_Internalname, context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"), context.localUtil.Format( AV24TrGestionTableros_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,70);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechamodificacion_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechamodificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontableros_fechamodificacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontableros_fechamodificacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpActualizarTablero.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_tipotablero_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TopAttributeContainer", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_tipotablerofieldcontainer_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_SideTextContainer", "left", "top", "", "", "div");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTextblock6_Internalname, "Estado : ", "", "", lblTextblock6_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            GxWebStd.gx_div_end( context, "left", "top", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            /* Div Control */
-            GxWebStd.gx_div_start( context, divTable_container_trgestiontableros_estado_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TopAttributeContainer", "left", "top", "", "", "div");
+            GxWebStd.gx_label_ctrl( context, lblTrgestiontableros_tipotablero_var_lefttext_Internalname, "Tipo de tablero : ", "", "", lblTrgestiontableros_tipotablero_var_lefttext_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "SideLabel", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 98,'',false,'',0)\"";
+            /* Single line edit */
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 77,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_tipotablero_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV16TrGestionTableros_TipoTablero), 4, 0, ".", "")), ((edtavTrgestiontableros_tipotablero_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV16TrGestionTableros_TipoTablero), "ZZZ9")) : context.localUtil.Format( (decimal)(AV16TrGestionTableros_TipoTablero), "ZZZ9")), TempTags+" onchange=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onblur(this,77);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_tipotablero_Jsonclick, 0, "Attribute_Trn", "", "", "", "", 1, edtavTrgestiontableros_tipotablero_Enabled, 0, "number", "1", 4, "chr", 1, "row", 4, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTrgestiontableros_estado_var_lefttext_Internalname, "Estado : ", "", "", lblTrgestiontableros_estado_var_lefttext_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "SideLabel", 0, "", 1, 1, 0, "HLP_WpActualizarTablero.htm");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 80,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, cmbavTrgestiontableros_estado, cmbavTrgestiontableros_estado_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV25TrGestionTableros_Estado), 4, 0)), 1, cmbavTrgestiontableros_estado_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, cmbavTrgestiontableros_estado.Enabled, 0, 0, 0, "em", 0, "", "", "Attribute_Trn", "", "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,98);\"", "", true, "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_combobox_ctrl1( context, cmbavTrgestiontableros_estado, cmbavTrgestiontableros_estado_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV25TrGestionTableros_Estado), 4, 0)), 1, cmbavTrgestiontableros_estado_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, cmbavTrgestiontableros_estado.Enabled, 0, 0, 0, "em", 0, "", "", "Attribute_Trn", "", "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,80);\"", "", true, "HLP_WpActualizarTablero.htm");
             cmbavTrgestiontableros_estado.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV25TrGestionTableros_Estado), 4, 0));
             AssignProp("", false, cmbavTrgestiontableros_estado_Internalname, "Values", (String)(cmbavTrgestiontableros_estado.ToJavascriptSource()), true);
+            GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -686,16 +632,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            wb_table1_104_1V2( true) ;
+            wb_table1_86_1V2( true) ;
          }
          else
          {
-            wb_table1_104_1V2( false) ;
+            wb_table1_86_1V2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_104_1V2e( bool wbgen )
+      protected void wb_table1_86_1V2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -711,16 +657,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            wb_table2_110_1V2( true) ;
+            wb_table2_92_1V2( true) ;
          }
          else
          {
-            wb_table2_110_1V2( false) ;
+            wb_table2_92_1V2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table2_110_1V2e( bool wbgen )
+      protected void wb_table2_92_1V2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1017,6 +963,62 @@ namespace GeneXus.Programs {
             AssignAttri("", false, "AV14TrGestionTableros_Descripcion", AV14TrGestionTableros_Descripcion);
             AV15TrGestionTableros_Comentario = cgiGet( edtavTrgestiontableros_comentario_Internalname);
             AssignAttri("", false, "AV15TrGestionTableros_Comentario", AV15TrGestionTableros_Comentario);
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 2) == 0 )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Inicio"}), 1, "vTRGESTIONTABLEROS_FECHAINICIO");
+               GX_FocusControl = edtavTrgestiontableros_fechainicio_Internalname;
+               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+               wbErr = true;
+               AV17TrGestionTableros_FechaInicio = DateTime.MinValue;
+               AssignAttri("", false, "AV17TrGestionTableros_FechaInicio", context.localUtil.Format(AV17TrGestionTableros_FechaInicio, "99/99/9999"));
+            }
+            else
+            {
+               AV17TrGestionTableros_FechaInicio = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 2);
+               AssignAttri("", false, "AV17TrGestionTableros_FechaInicio", context.localUtil.Format(AV17TrGestionTableros_FechaInicio, "99/99/9999"));
+            }
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 2) == 0 )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Fin"}), 1, "vTRGESTIONTABLEROS_FECHAFIN");
+               GX_FocusControl = edtavTrgestiontableros_fechafin_Internalname;
+               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+               wbErr = true;
+               AV18TrGestionTableros_FechaFin = DateTime.MinValue;
+               AssignAttri("", false, "AV18TrGestionTableros_FechaFin", context.localUtil.Format(AV18TrGestionTableros_FechaFin, "99/99/9999"));
+            }
+            else
+            {
+               AV18TrGestionTableros_FechaFin = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 2);
+               AssignAttri("", false, "AV18TrGestionTableros_FechaFin", context.localUtil.Format(AV18TrGestionTableros_FechaFin, "99/99/9999"));
+            }
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechacreacion_Internalname), 2) == 0 )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Creacion del tablero"}), 1, "vTRGESTIONTABLEROS_FECHACREACION");
+               GX_FocusControl = edtavTrgestiontableros_fechacreacion_Internalname;
+               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+               wbErr = true;
+               AV21TrGestionTableros_FechaCreacion = DateTime.MinValue;
+               AssignAttri("", false, "AV21TrGestionTableros_FechaCreacion", context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"));
+            }
+            else
+            {
+               AV21TrGestionTableros_FechaCreacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechacreacion_Internalname), 2);
+               AssignAttri("", false, "AV21TrGestionTableros_FechaCreacion", context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"));
+            }
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechamodificacion_Internalname), 2) == 0 )
+            {
+               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Modificacion del tablero"}), 1, "vTRGESTIONTABLEROS_FECHAMODIFICACION");
+               GX_FocusControl = edtavTrgestiontableros_fechamodificacion_Internalname;
+               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
+               wbErr = true;
+               AV24TrGestionTableros_FechaModificacion = DateTime.MinValue;
+               AssignAttri("", false, "AV24TrGestionTableros_FechaModificacion", context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"));
+            }
+            else
+            {
+               AV24TrGestionTableros_FechaModificacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechamodificacion_Internalname), 2);
+               AssignAttri("", false, "AV24TrGestionTableros_FechaModificacion", context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"));
+            }
             if ( ( ( context.localUtil.CToN( cgiGet( edtavTrgestiontableros_tipotablero_Internalname), ".", ",") < Convert.ToDecimal( 0 )) ) || ( ( context.localUtil.CToN( cgiGet( edtavTrgestiontableros_tipotablero_Internalname), ".", ",") > Convert.ToDecimal( 9999 )) ) )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_badnum", ""), 1, "vTRGESTIONTABLEROS_TIPOTABLERO");
@@ -1031,62 +1033,6 @@ namespace GeneXus.Programs {
                AV16TrGestionTableros_TipoTablero = (short)(context.localUtil.CToN( cgiGet( edtavTrgestiontableros_tipotablero_Internalname), ".", ","));
                AssignAttri("", false, "AV16TrGestionTableros_TipoTablero", StringUtil.LTrimStr( (decimal)(AV16TrGestionTableros_TipoTablero), 4, 0));
             }
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 1) == 0 )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Inicio"}), 1, "vTRGESTIONTABLEROS_FECHAINICIO");
-               GX_FocusControl = edtavTrgestiontableros_fechainicio_Internalname;
-               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
-               wbErr = true;
-               AV17TrGestionTableros_FechaInicio = DateTime.MinValue;
-               AssignAttri("", false, "AV17TrGestionTableros_FechaInicio", context.localUtil.Format(AV17TrGestionTableros_FechaInicio, "99/99/9999"));
-            }
-            else
-            {
-               AV17TrGestionTableros_FechaInicio = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 1);
-               AssignAttri("", false, "AV17TrGestionTableros_FechaInicio", context.localUtil.Format(AV17TrGestionTableros_FechaInicio, "99/99/9999"));
-            }
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 1) == 0 )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Fin"}), 1, "vTRGESTIONTABLEROS_FECHAFIN");
-               GX_FocusControl = edtavTrgestiontableros_fechafin_Internalname;
-               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
-               wbErr = true;
-               AV18TrGestionTableros_FechaFin = DateTime.MinValue;
-               AssignAttri("", false, "AV18TrGestionTableros_FechaFin", context.localUtil.Format(AV18TrGestionTableros_FechaFin, "99/99/9999"));
-            }
-            else
-            {
-               AV18TrGestionTableros_FechaFin = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 1);
-               AssignAttri("", false, "AV18TrGestionTableros_FechaFin", context.localUtil.Format(AV18TrGestionTableros_FechaFin, "99/99/9999"));
-            }
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechacreacion_Internalname), 1) == 0 )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Creacion del tablero"}), 1, "vTRGESTIONTABLEROS_FECHACREACION");
-               GX_FocusControl = edtavTrgestiontableros_fechacreacion_Internalname;
-               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
-               wbErr = true;
-               AV21TrGestionTableros_FechaCreacion = DateTime.MinValue;
-               AssignAttri("", false, "AV21TrGestionTableros_FechaCreacion", context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"));
-            }
-            else
-            {
-               AV21TrGestionTableros_FechaCreacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechacreacion_Internalname), 1);
-               AssignAttri("", false, "AV21TrGestionTableros_FechaCreacion", context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"));
-            }
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechamodificacion_Internalname), 1) == 0 )
-            {
-               GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Modificacion del tablero"}), 1, "vTRGESTIONTABLEROS_FECHAMODIFICACION");
-               GX_FocusControl = edtavTrgestiontableros_fechamodificacion_Internalname;
-               AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
-               wbErr = true;
-               AV24TrGestionTableros_FechaModificacion = DateTime.MinValue;
-               AssignAttri("", false, "AV24TrGestionTableros_FechaModificacion", context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"));
-            }
-            else
-            {
-               AV24TrGestionTableros_FechaModificacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechamodificacion_Internalname), 1);
-               AssignAttri("", false, "AV24TrGestionTableros_FechaModificacion", context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"));
-            }
             cmbavTrgestiontableros_estado.CurrentValue = cgiGet( cmbavTrgestiontableros_estado_Internalname);
             AV25TrGestionTableros_Estado = (short)(NumberUtil.Val( cgiGet( cmbavTrgestiontableros_estado_Internalname), "."));
             AssignAttri("", false, "AV25TrGestionTableros_Estado", StringUtil.LTrimStr( (decimal)(AV25TrGestionTableros_Estado), 4, 0));
@@ -1097,10 +1043,10 @@ namespace GeneXus.Programs {
             GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
             forbiddenHiddens = new GXProperties();
             forbiddenHiddens.Add("hshsalt", "hsh"+"WpActualizarTablero");
-            AV21TrGestionTableros_FechaCreacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechacreacion_Internalname), 1);
+            AV21TrGestionTableros_FechaCreacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechacreacion_Internalname), 2);
             AssignAttri("", false, "AV21TrGestionTableros_FechaCreacion", context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"));
             forbiddenHiddens.Add("TrGestionTableros_FechaCreacion", context.localUtil.Format(AV21TrGestionTableros_FechaCreacion, "99/99/9999"));
-            AV24TrGestionTableros_FechaModificacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechamodificacion_Internalname), 1);
+            AV24TrGestionTableros_FechaModificacion = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechamodificacion_Internalname), 2);
             AssignAttri("", false, "AV24TrGestionTableros_FechaModificacion", context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"));
             forbiddenHiddens.Add("TrGestionTableros_FechaModificacion", context.localUtil.Format(AV24TrGestionTableros_FechaModificacion, "99/99/9999"));
             hsh = cgiGet( "hsh");
@@ -1219,7 +1165,7 @@ namespace GeneXus.Programs {
       protected void E131V2( )
       {
          /* 'E_ModificarTablero' Routine */
-         AV28ConfirmMessage = "Are you sure?";
+         AV28ConfirmMessage = "¿Está seguro?";
          AssignAttri("", false, "AV28ConfirmMessage", AV28ConfirmMessage);
          /* Execute user subroutine: 'U_CONFIRMATIONREQUIRED(MODIFICARTABLERO)' */
          S142 ();
@@ -1289,7 +1235,7 @@ namespace GeneXus.Programs {
          /* Load Routine */
       }
 
-      protected void wb_table2_110_1V2( bool wbgen )
+      protected void wb_table2_92_1V2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1302,16 +1248,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblTableconditionalconfirm_Internalname, tblTableconditionalconfirm_Internalname, "", "Table_ConditionalConfirm", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table3_113_1V2( true) ;
+            wb_table3_95_1V2( true) ;
          }
          else
          {
-            wb_table3_113_1V2( false) ;
+            wb_table3_95_1V2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_113_1V2e( bool wbgen )
+      protected void wb_table3_95_1V2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1319,15 +1265,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table2_110_1V2e( true) ;
+            wb_table2_92_1V2e( true) ;
          }
          else
          {
-            wb_table2_110_1V2e( false) ;
+            wb_table2_92_1V2e( false) ;
          }
       }
 
-      protected void wb_table3_113_1V2( bool wbgen )
+      protected void wb_table3_95_1V2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1336,16 +1282,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblSection_condconf_dialog_Internalname, tblSection_condconf_dialog_Internalname, "", "Section_CondConf_Dialog", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table4_116_1V2( true) ;
+            wb_table4_98_1V2( true) ;
          }
          else
          {
-            wb_table4_116_1V2( false) ;
+            wb_table4_98_1V2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table4_116_1V2e( bool wbgen )
+      protected void wb_table4_98_1V2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1353,15 +1299,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_113_1V2e( true) ;
+            wb_table3_95_1V2e( true) ;
          }
          else
          {
-            wb_table3_113_1V2e( false) ;
+            wb_table3_95_1V2e( false) ;
          }
       }
 
-      protected void wb_table4_116_1V2( bool wbgen )
+      protected void wb_table4_98_1V2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1375,23 +1321,23 @@ namespace GeneXus.Programs {
             /* Attribute/Variable Label */
             GxWebStd.gx_label_element( context, edtavConfirmmessage_Internalname, "Confirm Message", "gx-form-item Attribute_ConditionalConfirmLabel", 0, true, "width: 25%;");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 120,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavConfirmmessage_Internalname, StringUtil.RTrim( AV28ConfirmMessage), StringUtil.RTrim( context.localUtil.Format( AV28ConfirmMessage, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,120);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavConfirmmessage_Jsonclick, 0, "Attribute_ConditionalConfirm", "", "", "", "", 1, edtavConfirmmessage_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "", "HLP_WpActualizarTablero.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 102,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavConfirmmessage_Internalname, StringUtil.RTrim( AV28ConfirmMessage), StringUtil.RTrim( context.localUtil.Format( AV28ConfirmMessage, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,102);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavConfirmmessage_Jsonclick, 0, "Attribute_ConditionalConfirm", "", "", "", "", 1, edtavConfirmmessage_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "", "HLP_WpActualizarTablero.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table5_123_1V2( true) ;
+            wb_table5_105_1V2( true) ;
          }
          else
          {
-            wb_table5_123_1V2( false) ;
+            wb_table5_105_1V2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table5_123_1V2e( bool wbgen )
+      protected void wb_table5_105_1V2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1399,15 +1345,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table4_116_1V2e( true) ;
+            wb_table4_98_1V2e( true) ;
          }
          else
          {
-            wb_table4_116_1V2e( false) ;
+            wb_table4_98_1V2e( false) ;
          }
       }
 
-      protected void wb_table5_123_1V2( bool wbgen )
+      protected void wb_table5_105_1V2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1416,29 +1362,29 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblConfirm_hidden_actionstable_Internalname, tblConfirm_hidden_actionstable_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 126,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 108,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MainAction_Confirm";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmyes_Internalname, "", "Ok", bttI_buttonconfirmyes_Jsonclick, 5, "Ok", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONFIRMYES\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmyes_Internalname, "", "Aceptar", bttI_buttonconfirmyes_Jsonclick, 5, "Aceptar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONFIRMYES\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpActualizarTablero.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 128,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 110,'',false,'',0)\"";
             ClassString = "Button_Standard";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmno_Internalname, "", "Cancel", bttI_buttonconfirmno_Jsonclick, 7, "Cancel", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e161v1_client"+"'", TempTags, "", 2, "HLP_WpActualizarTablero.htm");
+            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmno_Internalname, "", "Cancelar", bttI_buttonconfirmno_Jsonclick, 7, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e161v1_client"+"'", TempTags, "", 2, "HLP_WpActualizarTablero.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table5_123_1V2e( true) ;
+            wb_table5_105_1V2e( true) ;
          }
          else
          {
-            wb_table5_123_1V2e( false) ;
+            wb_table5_105_1V2e( false) ;
          }
       }
 
-      protected void wb_table1_104_1V2( bool wbgen )
+      protected void wb_table1_86_1V2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1447,7 +1393,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblActionscontainertableleft_actions_Internalname, tblActionscontainertableleft_actions_Internalname, "", "K2BToolsTableActionsLeftContainer", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td class='K2BToolsTableCell_ActionContainer'>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 107,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 89,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MainAction";
             StyleString = "";
             GxWebStd.gx_button_ctrl( context, bttModificartablero_Internalname, "", "Modificar Tablero", bttModificartablero_Jsonclick, 5, "", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'E_MODIFICARTABLERO\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpActualizarTablero.htm");
@@ -1455,11 +1401,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_104_1V2e( true) ;
+            wb_table1_86_1V2e( true) ;
          }
          else
          {
-            wb_table1_104_1V2e( false) ;
+            wb_table1_86_1V2e( false) ;
          }
       }
 
@@ -1509,7 +1455,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185879", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022102211344385", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1524,8 +1470,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wpactualizartablero.js", "?202210202185879", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("wpactualizartablero.js", "?2022102211344386", false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -1564,24 +1510,24 @@ namespace GeneXus.Programs {
          lblTextblock2_Internalname = "TEXTBLOCK2";
          edtavTrgestiontableros_comentario_Internalname = "vTRGESTIONTABLEROS_COMENTARIO";
          divTable_container_trgestiontableros_comentario_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_COMENTARIO";
-         lblTextblock3_Internalname = "TEXTBLOCK3";
-         edtavTrgestiontableros_tipotablero_Internalname = "vTRGESTIONTABLEROS_TIPOTABLERO";
-         divTable_container_trgestiontableros_tipotablero_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_TIPOTABLERO";
-         lblTextblock4_Internalname = "TEXTBLOCK4";
+         lblTrgestiontableros_fechainicio_var_lefttext_Internalname = "TRGESTIONTABLEROS_FECHAINICIO_VAR_LEFTTEXT";
          edtavTrgestiontableros_fechainicio_Internalname = "vTRGESTIONTABLEROS_FECHAINICIO";
-         divTable_container_trgestiontableros_fechainicio_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHAINICIO";
-         lblTextblock5_Internalname = "TEXTBLOCK5";
+         lblTrgestiontableros_fechafin_var_lefttext_Internalname = "TRGESTIONTABLEROS_FECHAFIN_VAR_LEFTTEXT";
          edtavTrgestiontableros_fechafin_Internalname = "vTRGESTIONTABLEROS_FECHAFIN";
-         divTable_container_trgestiontableros_fechafin_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHAFIN";
-         lblTextblock8_Internalname = "TEXTBLOCK8";
+         divTable_container_trgestiontableros_fechainiciofieldcontainer_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHAINICIOFIELDCONTAINER";
+         divTable_container_trgestiontableros_fechainicio_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHAINICIO";
+         lblTrgestiontableros_fechacreacion_var_lefttext_Internalname = "TRGESTIONTABLEROS_FECHACREACION_VAR_LEFTTEXT";
          edtavTrgestiontableros_fechacreacion_Internalname = "vTRGESTIONTABLEROS_FECHACREACION";
-         divTable_container_trgestiontableros_fechacreacion_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHACREACION";
-         lblTextblock7_Internalname = "TEXTBLOCK7";
+         lblTrgestiontableros_fechamodificacion_var_lefttext_Internalname = "TRGESTIONTABLEROS_FECHAMODIFICACION_VAR_LEFTTEXT";
          edtavTrgestiontableros_fechamodificacion_Internalname = "vTRGESTIONTABLEROS_FECHAMODIFICACION";
-         divTable_container_trgestiontableros_fechamodificacion_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHAMODIFICACION";
-         lblTextblock6_Internalname = "TEXTBLOCK6";
+         divTable_container_trgestiontableros_fechacreacionfieldcontainer_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHACREACIONFIELDCONTAINER";
+         divTable_container_trgestiontableros_fechacreacion_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_FECHACREACION";
+         lblTrgestiontableros_tipotablero_var_lefttext_Internalname = "TRGESTIONTABLEROS_TIPOTABLERO_VAR_LEFTTEXT";
+         edtavTrgestiontableros_tipotablero_Internalname = "vTRGESTIONTABLEROS_TIPOTABLERO";
+         lblTrgestiontableros_estado_var_lefttext_Internalname = "TRGESTIONTABLEROS_ESTADO_VAR_LEFTTEXT";
          cmbavTrgestiontableros_estado_Internalname = "vTRGESTIONTABLEROS_ESTADO";
-         divTable_container_trgestiontableros_estado_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_ESTADO";
+         divTable_container_trgestiontableros_tipotablerofieldcontainer_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_TIPOTABLEROFIELDCONTAINER";
+         divTable_container_trgestiontableros_tipotablero_Internalname = "TABLE_CONTAINER_TRGESTIONTABLEROS_TIPOTABLERO";
          divAttributescontainertable_attributes_Internalname = "ATTRIBUTESCONTAINERTABLE_ATTRIBUTES";
          divResponsivetable_mainattributes_attributes_Internalname = "RESPONSIVETABLE_MAINATTRIBUTES_ATTRIBUTES";
          divMaingroupresponsivetable_group_Internalname = "MAINGROUPRESPONSIVETABLE_GROUP";
@@ -1615,6 +1561,8 @@ namespace GeneXus.Programs {
          tblTableconditionalconfirm_Visible = 1;
          cmbavTrgestiontableros_estado_Jsonclick = "";
          cmbavTrgestiontableros_estado.Enabled = 1;
+         edtavTrgestiontableros_tipotablero_Jsonclick = "";
+         edtavTrgestiontableros_tipotablero_Enabled = 1;
          edtavTrgestiontableros_fechamodificacion_Jsonclick = "";
          edtavTrgestiontableros_fechamodificacion_Enabled = 1;
          edtavTrgestiontableros_fechacreacion_Jsonclick = "";
@@ -1623,8 +1571,6 @@ namespace GeneXus.Programs {
          edtavTrgestiontableros_fechafin_Enabled = 1;
          edtavTrgestiontableros_fechainicio_Jsonclick = "";
          edtavTrgestiontableros_fechainicio_Enabled = 1;
-         edtavTrgestiontableros_tipotablero_Jsonclick = "";
-         edtavTrgestiontableros_tipotablero_Enabled = 1;
          edtavTrgestiontableros_comentario_Enabled = 1;
          edtavTrgestiontableros_descripcion_Enabled = 1;
          edtavTrgestiontableros_nombre_Jsonclick = "";
@@ -1718,14 +1664,14 @@ namespace GeneXus.Programs {
          AV14TrGestionTableros_Descripcion = "";
          lblTextblock2_Jsonclick = "";
          AV15TrGestionTableros_Comentario = "";
-         lblTextblock3_Jsonclick = "";
-         lblTextblock4_Jsonclick = "";
+         lblTrgestiontableros_fechainicio_var_lefttext_Jsonclick = "";
          AV17TrGestionTableros_FechaInicio = DateTime.MinValue;
-         lblTextblock5_Jsonclick = "";
+         lblTrgestiontableros_fechafin_var_lefttext_Jsonclick = "";
          AV18TrGestionTableros_FechaFin = DateTime.MinValue;
-         lblTextblock8_Jsonclick = "";
-         lblTextblock7_Jsonclick = "";
-         lblTextblock6_Jsonclick = "";
+         lblTrgestiontableros_fechacreacion_var_lefttext_Jsonclick = "";
+         lblTrgestiontableros_fechamodificacion_var_lefttext_Jsonclick = "";
+         lblTrgestiontableros_tipotablero_var_lefttext_Jsonclick = "";
+         lblTrgestiontableros_estado_var_lefttext_Jsonclick = "";
          ucK2bcontrolbeautify1 = new GXUserControl();
          sEvt = "";
          EvtGridId = "";
@@ -1792,11 +1738,11 @@ namespace GeneXus.Programs {
       private int edtavTrgestiontableros_nombre_Enabled ;
       private int edtavTrgestiontableros_descripcion_Enabled ;
       private int edtavTrgestiontableros_comentario_Enabled ;
-      private int edtavTrgestiontableros_tipotablero_Enabled ;
       private int edtavTrgestiontableros_fechainicio_Enabled ;
       private int edtavTrgestiontableros_fechafin_Enabled ;
       private int edtavTrgestiontableros_fechacreacion_Enabled ;
       private int edtavTrgestiontableros_fechamodificacion_Enabled ;
+      private int edtavTrgestiontableros_tipotablero_Enabled ;
       private int edtavConfirmmessage_Enabled ;
       private int tblTableconditionalconfirm_Visible ;
       private int idxLst ;
@@ -1837,34 +1783,34 @@ namespace GeneXus.Programs {
       private String lblTextblock2_Jsonclick ;
       private String divTable_container_trgestiontableros_comentario_Internalname ;
       private String edtavTrgestiontableros_comentario_Internalname ;
-      private String lblTextblock3_Internalname ;
-      private String lblTextblock3_Jsonclick ;
-      private String divTable_container_trgestiontableros_tipotablero_Internalname ;
-      private String edtavTrgestiontableros_tipotablero_Internalname ;
-      private String edtavTrgestiontableros_tipotablero_Jsonclick ;
-      private String lblTextblock4_Internalname ;
-      private String lblTextblock4_Jsonclick ;
       private String divTable_container_trgestiontableros_fechainicio_Internalname ;
+      private String divTable_container_trgestiontableros_fechainiciofieldcontainer_Internalname ;
+      private String lblTrgestiontableros_fechainicio_var_lefttext_Internalname ;
+      private String lblTrgestiontableros_fechainicio_var_lefttext_Jsonclick ;
       private String edtavTrgestiontableros_fechainicio_Internalname ;
       private String edtavTrgestiontableros_fechainicio_Jsonclick ;
-      private String lblTextblock5_Internalname ;
-      private String lblTextblock5_Jsonclick ;
-      private String divTable_container_trgestiontableros_fechafin_Internalname ;
+      private String lblTrgestiontableros_fechafin_var_lefttext_Internalname ;
+      private String lblTrgestiontableros_fechafin_var_lefttext_Jsonclick ;
       private String edtavTrgestiontableros_fechafin_Internalname ;
       private String edtavTrgestiontableros_fechafin_Jsonclick ;
-      private String lblTextblock8_Internalname ;
-      private String lblTextblock8_Jsonclick ;
       private String divTable_container_trgestiontableros_fechacreacion_Internalname ;
+      private String divTable_container_trgestiontableros_fechacreacionfieldcontainer_Internalname ;
+      private String lblTrgestiontableros_fechacreacion_var_lefttext_Internalname ;
+      private String lblTrgestiontableros_fechacreacion_var_lefttext_Jsonclick ;
       private String edtavTrgestiontableros_fechacreacion_Internalname ;
       private String edtavTrgestiontableros_fechacreacion_Jsonclick ;
-      private String lblTextblock7_Internalname ;
-      private String lblTextblock7_Jsonclick ;
-      private String divTable_container_trgestiontableros_fechamodificacion_Internalname ;
+      private String lblTrgestiontableros_fechamodificacion_var_lefttext_Internalname ;
+      private String lblTrgestiontableros_fechamodificacion_var_lefttext_Jsonclick ;
       private String edtavTrgestiontableros_fechamodificacion_Internalname ;
       private String edtavTrgestiontableros_fechamodificacion_Jsonclick ;
-      private String lblTextblock6_Internalname ;
-      private String lblTextblock6_Jsonclick ;
-      private String divTable_container_trgestiontableros_estado_Internalname ;
+      private String divTable_container_trgestiontableros_tipotablero_Internalname ;
+      private String divTable_container_trgestiontableros_tipotablerofieldcontainer_Internalname ;
+      private String lblTrgestiontableros_tipotablero_var_lefttext_Internalname ;
+      private String lblTrgestiontableros_tipotablero_var_lefttext_Jsonclick ;
+      private String edtavTrgestiontableros_tipotablero_Internalname ;
+      private String edtavTrgestiontableros_tipotablero_Jsonclick ;
+      private String lblTrgestiontableros_estado_var_lefttext_Internalname ;
+      private String lblTrgestiontableros_estado_var_lefttext_Jsonclick ;
       private String cmbavTrgestiontableros_estado_Internalname ;
       private String cmbavTrgestiontableros_estado_Jsonclick ;
       private String divResponsivetable_containernode_actions_Internalname ;

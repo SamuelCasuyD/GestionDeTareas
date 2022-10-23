@@ -6,6 +6,7 @@
 
 <ItemGroup>
  	<Compile Include="$(WebDirectory)\type_SdtCrearTablero_SDT.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtGestionActividades_SDT.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtGestionEtiquetas_SDT.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtGestionTableros_SDT_GestionTableros_SDTItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtGestionTareas_SDT.cs" />
@@ -13,6 +14,8 @@
  	<Compile Include="$(WebDirectory)\type_SdtK2BActivityList_K2BActivityListItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtK2BAttributeValue_Item.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtK2BContext.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BFilterValuesSDT_K2BFilterValuesSDTItem.cs" />
+ 	<Compile Include="$(WebDirectory)\type_SdtK2BFilterValuesSDT_K2BFilterValuesSDTItem_MultipleValuesItem.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtK2BGridState.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtK2BGridState_FilterValue.cs" />
  	<Compile Include="$(WebDirectory)\type_SdtK2BMultiLevelMenu_K2BMultiLevelMenuItem.cs" />

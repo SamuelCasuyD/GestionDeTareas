@@ -284,14 +284,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185024", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?20221021174396", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -399,7 +399,7 @@ namespace GeneXus.Programs {
          SendCloseFormHiddens( ) ;
          if ( ( StringUtil.Len( sPrefix) != 0 ) && ( context.isAjaxRequest( ) || context.isSpaRequest( ) ) )
          {
-            context.AddJavascriptSource("k2bt_notificationsviewer.js", "?202210202185028", false, true);
+            context.AddJavascriptSource("k2bt_notificationsviewer.js", "?20221021174399", false, true);
          }
          GxWebStd.gx_hidden_field( context, sPrefix+"GX_FocusControl", GX_FocusControl);
          define_styles( ) ;
@@ -668,7 +668,7 @@ namespace GeneXus.Programs {
                NotificationsgridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
                NotificationsgridContainer.AddColumnProperties(NotificationsgridColumn);
                NotificationsgridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
-               NotificationsgridColumn.AddObjectProperty("Value", context.localUtil.TToC( AV11EventCreationDateTime, 10, 12, 1, 2, "/", ":", " "));
+               NotificationsgridColumn.AddObjectProperty("Value", context.localUtil.TToC( AV11EventCreationDateTime, 10, 12, 0, 3, "/", ":", " "));
                NotificationsgridContainer.AddColumnProperties(NotificationsgridColumn);
                NotificationsgridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
                NotificationsgridContainer.AddColumnProperties(NotificationsgridColumn);
@@ -969,12 +969,12 @@ namespace GeneXus.Programs {
                                  AssignAttri(sPrefix, false, "GX_FocusControl", GX_FocusControl);
                                  wbErr = true;
                                  AV11EventCreationDateTime = (DateTime)(DateTime.MinValue);
-                                 AssignAttri(sPrefix, false, edtavEventcreationdatetime_Internalname, context.localUtil.TToC( AV11EventCreationDateTime, 8, 12, 1, 2, "/", ":", " "));
+                                 AssignAttri(sPrefix, false, edtavEventcreationdatetime_Internalname, context.localUtil.TToC( AV11EventCreationDateTime, 8, 12, 0, 3, "/", ":", " "));
                               }
                               else
                               {
                                  AV11EventCreationDateTime = context.localUtil.CToT( cgiGet( edtavEventcreationdatetime_Internalname), 0);
-                                 AssignAttri(sPrefix, false, edtavEventcreationdatetime_Internalname, context.localUtil.TToC( AV11EventCreationDateTime, 8, 12, 1, 2, "/", ":", " "));
+                                 AssignAttri(sPrefix, false, edtavEventcreationdatetime_Internalname, context.localUtil.TToC( AV11EventCreationDateTime, 8, 12, 0, 3, "/", ":", " "));
                               }
                               AV27NotificationIsRead = StringUtil.StrToBool( cgiGet( chkavNotificationisread_Internalname));
                               AssignAttri(sPrefix, false, chkavNotificationisread_Internalname, AV27NotificationIsRead);
@@ -1481,7 +1481,7 @@ namespace GeneXus.Programs {
             AV28NotificationText = AV9DP_SDT_ITEM_NotificationsGrid.gxTpr_Notificationtext;
             AssignAttri(sPrefix, false, edtavNotificationtext_Internalname, AV28NotificationText);
             AV11EventCreationDateTime = AV9DP_SDT_ITEM_NotificationsGrid.gxTpr_Eventcreationdatetime;
-            AssignAttri(sPrefix, false, edtavEventcreationdatetime_Internalname, context.localUtil.TToC( AV11EventCreationDateTime, 8, 12, 1, 2, "/", ":", " "));
+            AssignAttri(sPrefix, false, edtavEventcreationdatetime_Internalname, context.localUtil.TToC( AV11EventCreationDateTime, 8, 12, 0, 3, "/", ":", " "));
             AV27NotificationIsRead = AV9DP_SDT_ITEM_NotificationsGrid.gxTpr_Notificationisread;
             AssignAttri(sPrefix, false, chkavNotificationisread_Internalname, AV27NotificationIsRead);
             AV25NotificationId = AV9DP_SDT_ITEM_NotificationsGrid.gxTpr_Notificationid;
@@ -1645,7 +1645,7 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblI_noresultsfoundtextblock_notificationsgrid_Internalname, "No notifications", "", "", lblI_noresultsfoundtextblock_notificationsgrid_Jsonclick, "'"+sPrefix+"'"+",false,"+"'"+""+"'", "", "K2BToolsTextBlock_NoResultsFound", 0, "", 1, 1, 0, "HLP_K2BT_NotificationsViewer.htm");
+            GxWebStd.gx_label_ctrl( context, lblI_noresultsfoundtextblock_notificationsgrid_Internalname, "No tiene notificaciones", "", "", lblI_noresultsfoundtextblock_notificationsgrid_Jsonclick, "'"+sPrefix+"'"+",false,"+"'"+""+"'", "", "K2BToolsTextBlock_NoResultsFound", 0, "", 1, 1, 0, "HLP_K2BT_NotificationsViewer.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
@@ -1913,7 +1913,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185098", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211743984", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1930,7 +1930,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("k2bt_notificationsviewer.js", "?202210202185099", false, true);
+            context.AddJavascriptSource("k2bt_notificationsviewer.js", "?202210211743985", false, true);
             context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
             context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
             context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -2101,7 +2101,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = " " + ((edtavEventcreationdatetime_Enabled!=0)&&(edtavEventcreationdatetime_Visible!=0) ? " onfocus=\"gx.evt.onfocus(this, 73,'"+sPrefix+"',false,'"+sGXsfl_51_idx+"',51)\"" : " ");
          ROClassString = "Attribute";
-         NotificationsgridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtavEventcreationdatetime_Internalname,context.localUtil.TToC( AV11EventCreationDateTime, 10, 12, 1, 2, "/", ":", " "),context.localUtil.Format( AV11EventCreationDateTime, "99/99/99 99:99:99.999"),TempTags+" onchange=\""+"gx.date.valid_date(this, 8,'MDY',12,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+((edtavEventcreationdatetime_Enabled!=0)&&(edtavEventcreationdatetime_Visible!=0) ? " onblur=\""+"gx.date.valid_date(this, 8,'MDY',12,12,'eng',false,0);"+";gx.evt.onblur(this,73);\"" : " "),(String)"'"+sPrefix+"'"+",false,"+"'"+""+"'",(String)"",(String)"",(String)"",(String)"",(String)edtavEventcreationdatetime_Jsonclick,(short)0,(String)"Attribute",(String)"",(String)ROClassString,(String)"",(String)"",(short)1,(short)1,(short)0,(String)"text",(String)"",(short)24,(String)"chr",(short)1,(String)"row",(short)24,(short)0,(short)0,(short)51,(short)1,(short)-1,(short)0,(bool)true,(String)"K2BTools\\K2BT_DatetimeWithMilliseconds",(String)"right",(bool)false,(String)""});
+         NotificationsgridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(String)edtavEventcreationdatetime_Internalname,context.localUtil.TToC( AV11EventCreationDateTime, 10, 12, 0, 3, "/", ":", " "),context.localUtil.Format( AV11EventCreationDateTime, "99/99/99 99:99:99.999"),TempTags+" onchange=\""+"gx.date.valid_date(this, 8,'DMY',12,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+((edtavEventcreationdatetime_Enabled!=0)&&(edtavEventcreationdatetime_Visible!=0) ? " onblur=\""+"gx.date.valid_date(this, 8,'DMY',12,24,'spa',false,0);"+";gx.evt.onblur(this,73);\"" : " "),(String)"'"+sPrefix+"'"+",false,"+"'"+""+"'",(String)"",(String)"",(String)"",(String)"",(String)edtavEventcreationdatetime_Jsonclick,(short)0,(String)"Attribute",(String)"",(String)ROClassString,(String)"",(String)"",(short)1,(short)1,(short)0,(String)"text",(String)"",(short)21,(String)"chr",(short)1,(String)"row",(short)21,(short)0,(short)0,(short)51,(short)1,(short)-1,(short)0,(bool)true,(String)"K2BTools\\K2BT_DatetimeWithMilliseconds",(String)"right",(bool)false,(String)""});
          NotificationsgridRow.AddColumnProperties("div_end", -1, isAjaxCallMode( ), new Object[] {(String)"left",(String)"top",(String)"div"});
          NotificationsgridRow.AddColumnProperties("div_end", -1, isAjaxCallMode( ), new Object[] {(String)"left",(String)"top",(String)"div"});
          /* Div Control */

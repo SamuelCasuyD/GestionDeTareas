@@ -306,7 +306,7 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
          ClassString = "BtnSelect";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Select", bttBtn_select_Jsonclick, 4, "Select", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0020.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRGESTIONTAREAS_ID"+"'), id:'"+"TRGESTIONTAREAS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Seleccionar", bttBtn_select_Jsonclick, 4, "Seleccionar", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0020.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRGESTIONTAREAS_ID"+"'), id:'"+"TRGESTIONTAREAS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrGestionTareas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -411,7 +411,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 48,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTareas_FechaInicio_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaInicio_Internalname, context.localUtil.Format(A15TrGestionTareas_FechaInicio, "99/99/9999"), context.localUtil.Format( A15TrGestionTareas_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,48);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaInicio_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaInicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaInicio_Internalname, context.localUtil.Format(A15TrGestionTareas_FechaInicio, "99/99/9999"), context.localUtil.Format( A15TrGestionTareas_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,48);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaInicio_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaInicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTareas_FechaInicio_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTareas_FechaInicio_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTareas.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -431,7 +431,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 53,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTareas_FechaFin_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaFin_Internalname, context.localUtil.Format(A16TrGestionTareas_FechaFin, "99/99/9999"), context.localUtil.Format( A16TrGestionTareas_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,53);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaFin_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaFin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaFin_Internalname, context.localUtil.Format(A16TrGestionTareas_FechaFin, "99/99/9999"), context.localUtil.Format( A16TrGestionTareas_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,53);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaFin_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaFin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTareas_FechaFin_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTareas_FechaFin_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTareas.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -451,7 +451,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 58,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTareas_FechaCreacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaCreacion_Internalname, context.localUtil.Format(A17TrGestionTareas_FechaCreacion, "99/99/9999"), context.localUtil.Format( A17TrGestionTareas_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,58);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaCreacion_Internalname, context.localUtil.Format(A17TrGestionTareas_FechaCreacion, "99/99/9999"), context.localUtil.Format( A17TrGestionTareas_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,58);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTareas_FechaCreacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTareas_FechaCreacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTareas.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -471,7 +471,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 63,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrGestionTareas_FechaModificacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaModificacion_Internalname, context.localUtil.Format(A18TrGestionTareas_FechaModificacion, "99/99/9999"), context.localUtil.Format( A18TrGestionTareas_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,63);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrGestionTareas_FechaModificacion_Internalname, context.localUtil.Format(A18TrGestionTareas_FechaModificacion, "99/99/9999"), context.localUtil.Format( A18TrGestionTareas_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,63);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrGestionTareas_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrGestionTareas_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrGestionTareas.htm");
          GxWebStd.gx_bitmap( context, edtTrGestionTareas_FechaModificacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrGestionTareas_FechaModificacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrGestionTareas.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -508,21 +508,21 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 73,'',false,'',0)\"";
          ClassString = "BtnEnter";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirm", bttBtn_enter_Jsonclick, 5, "Confirm", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirmar", bttBtn_enter_Jsonclick, 5, "Confirmar", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTareas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 75,'',false,'',0)\"";
          ClassString = "BtnCancel";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancel", bttBtn_cancel_Jsonclick, 1, "Cancel", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancelar", bttBtn_cancel_Jsonclick, 1, "Cancelar", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTareas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 77,'',false,'',0)\"";
          ClassString = "BtnDelete";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Delete", bttBtn_delete_Jsonclick, 5, "Delete", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTareas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Eliminar", bttBtn_delete_Jsonclick, 5, "Eliminar", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrGestionTareas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -623,7 +623,7 @@ namespace GeneXus.Programs {
             n14TrGestionTareas_Descripcion = false;
             AssignAttri("", false, "A14TrGestionTareas_Descripcion", A14TrGestionTareas_Descripcion);
             n14TrGestionTareas_Descripcion = (String.IsNullOrEmpty(StringUtil.RTrim( A14TrGestionTareas_Descripcion)) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaInicio_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaInicio_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Gestion Tareas_Fecha Inicio"}), 1, "TRGESTIONTAREAS_FECHAINICIO");
                AnyError = 1;
@@ -636,12 +636,12 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A15TrGestionTareas_FechaInicio = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaInicio_Internalname), 1);
+               A15TrGestionTareas_FechaInicio = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaInicio_Internalname), 2);
                n15TrGestionTareas_FechaInicio = false;
                AssignAttri("", false, "A15TrGestionTareas_FechaInicio", context.localUtil.Format(A15TrGestionTareas_FechaInicio, "99/99/9999"));
             }
             n15TrGestionTareas_FechaInicio = ((DateTime.MinValue==A15TrGestionTareas_FechaInicio) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaFin_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaFin_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Gestion Tareas_Fecha Fin"}), 1, "TRGESTIONTAREAS_FECHAFIN");
                AnyError = 1;
@@ -654,12 +654,12 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A16TrGestionTareas_FechaFin = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaFin_Internalname), 1);
+               A16TrGestionTareas_FechaFin = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaFin_Internalname), 2);
                n16TrGestionTareas_FechaFin = false;
                AssignAttri("", false, "A16TrGestionTareas_FechaFin", context.localUtil.Format(A16TrGestionTareas_FechaFin, "99/99/9999"));
             }
             n16TrGestionTareas_FechaFin = ((DateTime.MinValue==A16TrGestionTareas_FechaFin) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaCreacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaCreacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Gestion Tareas_Fecha Creacion"}), 1, "TRGESTIONTAREAS_FECHACREACION");
                AnyError = 1;
@@ -672,12 +672,12 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A17TrGestionTareas_FechaCreacion = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaCreacion_Internalname), 1);
+               A17TrGestionTareas_FechaCreacion = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaCreacion_Internalname), 2);
                n17TrGestionTareas_FechaCreacion = false;
                AssignAttri("", false, "A17TrGestionTareas_FechaCreacion", context.localUtil.Format(A17TrGestionTareas_FechaCreacion, "99/99/9999"));
             }
             n17TrGestionTareas_FechaCreacion = ((DateTime.MinValue==A17TrGestionTareas_FechaCreacion) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaModificacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrGestionTareas_FechaModificacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Gestion Tareas_Fecha Modificacion"}), 1, "TRGESTIONTAREAS_FECHAMODIFICACION");
                AnyError = 1;
@@ -690,7 +690,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A18TrGestionTareas_FechaModificacion = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaModificacion_Internalname), 1);
+               A18TrGestionTareas_FechaModificacion = context.localUtil.CToD( cgiGet( edtTrGestionTareas_FechaModificacion_Internalname), 2);
                n18TrGestionTareas_FechaModificacion = false;
                AssignAttri("", false, "A18TrGestionTareas_FechaModificacion", context.localUtil.Format(A18TrGestionTareas_FechaModificacion, "99/99/9999"));
             }
@@ -997,7 +997,7 @@ namespace GeneXus.Programs {
          pr_default.execute(2, new Object[] {A11TrGestionTareas_IDTablero});
          if ( (pr_default.getStatus(2) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Gestion Tableros_STG'.", "ForeignKeyNotFound", 1, "TRGESTIONTAREAS_IDTABLERO");
+            GX_msglist.addItem("No existe 'Tr Gestion Tableros_STG'.", "ForeignKeyNotFound", 1, "TRGESTIONTAREAS_IDTABLERO");
             AnyError = 1;
             GX_FocusControl = edtTrGestionTareas_IDTablero_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -1005,35 +1005,35 @@ namespace GeneXus.Programs {
          pr_default.close(2);
          if ( ! ( (DateTime.MinValue==A15TrGestionTareas_FechaInicio) || ( A15TrGestionTareas_FechaInicio >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tareas_Fecha Inicio is out of range", "OutOfRange", 1, "TRGESTIONTAREAS_FECHAINICIO");
+            GX_msglist.addItem("Campo Tr Gestion Tareas_Fecha Inicio fuera de rango", "OutOfRange", 1, "TRGESTIONTAREAS_FECHAINICIO");
             AnyError = 1;
             GX_FocusControl = edtTrGestionTareas_FechaInicio_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( (DateTime.MinValue==A16TrGestionTareas_FechaFin) || ( A16TrGestionTareas_FechaFin >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tareas_Fecha Fin is out of range", "OutOfRange", 1, "TRGESTIONTAREAS_FECHAFIN");
+            GX_msglist.addItem("Campo Tr Gestion Tareas_Fecha Fin fuera de rango", "OutOfRange", 1, "TRGESTIONTAREAS_FECHAFIN");
             AnyError = 1;
             GX_FocusControl = edtTrGestionTareas_FechaFin_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( (DateTime.MinValue==A17TrGestionTareas_FechaCreacion) || ( A17TrGestionTareas_FechaCreacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tareas_Fecha Creacion is out of range", "OutOfRange", 1, "TRGESTIONTAREAS_FECHACREACION");
+            GX_msglist.addItem("Campo Tr Gestion Tareas_Fecha Creacion fuera de rango", "OutOfRange", 1, "TRGESTIONTAREAS_FECHACREACION");
             AnyError = 1;
             GX_FocusControl = edtTrGestionTareas_FechaCreacion_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( (DateTime.MinValue==A18TrGestionTareas_FechaModificacion) || ( A18TrGestionTareas_FechaModificacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tareas_Fecha Modificacion is out of range", "OutOfRange", 1, "TRGESTIONTAREAS_FECHAMODIFICACION");
+            GX_msglist.addItem("Campo Tr Gestion Tareas_Fecha Modificacion fuera de rango", "OutOfRange", 1, "TRGESTIONTAREAS_FECHAMODIFICACION");
             AnyError = 1;
             GX_FocusControl = edtTrGestionTareas_FechaModificacion_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( ( A24TrGestionTareas_Estado == 1 ) || ( A24TrGestionTareas_Estado == 2 ) || ( A24TrGestionTareas_Estado == 3 ) || ( A24TrGestionTareas_Estado == 4 ) || ( A24TrGestionTareas_Estado == 5 ) || (0==A24TrGestionTareas_Estado) ) )
          {
-            GX_msglist.addItem("Field Tr Gestion Tareas_Estado is out of range", "OutOfRange", 1, "TRGESTIONTAREAS_ESTADO");
+            GX_msglist.addItem("Campo Tr Gestion Tareas_Estado fuera de rango", "OutOfRange", 1, "TRGESTIONTAREAS_ESTADO");
             AnyError = 1;
             GX_FocusControl = cmbTrGestionTareas_Estado_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -1055,7 +1055,7 @@ namespace GeneXus.Programs {
          pr_default.execute(4, new Object[] {A11TrGestionTareas_IDTablero});
          if ( (pr_default.getStatus(4) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Gestion Tableros_STG'.", "ForeignKeyNotFound", 1, "TRGESTIONTAREAS_IDTABLERO");
+            GX_msglist.addItem("No existe 'Tr Gestion Tableros_STG'.", "ForeignKeyNotFound", 1, "TRGESTIONTAREAS_IDTABLERO");
             AnyError = 1;
             GX_FocusControl = edtTrGestionTareas_IDTablero_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -1886,14 +1886,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185451", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744318", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -2078,7 +2078,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185459", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211744328", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2093,8 +2093,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("trgestiontareas.js", "?202210202185459", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("trgestiontareas.js", "?202210211744329", false, true);
          /* End function include_jscripts */
       }
 
@@ -2280,7 +2280,7 @@ namespace GeneXus.Programs {
          pr_default.execute(16, new Object[] {A11TrGestionTareas_IDTablero});
          if ( (pr_default.getStatus(16) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Gestion Tableros_STG'.", "ForeignKeyNotFound", 1, "TRGESTIONTAREAS_IDTABLERO");
+            GX_msglist.addItem("No existe 'Tr Gestion Tableros_STG'.", "ForeignKeyNotFound", 1, "TRGESTIONTAREAS_IDTABLERO");
             AnyError = 1;
             GX_FocusControl = edtTrGestionTareas_IDTablero_Internalname;
          }

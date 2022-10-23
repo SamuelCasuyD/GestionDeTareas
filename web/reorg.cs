@@ -61,13 +61,13 @@ namespace GeneXus.Programs {
          /* Load data into tables. */
       }
 
-      public void ReorganizeTrTareaComentarios( )
+      public void ReorganizeTrActividades( )
       {
          String cmdBuffer = "" ;
-         /* Indices for table TrTareaComentarios */
+         /* Indices for table TrActividades */
          try
          {
-            cmdBuffer=" CREATE TABLE TABLERO.[GXA0005] ([TrTareaComentarios_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrTareaComentarios_IDTarea] decimal( 13) NULL , [TrTareaComentarios_Descripcion] NVARCHAR(MAX) NULL , [TrTareaComentarios_Estado] smallint NULL , [TrTareaComentarios_FechaCreacion] datetime NULL , [TrTareaComentarios_FechaModificacion] datetime NULL )  "
+            cmdBuffer=" CREATE TABLE TABLERO.[GXA0004] ([TrActividades_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrActividades_IDTarea] decimal( 13) NULL , [TrActividades_Nombre] nchar(100) NULL , [TrActividades_Descripcion] NVARCHAR(MAX) NULL , [TrActividades_FechaInicio] datetime NULL , [TrActividades_FechaFin] datetime NULL , [TrActividades_FechaCreacion] datetime NULL , [TrActividades_FechaModificacion] datetime NULL , [TrActividades_Estado] smallint NULL )  "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -78,8 +78,8 @@ namespace GeneXus.Programs {
          {
             try
             {
-               DropTableConstraints( "TABLERO.[GXA0005]") ;
-               cmdBuffer=" DROP TABLE TABLERO.[GXA0005] "
+               DropTableConstraints( "TABLERO.[GXA0004]") ;
+               cmdBuffer=" DROP TABLE TABLERO.[GXA0004] "
                ;
                RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -90,8 +90,8 @@ namespace GeneXus.Programs {
             {
                try
                {
-                  DropTableConstraints( "TABLERO.[GXA0005]") ;
-                  cmdBuffer=" DROP VIEW TABLERO.[GXA0005] "
+                  DropTableConstraints( "TABLERO.[GXA0004]") ;
+                  cmdBuffer=" DROP VIEW TABLERO.[GXA0004] "
                   ;
                   RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                   RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -102,8 +102,8 @@ namespace GeneXus.Programs {
                {
                   try
                   {
-                     DropTableConstraints( "TABLERO.[GXA0005]") ;
-                     cmdBuffer=" DROP FUNCTION TABLERO.[GXA0005] "
+                     DropTableConstraints( "TABLERO.[GXA0004]") ;
+                     cmdBuffer=" DROP FUNCTION TABLERO.[GXA0004] "
                      ;
                      RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                      RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
@@ -115,26 +115,26 @@ namespace GeneXus.Programs {
                   }
                }
             }
-            cmdBuffer=" CREATE TABLE TABLERO.[GXA0005] ([TrTareaComentarios_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrTareaComentarios_IDTarea] decimal( 13) NULL , [TrTareaComentarios_Descripcion] NVARCHAR(MAX) NULL , [TrTareaComentarios_Estado] smallint NULL , [TrTareaComentarios_FechaCreacion] datetime NULL , [TrTareaComentarios_FechaModificacion] datetime NULL )  "
+            cmdBuffer=" CREATE TABLE TABLERO.[GXA0004] ([TrActividades_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrActividades_IDTarea] decimal( 13) NULL , [TrActividades_Nombre] nchar(100) NULL , [TrActividades_Descripcion] NVARCHAR(MAX) NULL , [TrActividades_FechaInicio] datetime NULL , [TrActividades_FechaFin] datetime NULL , [TrActividades_FechaCreacion] datetime NULL , [TrActividades_FechaModificacion] datetime NULL , [TrActividades_Estado] smallint NULL )  "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
          }
-         cmdBuffer=" SET IDENTITY_INSERT TABLERO.[GXA0005] ON "
+         cmdBuffer=" SET IDENTITY_INSERT TABLERO.[GXA0004] ON "
          ;
          RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
          RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
          RGZ.ExecuteStmt() ;
          RGZ.Drop();
-         cmdBuffer=" INSERT INTO TABLERO.[GXA0005] ([TrTareaComentarios_ID], [TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion]) SELECT [TrTareaComentarios_ID], [TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion] FROM TABLERO.[TrTareaComentarios] T1 "
+         cmdBuffer=" INSERT INTO TABLERO.[GXA0004] ([TrActividades_ID], [TrActividades_IDTarea], [TrActividades_Nombre], [TrActividades_Descripcion], [TrActividades_FechaInicio], [TrActividades_FechaFin], [TrActividades_FechaCreacion], [TrActividades_FechaModificacion], [TrActividades_Estado]) SELECT [TrActividades_ID], [TrActividades_IDTarea], [TrActividades_Nombre], [TrActividades_Descripcion], [TrActividades_FechaInicio], [TrActividades_FechaFin], [TrActividades_FechaCreacion], [TrActividades_FechaModificacion], [TrActividades_Estado] FROM TABLERO.[TrActividades] T1 "
          ;
          RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
          RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
          RGZ.ExecuteStmt() ;
          RGZ.Drop();
-         cmdBuffer=" SET IDENTITY_INSERT TABLERO.[GXA0005] OFF "
+         cmdBuffer=" SET IDENTITY_INSERT TABLERO.[GXA0004] OFF "
          ;
          RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
          RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -142,8 +142,8 @@ namespace GeneXus.Programs {
          RGZ.Drop();
          try
          {
-            DropTableConstraints( "TABLERO.[TrTareaComentarios]") ;
-            cmdBuffer=" DROP TABLE TABLERO.[TrTareaComentarios] "
+            DropTableConstraints( "TABLERO.[TrActividades]") ;
+            cmdBuffer=" DROP TABLE TABLERO.[TrActividades] "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -154,8 +154,8 @@ namespace GeneXus.Programs {
          {
             try
             {
-               DropTableConstraints( "TABLERO.[TrTareaComentarios]") ;
-               cmdBuffer=" DROP VIEW TABLERO.[TrTareaComentarios] "
+               DropTableConstraints( "TABLERO.[TrActividades]") ;
+               cmdBuffer=" DROP VIEW TABLERO.[TrActividades] "
                ;
                RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -166,8 +166,8 @@ namespace GeneXus.Programs {
             {
                try
                {
-                  DropTableConstraints( "TABLERO.[TrTareaComentarios]") ;
-                  cmdBuffer=" DROP FUNCTION TABLERO.[TrTareaComentarios] "
+                  DropTableConstraints( "TABLERO.[TrActividades]") ;
+                  cmdBuffer=" DROP FUNCTION TABLERO.[TrActividades] "
                   ;
                   RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                   RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
@@ -181,10 +181,10 @@ namespace GeneXus.Programs {
          }
          RGZ = new GxCommand(dsDefault.Db, "sp_rename", dsDefault,0,true,false,null);
          RGZ.CommandType = CommandType.StoredProcedure;
-         RGZ.AddParameter("@objname","TABLERO.[GXA0005]");
-         RGZ.AddParameter("@newname","TrTareaComentarios");
+         RGZ.AddParameter("@objname","TABLERO.[GXA0004]");
+         RGZ.AddParameter("@newname","TrActividades");
          RGZ.ExecuteStmt();
-         cmdBuffer=" ALTER TABLE TABLERO.[TrTareaComentarios] ADD PRIMARY KEY([TrTareaComentarios_ID]) "
+         cmdBuffer=" ALTER TABLE TABLERO.[TrActividades] ADD PRIMARY KEY([TrActividades_ID]) "
          ;
          RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
          RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -192,7 +192,7 @@ namespace GeneXus.Programs {
          RGZ.Drop();
          try
          {
-            cmdBuffer=" CREATE NONCLUSTERED INDEX [ITRTAREACOMENTARIOS1] ON TABLERO.[TrTareaComentarios] ([TrTareaComentarios_IDTarea] ) "
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ITRACTIVIDADES1] ON TABLERO.[TrActividades] ([TrActividades_IDTarea] ) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -201,13 +201,13 @@ namespace GeneXus.Programs {
          }
          catch ( Exception ex )
          {
-            cmdBuffer=" DROP INDEX [ITRTAREACOMENTARIOS1] ON TABLERO.[TrTareaComentarios] "
+            cmdBuffer=" DROP INDEX [ITRACTIVIDADES1] ON TABLERO.[TrActividades] "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
             RGZ.ExecuteStmt() ;
             RGZ.Drop();
-            cmdBuffer=" CREATE NONCLUSTERED INDEX [ITRTAREACOMENTARIOS1] ON TABLERO.[TrTareaComentarios] ([TrTareaComentarios_IDTarea] ) "
+            cmdBuffer=" CREATE NONCLUSTERED INDEX [ITRACTIVIDADES1] ON TABLERO.[TrActividades] ([TrActividades_IDTarea] ) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -216,12 +216,12 @@ namespace GeneXus.Programs {
          }
       }
 
-      public void RITrTareaComentariosTrGestionTareas( )
+      public void RITrActividadesLevel1TrActividades( )
       {
          String cmdBuffer ;
          try
          {
-            cmdBuffer=" ALTER TABLE TABLERO.[TrTareaComentarios] ADD CONSTRAINT [ITRTAREACOMENTARIOS1] FOREIGN KEY ([TrTareaComentarios_IDTarea]) REFERENCES TABLERO.[TrGestionTareas] ([TrGestionTareas_ID]) "
+            cmdBuffer=" ALTER TABLE TABLERO.[TrActividadesLevel1] ADD CONSTRAINT [ITRACTIVIDADESLEVEL2] FOREIGN KEY ([TrActividades_ID]) REFERENCES TABLERO.[TrActividades] ([TrActividades_ID]) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -232,7 +232,7 @@ namespace GeneXus.Programs {
          {
             try
             {
-               cmdBuffer=" ALTER TABLE TABLERO.[TrTareaComentarios] DROP CONSTRAINT [ITRTAREACOMENTARIOS1] "
+               cmdBuffer=" ALTER TABLE TABLERO.[TrActividadesLevel1] DROP CONSTRAINT [ITRACTIVIDADESLEVEL2] "
                ;
                RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
                RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
@@ -242,7 +242,42 @@ namespace GeneXus.Programs {
             catch ( Exception sqlex1 )
             {
             }
-            cmdBuffer=" ALTER TABLE TABLERO.[TrTareaComentarios] ADD CONSTRAINT [ITRTAREACOMENTARIOS1] FOREIGN KEY ([TrTareaComentarios_IDTarea]) REFERENCES TABLERO.[TrGestionTareas] ([TrGestionTareas_ID]) "
+            cmdBuffer=" ALTER TABLE TABLERO.[TrActividadesLevel1] ADD CONSTRAINT [ITRACTIVIDADESLEVEL2] FOREIGN KEY ([TrActividades_ID]) REFERENCES TABLERO.[TrActividades] ([TrActividades_ID]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+      }
+
+      public void RITrActividadesTrGestionTareas( )
+      {
+         String cmdBuffer ;
+         try
+         {
+            cmdBuffer=" ALTER TABLE TABLERO.[TrActividades] ADD CONSTRAINT [ITRACTIVIDADES1] FOREIGN KEY ([TrActividades_IDTarea]) REFERENCES TABLERO.[TrGestionTareas] ([TrGestionTareas_ID]) "
+            ;
+            RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+            RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
+            RGZ.ExecuteStmt() ;
+            RGZ.Drop();
+         }
+         catch ( Exception ex )
+         {
+            try
+            {
+               cmdBuffer=" ALTER TABLE TABLERO.[TrActividades] DROP CONSTRAINT [ITRACTIVIDADES1] "
+               ;
+               RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
+               RGZ.ErrorMask = GxErrorMask.GX_MASKNOTFOUND | GxErrorMask.GX_MASKLOOPLOCK;
+               RGZ.ExecuteStmt() ;
+               RGZ.Drop();
+            }
+            catch ( Exception sqlex1 )
+            {
+            }
+            cmdBuffer=" ALTER TABLE TABLERO.[TrActividades] ADD CONSTRAINT [ITRACTIVIDADES1] FOREIGN KEY ([TrActividades_IDTarea]) REFERENCES TABLERO.[TrGestionTareas] ([TrGestionTareas_ID]) "
             ;
             RGZ = new GxCommand(dsDefault.Db, cmdBuffer, dsDefault,0,true,false,null);
             RGZ.ErrorMask = GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK;
@@ -257,9 +292,9 @@ namespace GeneXus.Programs {
          {
             /* Using cursor P00012 */
             pr_default.execute(0);
-            TrTareaComentariosCount = P00012_ATrTareaComentariosCount[0];
+            TrActividadesCount = P00012_ATrActividadesCount[0];
             pr_default.close(0);
-            PrintRecordCount ( "TrTareaComentarios" ,  TrTareaComentariosCount );
+            PrintRecordCount ( "TrActividades" ,  TrActividadesCount );
          }
       }
 
@@ -278,9 +313,9 @@ namespace GeneXus.Programs {
             return true ;
          }
          sSchemaVar = "TABLERO";
-         if ( ! tableexist("TrTareaComentarios",sSchemaVar) )
+         if ( ! tableexist("TrActividades",sSchemaVar) )
          {
-            SetCheckError ( GXResourceManager.GetMessage("GXM_table_not_exist", new   object[]  {"TrTareaComentarios"}) ) ;
+            SetCheckError ( GXResourceManager.GetMessage("GXM_table_not_exist", new   object[]  {"TrActividades"}) ) ;
             return false ;
          }
          return true ;
@@ -331,12 +366,13 @@ namespace GeneXus.Programs {
 
       private void ExecuteOnlyTablesReorganization( )
       {
-         ReorgExecute.RegisterBlockForSubmit( 1 ,  "ReorganizeTrTareaComentarios" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 1 ,  "ReorganizeTrActividades" , new Object[]{ });
       }
 
       private void ExecuteOnlyRisReorganization( )
       {
-         ReorgExecute.RegisterBlockForSubmit( 2 ,  "RITrTareaComentariosTrGestionTareas" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 2 ,  "RITrActividadesLevel1TrActividades" , new Object[]{ });
+         ReorgExecute.RegisterBlockForSubmit( 3 ,  "RITrActividadesTrGestionTareas" , new Object[]{ });
       }
 
       private void ExecuteTablesReorganization( )
@@ -354,13 +390,15 @@ namespace GeneXus.Programs {
 
       private void SetPrecedencetables( )
       {
-         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_fileupdate", new   object[]  {"TrTareaComentarios", ""}) );
+         GXReorganization.SetMsg( 1 ,  GXResourceManager.GetMessage("GXM_fileupdate", new   object[]  {"TrActividades", ""}) );
       }
 
       private void SetPrecedenceris( )
       {
-         GXReorganization.SetMsg( 2 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[ITRTAREACOMENTARIOS1]"}) );
-         ReorgExecute.RegisterPrecedence( "RITrTareaComentariosTrGestionTareas" ,  "ReorganizeTrTareaComentarios" );
+         GXReorganization.SetMsg( 2 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[ITRACTIVIDADESLEVEL2]"}) );
+         ReorgExecute.RegisterPrecedence( "RITrActividadesLevel1TrActividades" ,  "ReorganizeTrActividades" );
+         GXReorganization.SetMsg( 3 ,  GXResourceManager.GetMessage("GXM_refintcrea", new   object[]  {"[ITRACTIVIDADES1]"}) );
+         ReorgExecute.RegisterPrecedence( "RITrActividadesTrGestionTareas" ,  "ReorganizeTrActividades" );
       }
 
       private void ExecuteReorganization( )
@@ -418,7 +456,7 @@ namespace GeneXus.Programs {
       public override void initialize( )
       {
          scmdbuf = "";
-         P00012_ATrTareaComentariosCount = new int[1] ;
+         P00012_ATrActividadesCount = new int[1] ;
          sSchemaVar = "";
          sTableName = "";
          sMySchemaName = "";
@@ -452,7 +490,7 @@ namespace GeneXus.Programs {
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.reorg__default(),
             new Object[][] {
                 new Object[] {
-               P00012_ATrTareaComentariosCount
+               P00012_ATrActividadesCount
                }
                , new Object[] {
                P00023_Atablename, P00023_Aschemaname
@@ -469,7 +507,7 @@ namespace GeneXus.Programs {
       }
 
       protected short ErrCode ;
-      protected int TrTareaComentariosCount ;
+      protected int TrActividadesCount ;
       protected int rkeyid ;
       protected String scmdbuf ;
       protected String sSchemaVar ;
@@ -490,7 +528,7 @@ namespace GeneXus.Programs {
       protected IGxDataStore dsDefault ;
       protected GxCommand RGZ ;
       protected IDataStoreProvider pr_default ;
-      protected int[] P00012_ATrTareaComentariosCount ;
+      protected int[] P00012_ATrActividadesCount ;
       protected String[] P00023_Atablename ;
       protected bool[] P00023_ntablename ;
       protected String[] P00023_Aschemaname ;
@@ -546,7 +584,7 @@ namespace GeneXus.Programs {
           new Object[] {"@sTableName",SqlDbType.Char,255,0}
           } ;
           def= new CursorDef[] {
-              new CursorDef("P00012", "SELECT COUNT(*) FROM TABLERO.[TrTareaComentarios] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00012,100, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("P00012", "SELECT COUNT(*) FROM TABLERO.[TrActividades] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00012,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("P00023", "SELECT TABLE_NAME, TABLE_SCHEMA FROM INFORMATION_SCHEMA.TABLES WHERE (TABLE_NAME = @sTableName) AND (TABLE_SCHEMA = @sMySchemaName) ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00023,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("P00034", "SELECT TABLE_NAME, TABLE_SCHEMA, COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE (TABLE_NAME = @sTableName) AND (TABLE_SCHEMA = @sMySchemaName) AND (COLUMN_NAME = @sMyColumnName) ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00034,100, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("P00045", "SELECT OBJECT_NAME(object_id), OBJECT_NAME(parent_object_id), referenced_object_id FROM sys.foreign_keys WHERE referenced_object_id = OBJECT_ID(RTRIM(LTRIM(@sTableName))) ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00045,100, GxCacheFrequency.OFF ,true,false )

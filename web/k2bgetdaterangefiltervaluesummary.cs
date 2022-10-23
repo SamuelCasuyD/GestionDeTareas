@@ -100,7 +100,7 @@ namespace GeneXus.Programs {
          /* Output device settings */
          if ( StringUtil.StrCmp(AV11SemanticDateRange, "K2BToolsDateRangeManual") == 0 )
          {
-            AV10Result = context.localUtil.DToC( AV8DateFrom, 1, "/") + " - " + context.localUtil.DToC( AV9DateTo, 1, "/");
+            AV10Result = context.localUtil.DToC( AV8DateFrom, 2, "/") + " - " + context.localUtil.DToC( AV9DateTo, 2, "/");
          }
          else
          {

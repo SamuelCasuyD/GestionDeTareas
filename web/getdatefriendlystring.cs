@@ -97,32 +97,32 @@ namespace GeneXus.Programs {
          AV13Seconds = (long)(-DateTimeUtil.TDiff( AV8DateTime, DateTimeUtil.Now( context)));
          if ( AV13Seconds < 180 )
          {
-            AV12String = "now";
+            AV12String = "ahora";
          }
          else if ( AV13Seconds < 3600 )
          {
             AV11Minutes = (short)(AV13Seconds/ (decimal)(60));
-            AV12String = StringUtil.Format( "%1 minutes ago", StringUtil.LTrimStr( (decimal)(AV11Minutes), 4, 0), "", "", "", "", "", "", "", "");
+            AV12String = StringUtil.Format( "hace %1 minutos", StringUtil.LTrimStr( (decimal)(AV11Minutes), 4, 0), "", "", "", "", "", "", "", "");
          }
          else if ( ( AV13Seconds >= 3600 ) && ( AV13Seconds <= 3660 ) )
          {
-            AV12String = "1 hour ago";
+            AV12String = "hace una hora";
          }
          else if ( AV13Seconds < 7200 )
          {
             AV11Minutes = (short)((AV13Seconds-3600)/ (decimal)(60));
-            AV12String = StringUtil.Format( "1 hour %1 minutes ago", StringUtil.LTrimStr( (decimal)(AV11Minutes), 4, 0), "", "", "", "", "", "", "", "");
+            AV12String = StringUtil.Format( "hace una hora y %1 minutos", StringUtil.LTrimStr( (decimal)(AV11Minutes), 4, 0), "", "", "", "", "", "", "", "");
          }
          else if ( AV13Seconds < 86400 )
          {
             AV10Hours = (short)(AV13Seconds/ (decimal)(3600));
             AV11Minutes = (short)((AV13Seconds-3600*AV10Hours)/ (decimal)(60));
-            AV12String = StringUtil.Format( "%1 hours %2 minutes ago", StringUtil.LTrimStr( (decimal)(AV10Hours), 4, 0), StringUtil.LTrimStr( (decimal)(AV11Minutes), 4, 0), "", "", "", "", "", "", "");
+            AV12String = StringUtil.Format( "hace %1 horas y %2 minutos", StringUtil.LTrimStr( (decimal)(AV10Hours), 4, 0), StringUtil.LTrimStr( (decimal)(AV11Minutes), 4, 0), "", "", "", "", "", "", "");
          }
          else
          {
             AV9Days = (short)(AV13Seconds/ (decimal)(86400));
-            AV12String = StringUtil.Format( "%1 days ago", StringUtil.LTrimStr( (decimal)(AV9Days), 4, 0), "", "", "", "", "", "", "", "");
+            AV12String = StringUtil.Format( "hace %1 días", StringUtil.LTrimStr( (decimal)(AV9Days), 4, 0), "", "", "", "", "", "", "", "");
          }
          this.cleanup();
       }

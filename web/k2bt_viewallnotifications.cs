@@ -240,7 +240,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185751", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744749", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -531,13 +531,13 @@ namespace GeneXus.Programs {
                context.SendWebValue( "Notification Id") ;
                context.WriteHtmlTextNl( "</th>") ;
                context.WriteHtmlText( "<th align=\""+"left"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute_Grid"+"\" "+" style=\""+""+""+"\" "+">") ;
-               context.SendWebValue( "Notification text") ;
+               context.SendWebValue( "Texto de notificación") ;
                context.WriteHtmlTextNl( "</th>") ;
                context.WriteHtmlText( "<th align=\""+"left"+"\" "+" width="+StringUtil.LTrimStr( (decimal)(570), 4, 0)+"px"+" class=\""+"Attribute_Grid"+"\" "+" style=\""+"display:none;"+""+"\" "+">") ;
                context.SendWebValue( "Event Target Url") ;
                context.WriteHtmlTextNl( "</th>") ;
                context.WriteHtmlText( "<th align=\""+""+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute_Grid"+"\" "+" style=\""+""+""+"\" "+">") ;
-               context.SendWebValue( "Is read?") ;
+               context.SendWebValue( "Notificación leída?") ;
                context.WriteHtmlTextNl( "</th>") ;
                context.WriteHtmlText( "<th align=\""+"left"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
                context.SendWebValue( "") ;
@@ -1278,9 +1278,9 @@ namespace GeneXus.Programs {
             GxWebStd.gx_hidden_field( context, "gxhash_vEVENTTARGETURL"+"_"+sGXsfl_57_idx, GetSecureSignedToken( sGXsfl_57_idx, StringUtil.RTrim( context.localUtil.Format( AV10EventTargetUrl, "")), context));
             AV19NotificationIsRead = AV9DP_SDT_ITEM_GridGetLatestNotificationsForCurrentUserDP.gxTpr_Notificationisread;
             AssignAttri("", false, chkavNotificationisread_Internalname, AV19NotificationIsRead);
-            AV21Open_Action = "Open";
+            AV21Open_Action = "Abrir";
             AssignAttri("", false, edtavOpen_action_Internalname, AV21Open_Action);
-            AV15MarkAsRead_Action = "Mark as read";
+            AV15MarkAsRead_Action = "Marcar como leído";
             AssignAttri("", false, edtavMarkasread_action_Internalname, AV15MarkAsRead_Action);
             /* Execute user subroutine: 'U_LOADROWVARS(GRIDGETLATESTNOTIFICATIONSFORCURRENTUSERDP)' */
             S142 ();
@@ -1553,7 +1553,7 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblI_noresultsfoundtextblock_gridgetlatestnotificationsforcurrentuserdp_Internalname, "No results found", "", "", lblI_noresultsfoundtextblock_gridgetlatestnotificationsforcurrentuserdp_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "K2BToolsTextBlock_NoResultsFound", 0, "", 1, 1, 0, "HLP_K2BT_ViewAllNotifications.htm");
+            GxWebStd.gx_label_ctrl( context, lblI_noresultsfoundtextblock_gridgetlatestnotificationsforcurrentuserdp_Internalname, "No hay resultados", "", "", lblI_noresultsfoundtextblock_gridgetlatestnotificationsforcurrentuserdp_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "K2BToolsTextBlock_NoResultsFound", 0, "", 1, 1, 0, "HLP_K2BT_ViewAllNotifications.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
@@ -1617,7 +1617,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 42,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MinimalAction";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttGridsettings_savegridgetlatestnotificationsforcurrentuserdp_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(57), 2, 0)+","+"null"+");", "Save", bttGridsettings_savegridgetlatestnotificationsforcurrentuserdp_Jsonclick, 5, "Save", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'SAVEGRIDSETTINGS(GRIDGETLATESTNOTIFICATIONSFORCURRENTUSERDP)\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_K2BT_ViewAllNotifications.htm");
+            GxWebStd.gx_button_ctrl( context, bttGridsettings_savegridgetlatestnotificationsforcurrentuserdp_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(57), 2, 0)+","+"null"+");", "Guardar", bttGridsettings_savegridgetlatestnotificationsforcurrentuserdp_Jsonclick, 5, "Guardar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'SAVEGRIDSETTINGS(GRIDGETLATESTNOTIFICATIONSFORCURRENTUSERDP)\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_K2BT_ViewAllNotifications.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -1646,7 +1646,7 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblGridsettings_rowsperpagetextblockgridgetlatestnotificationsforcurrentuserdp_Internalname, "Rows per page", "", "", lblGridsettings_rowsperpagetextblockgridgetlatestnotificationsforcurrentuserdp_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_K2BT_ViewAllNotifications.htm");
+            GxWebStd.gx_label_ctrl( context, lblGridsettings_rowsperpagetextblockgridgetlatestnotificationsforcurrentuserdp_Internalname, "Filas por página", "", "", lblGridsettings_rowsperpagetextblockgridgetlatestnotificationsforcurrentuserdp_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock", 0, "", 1, 1, 0, "HLP_K2BT_ViewAllNotifications.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             /* Div Control */
@@ -1655,7 +1655,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_element( context, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp_Internalname, "Grid Settings Rows Per Page_Grid Get Latest Notifications For Current User DP", "gx-form-item K2BToolsEnhancedComboLabel", 0, true, "width: 25%;");
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 39,'',false,'" + sGXsfl_57_idx + "',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV11GridSettingsRowsPerPage_GridGetLatestNotificationsForCurrentUserDP), 4, 0)), 1, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "Rows per page", 1, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp.Enabled, 0, 0, 0, "em", 0, "", "", "K2BToolsEnhancedCombo", "", "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,39);\"", "", true, "HLP_K2BT_ViewAllNotifications.htm");
+            GxWebStd.gx_combobox_ctrl1( context, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV11GridSettingsRowsPerPage_GridGetLatestNotificationsForCurrentUserDP), 4, 0)), 1, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "Filas por página", 1, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp.Enabled, 0, 0, 0, "em", 0, "", "", "K2BToolsEnhancedCombo", "", "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,39);\"", "", true, "HLP_K2BT_ViewAllNotifications.htm");
             cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV11GridSettingsRowsPerPage_GridGetLatestNotificationsForCurrentUserDP), 4, 0));
             AssignProp("", false, cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp_Internalname, "Values", (String)(cmbavGridsettingsrowsperpage_gridgetlatestnotificationsforcurrentuserdp.ToJavascriptSource()), true);
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -1713,7 +1713,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185845", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211744856", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1730,8 +1730,8 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-            context.AddJavascriptSource("k2bt_viewallnotifications.js", "?202210202185845", false, true);
+            context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+            context.AddJavascriptSource("k2bt_viewallnotifications.js", "?202210211744856", false, true);
             context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
             context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
             context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);

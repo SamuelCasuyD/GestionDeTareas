@@ -307,7 +307,7 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
          ClassString = "BtnSelect";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Select", bttBtn_select_Jsonclick, 4, "Select", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0060.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRETIQUETAS_ID"+"'), id:'"+"TRETIQUETAS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Seleccionar", bttBtn_select_Jsonclick, 4, "Seleccionar", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0060.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRETIQUETAS_ID"+"'), id:'"+"TRETIQUETAS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -395,7 +395,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 43,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrEtiquetas_FechaCreacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrEtiquetas_FechaCreacion_Internalname, context.localUtil.Format(A43TrEtiquetas_FechaCreacion, "99/99/9999"), context.localUtil.Format( A43TrEtiquetas_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,43);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrEtiquetas_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrEtiquetas_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrEtiquetas.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrEtiquetas_FechaCreacion_Internalname, context.localUtil.Format(A43TrEtiquetas_FechaCreacion, "99/99/9999"), context.localUtil.Format( A43TrEtiquetas_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,43);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrEtiquetas_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrEtiquetas_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrEtiquetas.htm");
          GxWebStd.gx_bitmap( context, edtTrEtiquetas_FechaCreacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrEtiquetas_FechaCreacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrEtiquetas.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -415,7 +415,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 48,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrEtiquetas_FechaModificacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrEtiquetas_FechaModificacion_Internalname, context.localUtil.Format(A44TrEtiquetas_FechaModificacion, "99/99/9999"), context.localUtil.Format( A44TrEtiquetas_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,48);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrEtiquetas_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrEtiquetas_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrEtiquetas.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrEtiquetas_FechaModificacion_Internalname, context.localUtil.Format(A44TrEtiquetas_FechaModificacion, "99/99/9999"), context.localUtil.Format( A44TrEtiquetas_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,48);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrEtiquetas_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrEtiquetas_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrEtiquetas.htm");
          GxWebStd.gx_bitmap( context, edtTrEtiquetas_FechaModificacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrEtiquetas_FechaModificacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrEtiquetas.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -452,21 +452,21 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 58,'',false,'',0)\"";
          ClassString = "BtnEnter";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirm", bttBtn_enter_Jsonclick, 5, "Confirm", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirmar", bttBtn_enter_Jsonclick, 5, "Confirmar", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 60,'',false,'',0)\"";
          ClassString = "BtnCancel";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancel", bttBtn_cancel_Jsonclick, 1, "Cancel", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancelar", bttBtn_cancel_Jsonclick, 1, "Cancelar", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 62,'',false,'',0)\"";
          ClassString = "BtnDelete";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Delete", bttBtn_delete_Jsonclick, 5, "Delete", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Eliminar", bttBtn_delete_Jsonclick, 5, "Eliminar", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -557,7 +557,7 @@ namespace GeneXus.Programs {
             n42TrEtiquetas_Nombre = false;
             AssignAttri("", false, "A42TrEtiquetas_Nombre", A42TrEtiquetas_Nombre);
             n42TrEtiquetas_Nombre = (String.IsNullOrEmpty(StringUtil.RTrim( A42TrEtiquetas_Nombre)) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrEtiquetas_FechaCreacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrEtiquetas_FechaCreacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Etiquetas_Fecha Creacion"}), 1, "TRETIQUETAS_FECHACREACION");
                AnyError = 1;
@@ -570,12 +570,12 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A43TrEtiquetas_FechaCreacion = context.localUtil.CToD( cgiGet( edtTrEtiquetas_FechaCreacion_Internalname), 1);
+               A43TrEtiquetas_FechaCreacion = context.localUtil.CToD( cgiGet( edtTrEtiquetas_FechaCreacion_Internalname), 2);
                n43TrEtiquetas_FechaCreacion = false;
                AssignAttri("", false, "A43TrEtiquetas_FechaCreacion", context.localUtil.Format(A43TrEtiquetas_FechaCreacion, "99/99/9999"));
             }
             n43TrEtiquetas_FechaCreacion = ((DateTime.MinValue==A43TrEtiquetas_FechaCreacion) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrEtiquetas_FechaModificacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrEtiquetas_FechaModificacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Etiquetas_Fecha Modificacion"}), 1, "TRETIQUETAS_FECHAMODIFICACION");
                AnyError = 1;
@@ -588,7 +588,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A44TrEtiquetas_FechaModificacion = context.localUtil.CToD( cgiGet( edtTrEtiquetas_FechaModificacion_Internalname), 1);
+               A44TrEtiquetas_FechaModificacion = context.localUtil.CToD( cgiGet( edtTrEtiquetas_FechaModificacion_Internalname), 2);
                n44TrEtiquetas_FechaModificacion = false;
                AssignAttri("", false, "A44TrEtiquetas_FechaModificacion", context.localUtil.Format(A44TrEtiquetas_FechaModificacion, "99/99/9999"));
             }
@@ -882,7 +882,7 @@ namespace GeneXus.Programs {
          {
             if ( ! ( (0==A40TrEtiquetas_IDTarea) ) )
             {
-               GX_msglist.addItem("No matching 'Tr Gestion Tareas3_STG'.", "ForeignKeyNotFound", 1, "TRETIQUETAS_IDTAREA");
+               GX_msglist.addItem("No existe 'Tr Gestion Tareas3_STG'.", "ForeignKeyNotFound", 1, "TRETIQUETAS_IDTAREA");
                AnyError = 1;
                GX_FocusControl = edtTrEtiquetas_IDTarea_Internalname;
                AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -891,21 +891,21 @@ namespace GeneXus.Programs {
          pr_default.close(2);
          if ( ! ( (DateTime.MinValue==A43TrEtiquetas_FechaCreacion) || ( A43TrEtiquetas_FechaCreacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Etiquetas_Fecha Creacion is out of range", "OutOfRange", 1, "TRETIQUETAS_FECHACREACION");
+            GX_msglist.addItem("Campo Tr Etiquetas_Fecha Creacion fuera de rango", "OutOfRange", 1, "TRETIQUETAS_FECHACREACION");
             AnyError = 1;
             GX_FocusControl = edtTrEtiquetas_FechaCreacion_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( (DateTime.MinValue==A44TrEtiquetas_FechaModificacion) || ( A44TrEtiquetas_FechaModificacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Etiquetas_Fecha Modificacion is out of range", "OutOfRange", 1, "TRETIQUETAS_FECHAMODIFICACION");
+            GX_msglist.addItem("Campo Tr Etiquetas_Fecha Modificacion fuera de rango", "OutOfRange", 1, "TRETIQUETAS_FECHAMODIFICACION");
             AnyError = 1;
             GX_FocusControl = edtTrEtiquetas_FechaModificacion_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( ( A45TrEtiquetas_Estado == 1 ) || ( A45TrEtiquetas_Estado == 2 ) || ( A45TrEtiquetas_Estado == 3 ) || ( A45TrEtiquetas_Estado == 4 ) || ( A45TrEtiquetas_Estado == 5 ) || (0==A45TrEtiquetas_Estado) ) )
          {
-            GX_msglist.addItem("Field Tr Etiquetas_Estado is out of range", "OutOfRange", 1, "TRETIQUETAS_ESTADO");
+            GX_msglist.addItem("Campo Tr Etiquetas_Estado fuera de rango", "OutOfRange", 1, "TRETIQUETAS_ESTADO");
             AnyError = 1;
             GX_FocusControl = cmbTrEtiquetas_Estado_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -929,7 +929,7 @@ namespace GeneXus.Programs {
          {
             if ( ! ( (0==A40TrEtiquetas_IDTarea) ) )
             {
-               GX_msglist.addItem("No matching 'Tr Gestion Tareas3_STG'.", "ForeignKeyNotFound", 1, "TRETIQUETAS_IDTAREA");
+               GX_msglist.addItem("No existe 'Tr Gestion Tareas3_STG'.", "ForeignKeyNotFound", 1, "TRETIQUETAS_IDTAREA");
                AnyError = 1;
                GX_FocusControl = edtTrEtiquetas_IDTarea_Internalname;
                AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -1706,14 +1706,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185589", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744327", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -1884,7 +1884,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185594", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211744334", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1899,8 +1899,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("tretiquetas.js", "?202210202185594", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("tretiquetas.js", "?202210211744335", false, true);
          /* End function include_jscripts */
       }
 
@@ -2074,7 +2074,7 @@ namespace GeneXus.Programs {
          {
             if ( ! ( (0==A40TrEtiquetas_IDTarea) ) )
             {
-               GX_msglist.addItem("No matching 'Tr Gestion Tareas3_STG'.", "ForeignKeyNotFound", 1, "TRETIQUETAS_IDTAREA");
+               GX_msglist.addItem("No existe 'Tr Gestion Tareas3_STG'.", "ForeignKeyNotFound", 1, "TRETIQUETAS_IDTAREA");
                AnyError = 1;
                GX_FocusControl = edtTrEtiquetas_IDTarea_Internalname;
             }

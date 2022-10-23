@@ -215,7 +215,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?2022102021351755", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744972", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -353,7 +353,7 @@ namespace GeneXus.Programs {
 
       public override String GetPgmdesc( )
       {
-         return "Wp Crear Comentarios Tarea" ;
+         return "Comentarios por tarea" ;
       }
 
       protected void WB290( )
@@ -373,6 +373,26 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "Section", "left", "top", " "+"data-gx-base-lib=\"bootstrapv3\""+" "+"data-abstract-form"+" ", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, divMaintable_Internalname, 1, 0, "px", 0, "px", "Table", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, divTable1_Internalname, 1, 0, "px", 0, "px", "K2BToolsTable_TitleContainer", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, divSection2_Internalname, 1, 0, "px", 0, "px", "Section", "left", "top", "", "", "h1");
+            /* Text block */
+            GxWebStd.gx_label_ctrl( context, lblTitle_Internalname, "Agregar comentario", "", "", lblTitle_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock_Title", 0, "", 1, 1, 0, "HLP_WpCrearComentariosTarea.htm");
+            GxWebStd.gx_div_end( context, "left", "top", "h1");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
+            GxWebStd.gx_div_end( context, "left", "top", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
@@ -421,8 +441,8 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 100, "%", 0, "px", "gx-form-item gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 25,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavTrtareacomentarios_id_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV15TrTareaComentarios_ID), 13, 0, ".", "")), ((edtavTrtareacomentarios_id_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV15TrTareaComentarios_ID), "ZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(AV15TrTareaComentarios_ID), "ZZZZZZZZZZZZ9")), TempTags+" onchange=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onblur(this,25);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrtareacomentarios_id_Jsonclick, 0, "Attribute_Trn", "", "", "", "", edtavTrtareacomentarios_id_Visible, edtavTrtareacomentarios_id_Enabled, 0, "number", "1", 13, "chr", 1, "row", 13, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearComentariosTarea.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 32,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavTrtareacomentarios_id_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV15TrTareaComentarios_ID), 13, 0, ".", "")), ((edtavTrtareacomentarios_id_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV15TrTareaComentarios_ID), "ZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(AV15TrTareaComentarios_ID), "ZZZZZZZZZZZZ9")), TempTags+" onchange=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onblur(this,32);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrtareacomentarios_id_Jsonclick, 0, "Attribute_Trn", "", "", "", "", edtavTrtareacomentarios_id_Visible, edtavTrtareacomentarios_id_Enabled, 0, "number", "1", 13, "chr", 1, "row", 13, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearComentariosTarea.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -441,8 +461,8 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 100, "%", 0, "px", "gx-form-item gx-attribute", "left", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 31,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavTrtareacomentarios_idtarea_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV16TrTareaComentarios_IDTarea), 13, 0, ".", "")), ((edtavTrtareacomentarios_idtarea_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV16TrTareaComentarios_IDTarea), "ZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(AV16TrTareaComentarios_IDTarea), "ZZZZZZZZZZZZ9")), TempTags+" onchange=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onblur(this,31);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrtareacomentarios_idtarea_Jsonclick, 0, "Attribute_Trn", "", "", "", "", edtavTrtareacomentarios_idtarea_Visible, edtavTrtareacomentarios_idtarea_Enabled, 0, "number", "1", 13, "chr", 1, "row", 13, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearComentariosTarea.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 38,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavTrtareacomentarios_idtarea_Internalname, StringUtil.LTrim( StringUtil.NToC( (decimal)(AV16TrTareaComentarios_IDTarea), 13, 0, ".", "")), ((edtavTrtareacomentarios_idtarea_Enabled!=0) ? StringUtil.LTrim( context.localUtil.Format( (decimal)(AV16TrTareaComentarios_IDTarea), "ZZZZZZZZZZZZ9")) : context.localUtil.Format( (decimal)(AV16TrTareaComentarios_IDTarea), "ZZZZZZZZZZZZ9")), TempTags+" onchange=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.num.valid_integer( this,',');"+";gx.evt.onblur(this,38);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrtareacomentarios_idtarea_Jsonclick, 0, "Attribute_Trn", "", "", "", "", edtavTrtareacomentarios_idtarea_Visible, edtavTrtareacomentarios_idtarea_Enabled, 0, "number", "1", 13, "chr", 1, "row", 13, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearComentariosTarea.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -461,12 +481,12 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
             /* Multiple line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 38,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 45,'',false,'',0)\"";
             ClassString = "Attribute_Trn";
             StyleString = "";
             ClassString = "Attribute_Trn";
             StyleString = "";
-            GxWebStd.gx_html_textarea( context, edtavTrtareacomentarios_descripcion_Internalname, AV17TrTareaComentarios_Descripcion, "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,38);\"", 0, 1, edtavTrtareacomentarios_descripcion_Enabled, 0, 80, "chr", 10, "row", StyleString, ClassString, "", "", "2097152", -1, 0, "", "", -1, true, "", "'"+""+"'"+",false,"+"'"+""+"'", 0, "HLP_WpCrearComentariosTarea.htm");
+            GxWebStd.gx_html_textarea( context, edtavTrtareacomentarios_descripcion_Internalname, AV17TrTareaComentarios_Descripcion, "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,45);\"", 0, 1, edtavTrtareacomentarios_descripcion_Enabled, 0, 80, "chr", 10, "row", StyleString, ClassString, "", "", "2097152", -1, 0, "", "", -1, true, "", "'"+""+"'"+",false,"+"'"+""+"'", 0, "HLP_WpCrearComentariosTarea.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -484,9 +504,9 @@ namespace GeneXus.Programs {
             GxWebStd.gx_label_ctrl( context, lblTrtareacomentarios_estado_var_lefttext_Internalname, "Estado : ", "", "", lblTrtareacomentarios_estado_var_lefttext_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "SideLabel", 0, "", 1, 1, 0, "HLP_WpCrearComentariosTarea.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", " gx-attribute", "left", "top", "", "", "div");
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 45,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 52,'',false,'',0)\"";
             /* ComboBox */
-            GxWebStd.gx_combobox_ctrl1( context, cmbavTrtareacomentarios_estado, cmbavTrtareacomentarios_estado_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV18TrTareaComentarios_Estado), 4, 0)), 1, cmbavTrtareacomentarios_estado_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, cmbavTrtareacomentarios_estado.Enabled, 0, 0, 0, "em", 0, "", "", "Attribute_Trn", "", "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,45);\"", "", true, "HLP_WpCrearComentariosTarea.htm");
+            GxWebStd.gx_combobox_ctrl1( context, cmbavTrtareacomentarios_estado, cmbavTrtareacomentarios_estado_Internalname, StringUtil.Trim( StringUtil.Str( (decimal)(AV18TrTareaComentarios_Estado), 4, 0)), 1, cmbavTrtareacomentarios_estado_Jsonclick, 0, "'"+""+"'"+",false,"+"'"+""+"'", "int", "", 1, cmbavTrtareacomentarios_estado.Enabled, 0, 0, 0, "em", 0, "", "", "Attribute_Trn", "", "", TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,52);\"", "", true, "HLP_WpCrearComentariosTarea.htm");
             cmbavTrtareacomentarios_estado.CurrentValue = StringUtil.Trim( StringUtil.Str( (decimal)(AV18TrTareaComentarios_Estado), 4, 0));
             AssignProp("", false, cmbavTrtareacomentarios_estado_Internalname, "Values", (String)(cmbavTrtareacomentarios_estado.ToJavascriptSource()), true);
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -514,16 +534,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            wb_table1_51_292( true) ;
+            wb_table1_58_292( true) ;
          }
          else
          {
-            wb_table1_51_292( false) ;
+            wb_table1_58_292( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_51_292e( bool wbgen )
+      protected void wb_table1_58_292e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -539,16 +559,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "row", "left", "top", "", "", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
-            wb_table2_57_292( true) ;
+            wb_table2_64_292( true) ;
          }
          else
          {
-            wb_table2_57_292( false) ;
+            wb_table2_64_292( false) ;
          }
          return  ;
       }
 
-      protected void wb_table2_57_292e( bool wbgen )
+      protected void wb_table2_64_292e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -579,7 +599,7 @@ namespace GeneXus.Programs {
             {
                Form.Meta.addItem("generator", "GeneXus C# 16_0_10-142546", 0) ;
             }
-            Form.Meta.addItem("description", "Wp Crear Comentarios Tarea", 0) ;
+            Form.Meta.addItem("description", "Comentarios por tarea", 0) ;
          }
          context.wjLoc = "";
          context.nUserReturn = 0;
@@ -962,7 +982,7 @@ namespace GeneXus.Programs {
       protected void E14292( )
       {
          /* 'E_CrearComentario' Routine */
-         AV12ConfirmMessage = "Are you sure?";
+         AV12ConfirmMessage = "¿Está seguro?";
          AssignAttri("", false, "AV12ConfirmMessage", AV12ConfirmMessage);
          /* Execute user subroutine: 'U_CONFIRMATIONREQUIRED(CREARCOMENTARIO)' */
          S152 ();
@@ -992,6 +1012,12 @@ namespace GeneXus.Programs {
          AV21TrComentarioTarea_SDT.gxTpr_Trtareacomentarios_estado = AV18TrTareaComentarios_Estado;
          new prgestionesdetareas(context ).execute(  AV19GestionTareas_SDT,  AV21TrComentarioTarea_SDT,  "CIN") ;
          context.DoAjaxRefresh();
+         context.setWebReturnParms(new Object[] {});
+         context.setWebReturnParmsMetadata(new Object[] {});
+         context.wjLocDisableFrm = 1;
+         context.nUserReturn = 1;
+         returnInSub = true;
+         if (true) return;
       }
 
       protected void nextLoad( )
@@ -1003,7 +1029,7 @@ namespace GeneXus.Programs {
          /* Load Routine */
       }
 
-      protected void wb_table2_57_292( bool wbgen )
+      protected void wb_table2_64_292( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1016,16 +1042,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblTableconditionalconfirm_Internalname, tblTableconditionalconfirm_Internalname, "", "Table_ConditionalConfirm", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table3_60_292( true) ;
+            wb_table3_67_292( true) ;
          }
          else
          {
-            wb_table3_60_292( false) ;
+            wb_table3_67_292( false) ;
          }
          return  ;
       }
 
-      protected void wb_table3_60_292e( bool wbgen )
+      protected void wb_table3_67_292e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1033,15 +1059,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table2_57_292e( true) ;
+            wb_table2_64_292e( true) ;
          }
          else
          {
-            wb_table2_57_292e( false) ;
+            wb_table2_64_292e( false) ;
          }
       }
 
-      protected void wb_table3_60_292( bool wbgen )
+      protected void wb_table3_67_292( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1050,16 +1076,16 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblSection_condconf_dialog_Internalname, tblSection_condconf_dialog_Internalname, "", "Section_CondConf_Dialog", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table4_63_292( true) ;
+            wb_table4_70_292( true) ;
          }
          else
          {
-            wb_table4_63_292( false) ;
+            wb_table4_70_292( false) ;
          }
          return  ;
       }
 
-      protected void wb_table4_63_292e( bool wbgen )
+      protected void wb_table4_70_292e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1067,15 +1093,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table3_60_292e( true) ;
+            wb_table3_67_292e( true) ;
          }
          else
          {
-            wb_table3_60_292e( false) ;
+            wb_table3_67_292e( false) ;
          }
       }
 
-      protected void wb_table4_63_292( bool wbgen )
+      protected void wb_table4_70_292( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1089,23 +1115,23 @@ namespace GeneXus.Programs {
             /* Attribute/Variable Label */
             GxWebStd.gx_label_element( context, edtavConfirmmessage_Internalname, "Confirm Message", "gx-form-item Attribute_ConditionalConfirmLabel", 0, true, "width: 25%;");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 67,'',false,'',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavConfirmmessage_Internalname, StringUtil.RTrim( AV12ConfirmMessage), StringUtil.RTrim( context.localUtil.Format( AV12ConfirmMessage, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,67);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavConfirmmessage_Jsonclick, 0, "Attribute_ConditionalConfirm", "", "", "", "", 1, edtavConfirmmessage_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "", "HLP_WpCrearComentariosTarea.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 74,'',false,'',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavConfirmmessage_Internalname, StringUtil.RTrim( AV12ConfirmMessage), StringUtil.RTrim( context.localUtil.Format( AV12ConfirmMessage, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,74);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavConfirmmessage_Jsonclick, 0, "Attribute_ConditionalConfirm", "", "", "", "", 1, edtavConfirmmessage_Enabled, 0, "text", "", 20, "chr", 1, "row", 20, 0, 0, 0, 1, -1, -1, true, "", "left", true, "", "HLP_WpCrearComentariosTarea.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            wb_table5_70_292( true) ;
+            wb_table5_77_292( true) ;
          }
          else
          {
-            wb_table5_70_292( false) ;
+            wb_table5_77_292( false) ;
          }
          return  ;
       }
 
-      protected void wb_table5_70_292e( bool wbgen )
+      protected void wb_table5_77_292e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1113,15 +1139,15 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table4_63_292e( true) ;
+            wb_table4_70_292e( true) ;
          }
          else
          {
-            wb_table4_63_292e( false) ;
+            wb_table4_70_292e( false) ;
          }
       }
 
-      protected void wb_table5_70_292( bool wbgen )
+      protected void wb_table5_77_292( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1130,29 +1156,29 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblConfirm_hidden_actionstable_Internalname, tblConfirm_hidden_actionstable_Internalname, "", "Table", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 73,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 80,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MainAction_Confirm";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmyes_Internalname, "", "Ok", bttI_buttonconfirmyes_Jsonclick, 5, "Ok", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONFIRMYES\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpCrearComentariosTarea.htm");
+            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmyes_Internalname, "", "Aceptar", bttI_buttonconfirmyes_Jsonclick, 5, "Aceptar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONFIRMYES\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpCrearComentariosTarea.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 75,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 82,'',false,'',0)\"";
             ClassString = "Button_Standard";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmno_Internalname, "", "Cancel", bttI_buttonconfirmno_Jsonclick, 7, "Cancel", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e16291_client"+"'", TempTags, "", 2, "HLP_WpCrearComentariosTarea.htm");
+            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmno_Internalname, "", "Cancelar", bttI_buttonconfirmno_Jsonclick, 7, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e16291_client"+"'", TempTags, "", 2, "HLP_WpCrearComentariosTarea.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table5_70_292e( true) ;
+            wb_table5_77_292e( true) ;
          }
          else
          {
-            wb_table5_70_292e( false) ;
+            wb_table5_77_292e( false) ;
          }
       }
 
-      protected void wb_table1_51_292( bool wbgen )
+      protected void wb_table1_58_292( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1161,7 +1187,7 @@ namespace GeneXus.Programs {
             GxWebStd.gx_table_start( context, tblActionscontainertableleft_actions_Internalname, tblActionscontainertableleft_actions_Internalname, "", "K2BToolsTableActionsLeftContainer", 0, "", "", 1, 2, sStyleString, "", "", 0);
             context.WriteHtmlText( "<tr>") ;
             context.WriteHtmlText( "<td class='K2BToolsTableCell_ActionContainer'>") ;
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 61,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MainAction";
             StyleString = "";
             GxWebStd.gx_button_ctrl( context, bttCrearcomentario_Internalname, "", "Crear Comentario", bttCrearcomentario_Jsonclick, 5, "", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'E_CREARCOMENTARIO\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpCrearComentariosTarea.htm");
@@ -1169,11 +1195,11 @@ namespace GeneXus.Programs {
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_51_292e( true) ;
+            wb_table1_58_292e( true) ;
          }
          else
          {
-            wb_table1_51_292e( false) ;
+            wb_table1_58_292e( false) ;
          }
       }
 
@@ -1222,7 +1248,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022102021351780", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211745015", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1237,8 +1263,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wpcrearcomentariostarea.js", "?2022102021351780", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("wpcrearcomentariostarea.js", "?202210211745015", false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -1263,6 +1289,9 @@ namespace GeneXus.Programs {
 
       protected void init_default_properties( )
       {
+         lblTitle_Internalname = "TITLE";
+         divSection2_Internalname = "SECTION2";
+         divTable1_Internalname = "TABLE1";
          edtavTrtareacomentarios_id_Internalname = "vTRTAREACOMENTARIOS_ID";
          divTable_container_trtareacomentarios_id_Internalname = "TABLE_CONTAINER_TRTAREACOMENTARIOS_ID";
          edtavTrtareacomentarios_idtarea_Internalname = "vTRTAREACOMENTARIOS_IDTAREA";
@@ -1319,7 +1348,7 @@ namespace GeneXus.Programs {
          Form.Background = "";
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = "Wp Crear Comentarios Tarea";
+         Form.Caption = "Comentarios por tarea";
          context.GX_msglist.DisplayMode = 1;
          if ( context.isSpaRequest( ) )
          {
@@ -1375,6 +1404,7 @@ namespace GeneXus.Programs {
          GX_FocusControl = "";
          Form = new GXWebForm();
          sPrefix = "";
+         lblTitle_Jsonclick = "";
          ClassString = "";
          StyleString = "";
          TempTags = "";
@@ -1430,6 +1460,10 @@ namespace GeneXus.Programs {
       private String GX_FocusControl ;
       private String sPrefix ;
       private String divMaintable_Internalname ;
+      private String divTable1_Internalname ;
+      private String divSection2_Internalname ;
+      private String lblTitle_Internalname ;
+      private String lblTitle_Jsonclick ;
       private String ClassString ;
       private String StyleString ;
       private String divContenttable_Internalname ;

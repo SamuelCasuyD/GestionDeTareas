@@ -223,14 +223,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?2022102021351523", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744843", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -371,7 +371,7 @@ namespace GeneXus.Programs {
 
       public override String GetPgmdesc( )
       {
-         return "Wp Actualizar Tarea Por Tablero" ;
+         return "Gestión del tablero" ;
       }
 
       protected void WB1Y0( )
@@ -431,7 +431,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Control Group */
-            GxWebStd.gx_group_start( context, grpGroup_Internalname, "Datos de la tarea", 1, 0, "px", 0, "px", "Group_Tabular", "", "HLP_WpActualizarTareaPorTablero.htm");
+            GxWebStd.gx_group_start( context, grpGroup_Internalname, "Ingrese lo datos solicitados", 1, 0, "px", 0, "px", "Group_Tabular", "", "HLP_WpActualizarTareaPorTablero.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, divMaingroupresponsivetable_group_Internalname, 1, 0, "px", 0, "px", "Table", "left", "top", "", "", "div");
             /* Div Control */
@@ -505,7 +505,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 47,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontareas_fechainicio_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontareas_fechainicio_Internalname, context.localUtil.Format(AV15TrGestionTareas_FechaInicio, "99/99/9999"), context.localUtil.Format( AV15TrGestionTareas_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,47);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontareas_fechainicio_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontareas_fechainicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTareaPorTablero.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontareas_fechainicio_Internalname, context.localUtil.Format(AV15TrGestionTareas_FechaInicio, "99/99/9999"), context.localUtil.Format( AV15TrGestionTareas_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,47);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontareas_fechainicio_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontareas_fechainicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTareaPorTablero.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontareas_fechainicio_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontareas_fechainicio_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpActualizarTareaPorTablero.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -528,7 +528,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 54,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontareas_fechafin_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontareas_fechafin_Internalname, context.localUtil.Format(AV16TrGestionTareas_FechaFin, "99/99/9999"), context.localUtil.Format( AV16TrGestionTareas_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontareas_fechafin_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontareas_fechafin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTareaPorTablero.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontareas_fechafin_Internalname, context.localUtil.Format(AV16TrGestionTareas_FechaFin, "99/99/9999"), context.localUtil.Format( AV16TrGestionTareas_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,54);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontareas_fechafin_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontareas_fechafin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpActualizarTareaPorTablero.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontareas_fechafin_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontareas_fechafin_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpActualizarTareaPorTablero.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -624,7 +624,7 @@ namespace GeneXus.Programs {
             {
                Form.Meta.addItem("generator", "GeneXus C# 16_0_10-142546", 0) ;
             }
-            Form.Meta.addItem("description", "Wp Actualizar Tarea Por Tablero", 0) ;
+            Form.Meta.addItem("description", "Gestión del tablero", 0) ;
          }
          context.wjLoc = "";
          context.nUserReturn = 0;
@@ -877,7 +877,7 @@ namespace GeneXus.Programs {
             AssignAttri("", false, "AV13TrGestionTareas_Nombre", AV13TrGestionTareas_Nombre);
             AV14TrGestionTareas_Descripcion = cgiGet( edtavTrgestiontareas_descripcion_Internalname);
             AssignAttri("", false, "AV14TrGestionTareas_Descripcion", AV14TrGestionTareas_Descripcion);
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontareas_fechainicio_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontareas_fechainicio_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Gestion Tareas_Fecha Inicio"}), 1, "vTRGESTIONTAREAS_FECHAINICIO");
                GX_FocusControl = edtavTrgestiontareas_fechainicio_Internalname;
@@ -888,10 +888,10 @@ namespace GeneXus.Programs {
             }
             else
             {
-               AV15TrGestionTareas_FechaInicio = context.localUtil.CToD( cgiGet( edtavTrgestiontareas_fechainicio_Internalname), 1);
+               AV15TrGestionTareas_FechaInicio = context.localUtil.CToD( cgiGet( edtavTrgestiontareas_fechainicio_Internalname), 2);
                AssignAttri("", false, "AV15TrGestionTareas_FechaInicio", context.localUtil.Format(AV15TrGestionTareas_FechaInicio, "99/99/9999"));
             }
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontareas_fechafin_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontareas_fechafin_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Gestion Tareas_Fecha Fin"}), 1, "vTRGESTIONTAREAS_FECHAFIN");
                GX_FocusControl = edtavTrgestiontareas_fechafin_Internalname;
@@ -902,7 +902,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               AV16TrGestionTareas_FechaFin = context.localUtil.CToD( cgiGet( edtavTrgestiontareas_fechafin_Internalname), 1);
+               AV16TrGestionTareas_FechaFin = context.localUtil.CToD( cgiGet( edtavTrgestiontareas_fechafin_Internalname), 2);
                AssignAttri("", false, "AV16TrGestionTareas_FechaFin", context.localUtil.Format(AV16TrGestionTareas_FechaFin, "99/99/9999"));
             }
             cmbavTrgestiontareas_estado.CurrentValue = cgiGet( cmbavTrgestiontareas_estado_Internalname);
@@ -1097,7 +1097,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?2022102021351552", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211744886", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1112,8 +1112,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wpactualizartareaportablero.js", "?2022102021351552", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("wpactualizartareaportablero.js", "?202210211744886", false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -1197,7 +1197,7 @@ namespace GeneXus.Programs {
          Form.Background = "";
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = "Wp Actualizar Tarea Por Tablero";
+         Form.Caption = "Gestión del tablero";
          context.GX_msglist.DisplayMode = 1;
          if ( context.isSpaRequest( ) )
          {

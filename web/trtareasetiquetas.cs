@@ -307,7 +307,7 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
          ClassString = "BtnSelect";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Select", bttBtn_select_Jsonclick, 4, "Select", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0080.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRTAREASETIQUETAS_ID"+"'), id:'"+"TRTAREASETIQUETAS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrTareasEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Seleccionar", bttBtn_select_Jsonclick, 4, "Seleccionar", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0080.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRTAREASETIQUETAS_ID"+"'), id:'"+"TRTAREASETIQUETAS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrTareasEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -414,21 +414,21 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 48,'',false,'',0)\"";
          ClassString = "BtnEnter";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirm", bttBtn_enter_Jsonclick, 5, "Confirm", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareasEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirmar", bttBtn_enter_Jsonclick, 5, "Confirmar", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareasEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 50,'',false,'',0)\"";
          ClassString = "BtnCancel";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancel", bttBtn_cancel_Jsonclick, 1, "Cancel", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareasEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancelar", bttBtn_cancel_Jsonclick, 1, "Cancelar", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareasEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 52,'',false,'',0)\"";
          ClassString = "BtnDelete";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Delete", bttBtn_delete_Jsonclick, 5, "Delete", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareasEtiquetas.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Eliminar", bttBtn_delete_Jsonclick, 5, "Eliminar", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareasEtiquetas.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -789,7 +789,7 @@ namespace GeneXus.Programs {
          pr_default.execute(3, new Object[] {A53TrTareasEtiquetas_IDEtiqueta});
          if ( (pr_default.getStatus(3) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Etiquetas_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_IDETIQUETA");
+            GX_msglist.addItem("No existe 'Tr Etiquetas_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_IDETIQUETA");
             AnyError = 1;
             GX_FocusControl = edtTrTareasEtiquetas_IDEtiqueta_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -802,7 +802,7 @@ namespace GeneXus.Programs {
          pr_default.execute(2, new Object[] {A52TrTareasEtiquetas_TareaID});
          if ( (pr_default.getStatus(2) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Gestion Tareas4_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_TAREAID");
+            GX_msglist.addItem("No existe 'Tr Gestion Tareas4_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_TAREAID");
             AnyError = 1;
             GX_FocusControl = edtTrTareasEtiquetas_TareaID_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -826,7 +826,7 @@ namespace GeneXus.Programs {
          pr_default.execute(5, new Object[] {A53TrTareasEtiquetas_IDEtiqueta});
          if ( (pr_default.getStatus(5) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Etiquetas_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_IDETIQUETA");
+            GX_msglist.addItem("No existe 'Tr Etiquetas_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_IDETIQUETA");
             AnyError = 1;
             GX_FocusControl = edtTrTareasEtiquetas_IDEtiqueta_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -853,7 +853,7 @@ namespace GeneXus.Programs {
          pr_default.execute(6, new Object[] {A52TrTareasEtiquetas_TareaID});
          if ( (pr_default.getStatus(6) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Gestion Tareas4_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_TAREAID");
+            GX_msglist.addItem("No existe 'Tr Gestion Tareas4_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_TAREAID");
             AnyError = 1;
             GX_FocusControl = edtTrTareasEtiquetas_TareaID_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -1596,7 +1596,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185454", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744330", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -1751,7 +1751,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185458", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211744335", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1766,8 +1766,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("trtareasetiquetas.js", "?202210202185458", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("trtareasetiquetas.js", "?202210211744336", false, true);
          /* End function include_jscripts */
       }
 
@@ -1903,7 +1903,7 @@ namespace GeneXus.Programs {
          pr_default.execute(13, new Object[] {A53TrTareasEtiquetas_IDEtiqueta});
          if ( (pr_default.getStatus(13) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Etiquetas_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_IDETIQUETA");
+            GX_msglist.addItem("No existe 'Tr Etiquetas_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_IDETIQUETA");
             AnyError = 1;
             GX_FocusControl = edtTrTareasEtiquetas_IDEtiqueta_Internalname;
          }
@@ -1921,7 +1921,7 @@ namespace GeneXus.Programs {
          pr_default.execute(15, new Object[] {A52TrTareasEtiquetas_TareaID});
          if ( (pr_default.getStatus(15) == 101) )
          {
-            GX_msglist.addItem("No matching 'Tr Gestion Tareas4_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_TAREAID");
+            GX_msglist.addItem("No existe 'Tr Gestion Tareas4_STG'.", "ForeignKeyNotFound", 1, "TRTAREASETIQUETAS_TAREAID");
             AnyError = 1;
             GX_FocusControl = edtTrTareasEtiquetas_TareaID_Internalname;
          }

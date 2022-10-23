@@ -151,7 +151,7 @@ namespace GeneXus.Programs {
          context.AddJavascriptSource("K2BHorizontalMenu/K2BHorizontalMenuRender.js", "", false, true);
          context.AddJavascriptSource("K2BAccordionMenu/metisMenu-master/dist/metisMenu.min.js", "", false, true);
          context.AddJavascriptSource("K2BAccordionMenu/K2BAccordionMenuRender.js", "", false, true);
-         context.AddJavascriptSource("k2bwwmasterpageorionhorizmenu.js", "?20221020218575", false, true);
+         context.AddJavascriptSource("k2bwwmasterpageorionhorizmenu.js", "?202210211744769", false, true);
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -960,7 +960,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202210202185735", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20221021174487", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -975,7 +975,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("k2bwwmasterpageorionhorizmenu.js", "?202210202185736", false, true);
+         context.AddJavascriptSource("k2bwwmasterpageorionhorizmenu.js", "?20221021174487", false, true);
          context.AddJavascriptSource("K2BHorizontalMenu/K2BHorizontalMenuRender.js", "", false, true);
          context.AddJavascriptSource("K2BAccordionMenu/metisMenu-master/dist/metisMenu.min.js", "", false, true);
          context.AddJavascriptSource("K2BAccordionMenu/K2BAccordionMenuRender.js", "", false, true);

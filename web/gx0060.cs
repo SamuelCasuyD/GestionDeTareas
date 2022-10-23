@@ -247,14 +247,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185989", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211745248", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -460,7 +460,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 26,'',false,'" + sGXsfl_64_idx + "',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavCtretiquetas_fechacreacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavCtretiquetas_fechacreacion_Internalname, context.localUtil.Format(AV7cTrEtiquetas_FechaCreacion, "99/99/9999"), context.localUtil.Format( AV7cTrEtiquetas_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,26);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCtretiquetas_fechacreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtavCtretiquetas_fechacreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_Gx0060.htm");
+            GxWebStd.gx_single_line_edit( context, edtavCtretiquetas_fechacreacion_Internalname, context.localUtil.Format(AV7cTrEtiquetas_FechaCreacion, "99/99/9999"), context.localUtil.Format( AV7cTrEtiquetas_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,26);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCtretiquetas_fechacreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtavCtretiquetas_fechacreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_Gx0060.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -493,7 +493,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 36,'',false,'" + sGXsfl_64_idx + "',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavCtretiquetas_fechamodificacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavCtretiquetas_fechamodificacion_Internalname, context.localUtil.Format(AV8cTrEtiquetas_FechaModificacion, "99/99/9999"), context.localUtil.Format( AV8cTrEtiquetas_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,36);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCtretiquetas_fechamodificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtavCtretiquetas_fechamodificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_Gx0060.htm");
+            GxWebStd.gx_single_line_edit( context, edtavCtretiquetas_fechamodificacion_Internalname, context.localUtil.Format(AV8cTrEtiquetas_FechaModificacion, "99/99/9999"), context.localUtil.Format( AV8cTrEtiquetas_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,36);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavCtretiquetas_fechamodificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtavCtretiquetas_fechamodificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_Gx0060.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -728,7 +728,7 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 73,'',false,'',0)\"";
             ClassString = "BtnCancel";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "Cancel", bttBtn_cancel_Jsonclick, 1, "Cancel", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_Gx0060.htm");
+            GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "gx.evt.setGridEvt("+StringUtil.Str( (decimal)(64), 2, 0)+","+"null"+");", "Cancelar", bttBtn_cancel_Jsonclick, 1, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_Gx0060.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -1337,7 +1337,7 @@ namespace GeneXus.Programs {
                AV6cTrEtiquetas_ID = (long)(context.localUtil.CToN( cgiGet( edtavCtretiquetas_id_Internalname), ".", ","));
                AssignAttri("", false, "AV6cTrEtiquetas_ID", StringUtil.LTrimStr( (decimal)(AV6cTrEtiquetas_ID), 13, 0));
             }
-            if ( context.localUtil.VCDate( cgiGet( edtavCtretiquetas_fechacreacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtavCtretiquetas_fechacreacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Etiquetas_Fecha Creacion"}), 1, "vCTRETIQUETAS_FECHACREACION");
                GX_FocusControl = edtavCtretiquetas_fechacreacion_Internalname;
@@ -1348,10 +1348,10 @@ namespace GeneXus.Programs {
             }
             else
             {
-               AV7cTrEtiquetas_FechaCreacion = context.localUtil.CToD( cgiGet( edtavCtretiquetas_fechacreacion_Internalname), 1);
+               AV7cTrEtiquetas_FechaCreacion = context.localUtil.CToD( cgiGet( edtavCtretiquetas_fechacreacion_Internalname), 2);
                AssignAttri("", false, "AV7cTrEtiquetas_FechaCreacion", context.localUtil.Format(AV7cTrEtiquetas_FechaCreacion, "99/99/9999"));
             }
-            if ( context.localUtil.VCDate( cgiGet( edtavCtretiquetas_fechamodificacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtavCtretiquetas_fechamodificacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Etiquetas_Fecha Modificacion"}), 1, "vCTRETIQUETAS_FECHAMODIFICACION");
                GX_FocusControl = edtavCtretiquetas_fechamodificacion_Internalname;
@@ -1362,7 +1362,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               AV8cTrEtiquetas_FechaModificacion = context.localUtil.CToD( cgiGet( edtavCtretiquetas_fechamodificacion_Internalname), 1);
+               AV8cTrEtiquetas_FechaModificacion = context.localUtil.CToD( cgiGet( edtavCtretiquetas_fechamodificacion_Internalname), 2);
                AssignAttri("", false, "AV8cTrEtiquetas_FechaModificacion", context.localUtil.Format(AV8cTrEtiquetas_FechaModificacion, "99/99/9999"));
             }
             cmbavCtretiquetas_estado.Name = cmbavCtretiquetas_estado_Internalname;
@@ -1391,11 +1391,11 @@ namespace GeneXus.Programs {
             {
                GRID1_nFirstRecordOnPage = 0;
             }
-            if ( context.localUtil.CToD( cgiGet( "GXH_vCTRETIQUETAS_FECHACREACION"), 1) != AV7cTrEtiquetas_FechaCreacion )
+            if ( context.localUtil.CToD( cgiGet( "GXH_vCTRETIQUETAS_FECHACREACION"), 2) != AV7cTrEtiquetas_FechaCreacion )
             {
                GRID1_nFirstRecordOnPage = 0;
             }
-            if ( context.localUtil.CToD( cgiGet( "GXH_vCTRETIQUETAS_FECHAMODIFICACION"), 1) != AV8cTrEtiquetas_FechaModificacion )
+            if ( context.localUtil.CToD( cgiGet( "GXH_vCTRETIQUETAS_FECHAMODIFICACION"), 2) != AV8cTrEtiquetas_FechaModificacion )
             {
                GRID1_nFirstRecordOnPage = 0;
             }
@@ -1428,7 +1428,7 @@ namespace GeneXus.Programs {
       protected void E17212( )
       {
          /* Start Routine */
-         Form.Caption = StringUtil.Format( "Selection List %1", "Tr Etiquetas", "", "", "", "", "", "", "", "");
+         Form.Caption = StringUtil.Format( "Lista de Selección %1", "Tr Etiquetas", "", "", "", "", "", "", "", "");
          AssignProp("", false, "FORM", "Caption", Form.Caption, true);
          AV12ADVANCED_LABEL_TEMPLATE = "%1 <strong>%2</strong>";
       }
@@ -1514,7 +1514,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221020219040", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211745299", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1529,8 +1529,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("gx0060.js", "?20221020219040", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("gx0060.js", "?202210211745299", false, true);
          /* End function include_jscripts */
       }
 

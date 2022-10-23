@@ -190,6 +190,77 @@ namespace GeneXus.Programs {
       protected void S131( )
       {
          /* 'ELIMINARTAREA' Routine */
+         AV15GXLvl50 = 0;
+         /* Using cursor P002M4 */
+         pr_default.execute(2, new Object[] {AV9GestionTareas_SDT.gxTpr_Trgestiontareas_id});
+         while ( (pr_default.getStatus(2) != 101) )
+         {
+            A34TrTareaComentarios_IDTarea = P002M4_A34TrTareaComentarios_IDTarea[0];
+            n34TrTareaComentarios_IDTarea = P002M4_n34TrTareaComentarios_IDTarea[0];
+            A35TrTareaComentarios_ID = P002M4_A35TrTareaComentarios_ID[0];
+            AV15GXLvl50 = 1;
+            AV11Existe = true;
+            /* Exit For each command. Update data (if necessary), close cursors & exit. */
+            if (true) break;
+            pr_default.readNext(2);
+         }
+         pr_default.close(2);
+         if ( AV15GXLvl50 == 0 )
+         {
+            AV11Existe = false;
+         }
+         AV16GXLvl59 = 0;
+         /* Using cursor P002M5 */
+         pr_default.execute(3, new Object[] {AV9GestionTareas_SDT.gxTpr_Trgestiontareas_id});
+         while ( (pr_default.getStatus(3) != 101) )
+         {
+            A52TrTareasEtiquetas_TareaID = P002M5_A52TrTareasEtiquetas_TareaID[0];
+            A51TrTareasEtiquetas_ID = P002M5_A51TrTareasEtiquetas_ID[0];
+            AV16GXLvl59 = 1;
+            AV11Existe = true;
+            /* Exit For each command. Update data (if necessary), close cursors & exit. */
+            if (true) break;
+            pr_default.readNext(3);
+         }
+         pr_default.close(3);
+         if ( AV16GXLvl59 == 0 )
+         {
+            AV11Existe = false;
+         }
+         AV17GXLvl68 = 0;
+         /* Using cursor P002M6 */
+         pr_default.execute(4, new Object[] {AV9GestionTareas_SDT.gxTpr_Trgestiontareas_id});
+         while ( (pr_default.getStatus(4) != 101) )
+         {
+            A25TrActividades_IDTarea = P002M6_A25TrActividades_IDTarea[0];
+            n25TrActividades_IDTarea = P002M6_n25TrActividades_IDTarea[0];
+            A26TrActividades_ID = P002M6_A26TrActividades_ID[0];
+            AV17GXLvl68 = 1;
+            AV11Existe = true;
+            /* Exit For each command. Update data (if necessary), close cursors & exit. */
+            if (true) break;
+            pr_default.readNext(4);
+         }
+         pr_default.close(4);
+         if ( AV17GXLvl68 == 0 )
+         {
+            AV11Existe = false;
+         }
+         if ( ! AV11Existe )
+         {
+            /* Optimized DELETE. */
+            /* Using cursor P002M7 */
+            pr_default.execute(5, new Object[] {AV9GestionTareas_SDT.gxTpr_Trgestiontareas_id, AV9GestionTareas_SDT.gxTpr_Trgestiontareas_idtablero});
+            pr_default.close(5);
+            dsDefault.SmartCacheProvider.SetUpdated("TrGestionTareas") ;
+            /* End optimized DELETE. */
+         }
+         else
+         {
+            GX_msglist.addItem("La tarea no puede eliminarse, por que ya cuenta con etiquetas - comentarios o activiades");
+            returnInSub = true;
+            if (true) return;
+         }
       }
 
       protected void S141( )
@@ -207,12 +278,12 @@ namespace GeneXus.Programs {
          n38TrTareaComentarios_FechaCreacion = false;
          A37TrTareaComentarios_Estado = AV10TrComentarioTarea_SDT.gxTpr_Trtareacomentarios_estado;
          n37TrTareaComentarios_Estado = false;
-         /* Using cursor P002M4 */
-         pr_default.execute(2, new Object[] {n34TrTareaComentarios_IDTarea, A34TrTareaComentarios_IDTarea, n36TrTareaComentarios_Descripcion, A36TrTareaComentarios_Descripcion, n37TrTareaComentarios_Estado, A37TrTareaComentarios_Estado, n38TrTareaComentarios_FechaCreacion, A38TrTareaComentarios_FechaCreacion});
-         A35TrTareaComentarios_ID = P002M4_A35TrTareaComentarios_ID[0];
-         pr_default.close(2);
+         /* Using cursor P002M8 */
+         pr_default.execute(6, new Object[] {n34TrTareaComentarios_IDTarea, A34TrTareaComentarios_IDTarea, n36TrTareaComentarios_Descripcion, A36TrTareaComentarios_Descripcion, n37TrTareaComentarios_Estado, A37TrTareaComentarios_Estado, n38TrTareaComentarios_FechaCreacion, A38TrTareaComentarios_FechaCreacion});
+         A35TrTareaComentarios_ID = P002M8_A35TrTareaComentarios_ID[0];
+         pr_default.close(6);
          dsDefault.SmartCacheProvider.SetUpdated("TrTareaComentarios") ;
-         if ( (pr_default.getStatus(2) == 1) )
+         if ( (pr_default.getStatus(6) == 1) )
          {
             context.Gx_err = 1;
             Gx_emsg = (String)(context.GetMessage( "GXM_noupdate", ""));
@@ -249,9 +320,18 @@ namespace GeneXus.Programs {
          A17TrGestionTareas_FechaCreacion = DateTime.MinValue;
          P002M2_A12TrGestionTareas_ID = new long[1] ;
          Gx_emsg = "";
+         scmdbuf = "";
+         P002M4_A34TrTareaComentarios_IDTarea = new long[1] ;
+         P002M4_n34TrTareaComentarios_IDTarea = new bool[] {false} ;
+         P002M4_A35TrTareaComentarios_ID = new long[1] ;
+         P002M5_A52TrTareasEtiquetas_TareaID = new long[1] ;
+         P002M5_A51TrTareasEtiquetas_ID = new long[1] ;
+         P002M6_A25TrActividades_IDTarea = new long[1] ;
+         P002M6_n25TrActividades_IDTarea = new bool[] {false} ;
+         P002M6_A26TrActividades_ID = new long[1] ;
          A36TrTareaComentarios_Descripcion = "";
          A38TrTareaComentarios_FechaCreacion = DateTime.MinValue;
-         P002M4_A35TrTareaComentarios_ID = new long[1] ;
+         P002M8_A35TrTareaComentarios_ID = new long[1] ;
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.prgestionesdetareas__default(),
             new Object[][] {
                 new Object[] {
@@ -260,7 +340,18 @@ namespace GeneXus.Programs {
                , new Object[] {
                }
                , new Object[] {
-               P002M4_A35TrTareaComentarios_ID
+               P002M4_A34TrTareaComentarios_IDTarea, P002M4_n34TrTareaComentarios_IDTarea, P002M4_A35TrTareaComentarios_ID
+               }
+               , new Object[] {
+               P002M5_A52TrTareasEtiquetas_TareaID, P002M5_A51TrTareasEtiquetas_ID
+               }
+               , new Object[] {
+               P002M6_A25TrActividades_IDTarea, P002M6_n25TrActividades_IDTarea, P002M6_A26TrActividades_ID
+               }
+               , new Object[] {
+               }
+               , new Object[] {
+               P002M8_A35TrTareaComentarios_ID
                }
             }
          );
@@ -269,15 +360,23 @@ namespace GeneXus.Programs {
       }
 
       private short A24TrGestionTareas_Estado ;
+      private short AV15GXLvl50 ;
+      private short AV16GXLvl59 ;
+      private short AV17GXLvl68 ;
       private short A37TrTareaComentarios_Estado ;
       private int GX_INS2 ;
       private int GX_INS5 ;
       private long A12TrGestionTareas_ID ;
       private long A34TrTareaComentarios_IDTarea ;
       private long A35TrTareaComentarios_ID ;
+      private long A52TrTareasEtiquetas_TareaID ;
+      private long A51TrTareasEtiquetas_ID ;
+      private long A25TrActividades_IDTarea ;
+      private long A26TrActividades_ID ;
       private String AV8Modo ;
       private String A13TrGestionTareas_Nombre ;
       private String Gx_emsg ;
+      private String scmdbuf ;
       private DateTime A15TrGestionTareas_FechaInicio ;
       private DateTime A16TrGestionTareas_FechaFin ;
       private DateTime A17TrGestionTareas_FechaCreacion ;
@@ -290,6 +389,8 @@ namespace GeneXus.Programs {
       private bool n17TrGestionTareas_FechaCreacion ;
       private bool n24TrGestionTareas_Estado ;
       private bool n34TrTareaComentarios_IDTarea ;
+      private bool AV11Existe ;
+      private bool n25TrActividades_IDTarea ;
       private bool n36TrTareaComentarios_Descripcion ;
       private bool n38TrTareaComentarios_FechaCreacion ;
       private bool n37TrTareaComentarios_Estado ;
@@ -299,7 +400,15 @@ namespace GeneXus.Programs {
       private IGxDataStore dsDefault ;
       private IDataStoreProvider pr_default ;
       private long[] P002M2_A12TrGestionTareas_ID ;
+      private long[] P002M4_A34TrTareaComentarios_IDTarea ;
+      private bool[] P002M4_n34TrTareaComentarios_IDTarea ;
       private long[] P002M4_A35TrTareaComentarios_ID ;
+      private long[] P002M5_A52TrTareasEtiquetas_TareaID ;
+      private long[] P002M5_A51TrTareasEtiquetas_ID ;
+      private long[] P002M6_A25TrActividades_IDTarea ;
+      private bool[] P002M6_n25TrActividades_IDTarea ;
+      private long[] P002M6_A26TrActividades_ID ;
+      private long[] P002M8_A35TrTareaComentarios_ID ;
       private SdtGestionTareas_SDT AV9GestionTareas_SDT ;
       private SdtTrComentarioTarea_SDT AV10TrComentarioTarea_SDT ;
    }
@@ -313,6 +422,10 @@ namespace GeneXus.Programs {
           new ForEachCursor(def[0])
          ,new UpdateCursor(def[1])
          ,new ForEachCursor(def[2])
+         ,new ForEachCursor(def[3])
+         ,new ForEachCursor(def[4])
+         ,new UpdateCursor(def[5])
+         ,new ForEachCursor(def[6])
        };
     }
 
@@ -343,6 +456,23 @@ namespace GeneXus.Programs {
           } ;
           Object[] prmP002M4 ;
           prmP002M4 = new Object[] {
+          new Object[] {"@AV9Gesti_1Trgestiontareas_id",SqlDbType.Decimal,13,0}
+          } ;
+          Object[] prmP002M5 ;
+          prmP002M5 = new Object[] {
+          new Object[] {"@AV9Gesti_1Trgestiontareas_id",SqlDbType.Decimal,13,0}
+          } ;
+          Object[] prmP002M6 ;
+          prmP002M6 = new Object[] {
+          new Object[] {"@AV9Gesti_1Trgestiontareas_id",SqlDbType.Decimal,13,0}
+          } ;
+          Object[] prmP002M7 ;
+          prmP002M7 = new Object[] {
+          new Object[] {"@AV9Gesti_1Trgestiontareas_id",SqlDbType.Decimal,13,0} ,
+          new Object[] {"@AV9Gesti_2Trgestiontareas_idt",SqlDbType.UniqueIdentifier,4,0}
+          } ;
+          Object[] prmP002M8 ;
+          prmP002M8 = new Object[] {
           new Object[] {"@TrTareaComentarios_IDTarea",SqlDbType.Decimal,13,0} ,
           new Object[] {"@TrTareaComentarios_Descripcion",SqlDbType.NVarChar,2097152,0} ,
           new Object[] {"@TrTareaComentarios_Estado",SqlDbType.SmallInt,4,0} ,
@@ -351,7 +481,11 @@ namespace GeneXus.Programs {
           def= new CursorDef[] {
               new CursorDef("P002M2", "INSERT INTO TABLERO.[TrGestionTareas]([TrGestionTareas_IDTablero], [TrGestionTareas_Nombre], [TrGestionTareas_Descripcion], [TrGestionTareas_FechaInicio], [TrGestionTareas_FechaFin], [TrGestionTareas_FechaCreacion], [TrGestionTareas_Estado], [TrGestionTareas_FechaModificacion]) VALUES(@TrGestionTareas_IDTablero, @TrGestionTareas_Nombre, @TrGestionTareas_Descripcion, @TrGestionTareas_FechaInicio, @TrGestionTareas_FechaFin, @TrGestionTareas_FechaCreacion, @TrGestionTareas_Estado, convert( DATETIME, '17530101', 112 )); SELECT SCOPE_IDENTITY()", GxErrorMask.GX_NOMASK,prmP002M2)
              ,new CursorDef("P002M3", "UPDATE TABLERO.[TrGestionTareas] SET [TrGestionTareas_Estado]=@TrGestionTareas_Estado, [TrGestionTareas_FechaModificacion]=GETUTCDATE(), [TrGestionTareas_FechaFin]=@TrGestionTareas_FechaFin, [TrGestionTareas_FechaInicio]=@TrGestionTareas_FechaInicio, [TrGestionTareas_Descripcion]=@TrGestionTareas_Descripcion, [TrGestionTareas_Nombre]=@TrGestionTareas_Nombre  WHERE ([TrGestionTareas_ID] = @AV9Gesti_1Trgestiontareas_id) AND ([TrGestionTareas_IDTablero] = @AV9Gesti_2Trgestiontareas_idt)", GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK,prmP002M3)
-             ,new CursorDef("P002M4", "INSERT INTO TABLERO.[TrTareaComentarios]([TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion]) VALUES(@TrTareaComentarios_IDTarea, @TrTareaComentarios_Descripcion, @TrTareaComentarios_Estado, @TrTareaComentarios_FechaCreacion, convert( DATETIME, '17530101', 112 )); SELECT SCOPE_IDENTITY()", GxErrorMask.GX_NOMASK,prmP002M4)
+             ,new CursorDef("P002M4", "SELECT TOP 1 [TrTareaComentarios_IDTarea], [TrTareaComentarios_ID] FROM TABLERO.[TrTareaComentarios] WHERE [TrTareaComentarios_IDTarea] = @AV9Gesti_1Trgestiontareas_id ORDER BY [TrTareaComentarios_IDTarea] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002M4,1, GxCacheFrequency.OFF ,false,true )
+             ,new CursorDef("P002M5", "SELECT TOP 1 [TrTareasEtiquetas_TareaID], [TrTareasEtiquetas_ID] FROM TABLERO.[TrTareasEtiquetas] WHERE [TrTareasEtiquetas_TareaID] = @AV9Gesti_1Trgestiontareas_id ORDER BY [TrTareasEtiquetas_TareaID] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002M5,1, GxCacheFrequency.OFF ,false,true )
+             ,new CursorDef("P002M6", "SELECT TOP 1 [TrActividades_IDTarea], [TrActividades_ID] FROM TABLERO.[TrActividades] WHERE [TrActividades_IDTarea] = @AV9Gesti_1Trgestiontareas_id ORDER BY [TrActividades_IDTarea] ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP002M6,1, GxCacheFrequency.OFF ,false,true )
+             ,new CursorDef("P002M7", "DELETE FROM TABLERO.[TrGestionTareas]  WHERE ([TrGestionTareas_ID] = @AV9Gesti_1Trgestiontareas_id) AND ([TrGestionTareas_IDTablero] = @AV9Gesti_2Trgestiontareas_idt)", GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK,prmP002M7)
+             ,new CursorDef("P002M8", "INSERT INTO TABLERO.[TrTareaComentarios]([TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion]) VALUES(@TrTareaComentarios_IDTarea, @TrTareaComentarios_Descripcion, @TrTareaComentarios_Estado, @TrTareaComentarios_FechaCreacion, convert( DATETIME, '17530101', 112 )); SELECT SCOPE_IDENTITY()", GxErrorMask.GX_NOMASK,prmP002M8)
           };
        }
     }
@@ -366,6 +500,20 @@ namespace GeneXus.Programs {
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
                 return;
              case 2 :
+                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                ((long[]) buf[2])[0] = rslt.getLong(2) ;
+                return;
+             case 3 :
+                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((long[]) buf[1])[0] = rslt.getLong(2) ;
+                return;
+             case 4 :
+                ((long[]) buf[0])[0] = rslt.getLong(1) ;
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                ((long[]) buf[2])[0] = rslt.getLong(2) ;
+                return;
+             case 6 :
                 ((long[]) buf[0])[0] = rslt.getLong(1) ;
                 return;
        }
@@ -473,6 +621,19 @@ namespace GeneXus.Programs {
                 stmt.SetParameter(7, (Guid)parms[11]);
                 return;
              case 2 :
+                stmt.SetParameter(1, (long)parms[0]);
+                return;
+             case 3 :
+                stmt.SetParameter(1, (long)parms[0]);
+                return;
+             case 4 :
+                stmt.SetParameter(1, (long)parms[0]);
+                return;
+             case 5 :
+                stmt.SetParameter(1, (long)parms[0]);
+                stmt.SetParameter(2, (Guid)parms[1]);
+                return;
+             case 6 :
                 if ( (bool)parms[0] )
                 {
                    stmt.setNull( 1 , SqlDbType.Decimal );

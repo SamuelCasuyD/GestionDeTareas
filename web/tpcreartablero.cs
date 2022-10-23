@@ -93,7 +93,7 @@ namespace GeneXus.Programs {
                this.cleanup();
                if (true) return;
             }
-            GX_msglist.addItem("Tablero creadoo");
+            GX_msglist.addItem("Tablero creado");
          }
          else if ( StringUtil.StrCmp(AV18Modo, "UDP") == 0 )
          {
@@ -207,6 +207,8 @@ namespace GeneXus.Programs {
          else
          {
             GX_msglist.addItem("El tablero no puede eliminarse por que ya cuenta con tareas");
+            returnInSub = true;
+            if (true) return;
          }
       }
 

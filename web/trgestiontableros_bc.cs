@@ -205,27 +205,27 @@ namespace GeneXus.Programs {
          standaloneModal( ) ;
          if ( ! ( (DateTime.MinValue==A3TrGestionTableros_FechaInicio) || ( A3TrGestionTableros_FechaInicio >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Fecha Inicio is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Campo Fecha Inicio fuera de rango", "OutOfRange", 1, "");
             AnyError = 1;
          }
          if ( ! ( (DateTime.MinValue==A4TrGestionTableros_FechaFin) || ( A4TrGestionTableros_FechaFin >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Fecha Fin is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Campo Fecha Fin fuera de rango", "OutOfRange", 1, "");
             AnyError = 1;
          }
          if ( ! ( (DateTime.MinValue==A7TrGestionTableros_FechaCreacion) || ( A7TrGestionTableros_FechaCreacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Fecha Creacion del tablero is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Campo Fecha Creacion del tablero fuera de rango", "OutOfRange", 1, "");
             AnyError = 1;
          }
          if ( ! ( (DateTime.MinValue==A8TrGestionTableros_FechaModificacion) || ( A8TrGestionTableros_FechaModificacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Fecha Modificacion del tablero is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Campo Fecha Modificacion del tablero fuera de rango", "OutOfRange", 1, "");
             AnyError = 1;
          }
          if ( ! ( ( A10TrGestionTableros_Estado == 1 ) || ( A10TrGestionTableros_Estado == 2 ) || ( A10TrGestionTableros_Estado == 3 ) || ( A10TrGestionTableros_Estado == 4 ) || ( A10TrGestionTableros_Estado == 5 ) || (0==A10TrGestionTableros_Estado) ) )
          {
-            GX_msglist.addItem("Field Estado del tablero is out of range", "OutOfRange", 1, "");
+            GX_msglist.addItem("Campo Estado del tablero fuera de rango", "OutOfRange", 1, "");
             AnyError = 1;
          }
       }

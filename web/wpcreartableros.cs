@@ -207,14 +207,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185763", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744754", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -341,7 +341,7 @@ namespace GeneXus.Programs {
 
       public override String GetPgmdesc( )
       {
-         return "Nuevo Tablero" ;
+         return "Gestión del tablero" ;
       }
 
       protected void WB1U0( )
@@ -374,7 +374,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, divSection2_Internalname, 1, 0, "px", 0, "px", "Section", "left", "top", "", "", "h1");
             /* Text block */
-            GxWebStd.gx_label_ctrl( context, lblTitle_Internalname, "Gestión", "", "", lblTitle_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock_Title", 0, "", 1, 1, 0, "HLP_WpCrearTableros.htm");
+            GxWebStd.gx_label_ctrl( context, lblTitle_Internalname, "Nuevo tablero", "", "", lblTitle_Jsonclick, "'"+""+"'"+",false,"+"'"+""+"'", "", "TextBlock_Title", 0, "", 1, 1, 0, "HLP_WpCrearTableros.htm");
             GxWebStd.gx_div_end( context, "left", "top", "h1");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -401,7 +401,7 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "col-xs-12", "left", "top", "", "", "div");
             /* Control Group */
-            GxWebStd.gx_group_start( context, grpGroup_Internalname, "Crear Nuevo tablero", 1, 0, "px", 0, "px", "Group_Tabular", "", "HLP_WpCrearTableros.htm");
+            GxWebStd.gx_group_start( context, grpGroup_Internalname, "Ingrese los datos solicitados", 1, 0, "px", 0, "px", "Group_Tabular", "", "HLP_WpCrearTableros.htm");
             /* Div Control */
             GxWebStd.gx_div_start( context, divMaingroupresponsivetable_group_Internalname, 1, 0, "px", 0, "px", "Table", "left", "top", "", "", "div");
             /* Div Control */
@@ -535,7 +535,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 66,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontableros_fechainicio_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechainicio_Internalname, context.localUtil.Format(AV16TrGestionTableros_FechaInicio, "99/99/9999"), context.localUtil.Format( AV16TrGestionTableros_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,66);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechainicio_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechainicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearTableros.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechainicio_Internalname, context.localUtil.Format(AV16TrGestionTableros_FechaInicio, "99/99/9999"), context.localUtil.Format( AV16TrGestionTableros_FechaInicio, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,66);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechainicio_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechainicio_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearTableros.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontableros_fechainicio_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontableros_fechainicio_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpCrearTableros.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -561,7 +561,7 @@ namespace GeneXus.Programs {
             /* Single line edit */
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 74,'',false,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavTrgestiontableros_fechafin_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechafin_Internalname, context.localUtil.Format(AV17TrGestionTableros_FechaFin, "99/99/9999"), context.localUtil.Format( AV17TrGestionTableros_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,74);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechafin_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechafin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearTableros.htm");
+            GxWebStd.gx_single_line_edit( context, edtavTrgestiontableros_fechafin_Internalname, context.localUtil.Format(AV17TrGestionTableros_FechaFin, "99/99/9999"), context.localUtil.Format( AV17TrGestionTableros_FechaFin, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,74);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavTrgestiontableros_fechafin_Jsonclick, 0, "Attribute_TrnDate", "", "", "", "", 1, edtavTrgestiontableros_fechafin_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "", "right", false, "", "HLP_WpCrearTableros.htm");
             GxWebStd.gx_bitmap( context, edtavTrgestiontableros_fechafin_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtavTrgestiontableros_fechafin_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WpCrearTableros.htm");
             context.WriteHtmlTextNl( "</div>") ;
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -653,7 +653,7 @@ namespace GeneXus.Programs {
             {
                Form.Meta.addItem("generator", "GeneXus C# 16_0_10-142546", 0) ;
             }
-            Form.Meta.addItem("description", "Nuevo Tablero", 0) ;
+            Form.Meta.addItem("description", "Gestión del tablero", 0) ;
          }
          context.wjLoc = "";
          context.nUserReturn = 0;
@@ -919,7 +919,7 @@ namespace GeneXus.Programs {
                AV15TrGestionTableros_TipoTablero = (short)(context.localUtil.CToN( cgiGet( edtavTrgestiontableros_tipotablero_Internalname), ".", ","));
                AssignAttri("", false, "AV15TrGestionTableros_TipoTablero", StringUtil.LTrimStr( (decimal)(AV15TrGestionTableros_TipoTablero), 4, 0));
             }
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Inicio"}), 1, "vTRGESTIONTABLEROS_FECHAINICIO");
                GX_FocusControl = edtavTrgestiontableros_fechainicio_Internalname;
@@ -930,10 +930,10 @@ namespace GeneXus.Programs {
             }
             else
             {
-               AV16TrGestionTableros_FechaInicio = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 1);
+               AV16TrGestionTableros_FechaInicio = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechainicio_Internalname), 2);
                AssignAttri("", false, "AV16TrGestionTableros_FechaInicio", context.localUtil.Format(AV16TrGestionTableros_FechaInicio, "99/99/9999"));
             }
-            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Fecha Fin"}), 1, "vTRGESTIONTABLEROS_FECHAFIN");
                GX_FocusControl = edtavTrgestiontableros_fechafin_Internalname;
@@ -944,7 +944,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               AV17TrGestionTableros_FechaFin = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 1);
+               AV17TrGestionTableros_FechaFin = context.localUtil.CToD( cgiGet( edtavTrgestiontableros_fechafin_Internalname), 2);
                AssignAttri("", false, "AV17TrGestionTableros_FechaFin", context.localUtil.Format(AV17TrGestionTableros_FechaFin, "99/99/9999"));
             }
             AV25ConfirmMessage = cgiGet( edtavConfirmmessage_Internalname);
@@ -1008,7 +1008,7 @@ namespace GeneXus.Programs {
       protected void E131U2( )
       {
          /* 'E_CrearTablero' Routine */
-         AV25ConfirmMessage = "Are you sure?";
+         AV25ConfirmMessage = "¿Está seguro?";
          AssignAttri("", false, "AV25ConfirmMessage", AV25ConfirmMessage);
          /* Execute user subroutine: 'U_CONFIRMATIONREQUIRED(CREARTABLERO)' */
          S142 ();
@@ -1042,6 +1042,13 @@ namespace GeneXus.Programs {
          AV21CrearTablero_SDT.gxTpr_Trgestiontableros_fechacreacion = AV23TrGestionTableros_FechaCreacion;
          AV21CrearTablero_SDT.gxTpr_Trgestiontableros_estado = AV22TrGestionTableros_Estado;
          new tpcreartablero(context ).execute(  AV21CrearTablero_SDT,  "INS") ;
+         context.DoAjaxRefresh();
+         context.setWebReturnParms(new Object[] {});
+         context.setWebReturnParmsMetadata(new Object[] {});
+         context.wjLocDisableFrm = 1;
+         context.nUserReturn = 1;
+         returnInSub = true;
+         if (true) return;
       }
 
       protected void E141U2( )
@@ -1205,13 +1212,13 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 102,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MainAction_Confirm";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmyes_Internalname, "", "Ok", bttI_buttonconfirmyes_Jsonclick, 5, "Ok", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONFIRMYES\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpCrearTableros.htm");
+            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmyes_Internalname, "", "Aceptar", bttI_buttonconfirmyes_Jsonclick, 5, "Aceptar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'CONFIRMYES\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WpCrearTableros.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "<td>") ;
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 104,'',false,'',0)\"";
             ClassString = "Button_Standard";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmno_Internalname, "", "Cancel", bttI_buttonconfirmno_Jsonclick, 7, "Cancel", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e161u1_client"+"'", TempTags, "", 2, "HLP_WpCrearTableros.htm");
+            GxWebStd.gx_button_ctrl( context, bttI_buttonconfirmno_Internalname, "", "Cancelar", bttI_buttonconfirmno_Jsonclick, 7, "Cancelar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"e161u1_client"+"'", TempTags, "", 2, "HLP_WpCrearTableros.htm");
             context.WriteHtmlText( "</td>") ;
             context.WriteHtmlText( "</tr>") ;
             /* End of table */
@@ -1292,7 +1299,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185819", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211744817", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1307,8 +1314,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wpcreartableros.js", "?202210202185819", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("wpcreartableros.js", "?202210211744818", false, true);
          context.AddJavascriptSource("K2BControlBeautify/montrezorro-bootstrap-checkbox/js/bootstrap-checkbox.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/silviomoreto-bootstrap-select/dist/js/bootstrap-select.js", "", false, true);
          context.AddJavascriptSource("K2BControlBeautify/toastr-master/toastr.min.js", "", false, true);
@@ -1389,7 +1396,7 @@ namespace GeneXus.Programs {
          Form.Background = "";
          Form.Textcolor = 0;
          Form.Backcolor = (int)(0xFFFFFF);
-         Form.Caption = "Nuevo Tablero";
+         Form.Caption = "Gestión del tablero";
          context.GX_msglist.DisplayMode = 1;
          if ( context.isSpaRequest( ) )
          {

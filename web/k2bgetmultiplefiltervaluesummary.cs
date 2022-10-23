@@ -109,7 +109,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               AV9Result = "All";
+               AV9Result = "Todo";
             }
          }
          this.cleanup();

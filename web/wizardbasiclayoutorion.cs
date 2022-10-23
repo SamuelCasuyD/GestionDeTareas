@@ -206,7 +206,7 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202185757", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744735", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
@@ -401,21 +401,21 @@ namespace GeneXus.Programs {
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 23,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MinimalAction";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttPrevious_Internalname, "", "< Previous", bttPrevious_Jsonclick, 5, "< Previous", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'PREVIOUS\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WizardBasicLayoutOrion.htm");
+            GxWebStd.gx_button_ctrl( context, bttPrevious_Internalname, "", "< Anterior", bttPrevious_Jsonclick, 5, "< Anterior", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'PREVIOUS\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WizardBasicLayoutOrion.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "K2BToolsTableCell_ActionContainer", "left", "top", "", "flex-grow:1;", "div");
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 25,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MainAction";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttNext_Internalname, "", "Next >", bttNext_Jsonclick, 5, "Next >", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'NEXT\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WizardBasicLayoutOrion.htm");
+            GxWebStd.gx_button_ctrl( context, bttNext_Internalname, "", "Siguiente >", bttNext_Jsonclick, 5, "Siguiente >", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'NEXT\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WizardBasicLayoutOrion.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "K2BToolsTableCell_ActionContainer", "left", "top", "", "flex-grow:1;", "div");
             TempTags = "  onfocus=\"gx.evt.onfocus(this, 27,'',false,'',0)\"";
             ClassString = "K2BToolsButton_MainAction";
             StyleString = "";
-            GxWebStd.gx_button_ctrl( context, bttFinish_Internalname, "", "Finish", bttFinish_Jsonclick, 5, "Finish", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'FINISH\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WizardBasicLayoutOrion.htm");
+            GxWebStd.gx_button_ctrl( context, bttFinish_Internalname, "", "Finalizar", bttFinish_Jsonclick, 5, "Finalizar", "", StyleString, ClassString, 1, 1, "standard", "'"+""+"'"+",false,"+"'"+"E\\'FINISH\\'."+"'", TempTags, "", context.GetButtonType( ), "HLP_WizardBasicLayoutOrion.htm");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
             GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -723,7 +723,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202185767", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210211744748", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -738,8 +738,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wizardbasiclayoutorion.js", "?202210202185767", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("wizardbasiclayoutorion.js", "?202210211744748", false, true);
          context.AddJavascriptSource("K2BWizardSteps/K2BWizardStepsRender.js", "", false, true);
          /* End function include_jscripts */
       }

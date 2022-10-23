@@ -1,11 +1,13 @@
-CREATE TABLE TABLERO.[GXA0005] ([TrTareaComentarios_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrTareaComentarios_IDTarea] decimal( 13) NULL , [TrTareaComentarios_Descripcion] NVARCHAR(MAX) NULL , [TrTareaComentarios_Estado] smallint NULL , [TrTareaComentarios_FechaCreacion] datetime NULL , [TrTareaComentarios_FechaModificacion] datetime NULL )
-SET IDENTITY_INSERT TABLERO.[GXA0005] ON
-INSERT INTO TABLERO.[GXA0005] ([TrTareaComentarios_ID], [TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion]) SELECT [TrTareaComentarios_ID], [TrTareaComentarios_IDTarea], [TrTareaComentarios_Descripcion], [TrTareaComentarios_Estado], [TrTareaComentarios_FechaCreacion], [TrTareaComentarios_FechaModificacion] FROM TABLERO.[TrTareaComentarios] T1
-SET IDENTITY_INSERT TABLERO.[GXA0005] OFF
-DROP TABLE TABLERO.[TrTareaComentarios]
-sp_rename 'TABLERO.[GXA0005]', 'TrTareaComentarios'
-ALTER TABLE TABLERO.[TrTareaComentarios] ADD PRIMARY KEY([TrTareaComentarios_ID])
-CREATE NONCLUSTERED INDEX [ITRTAREACOMENTARIOS1] ON TABLERO.[TrTareaComentarios] ([TrTareaComentarios_IDTarea] )
+CREATE TABLE TABLERO.[GXA0004] ([TrActividades_ID] decimal( 13) NOT NULL IDENTITY(1,1), [TrActividades_IDTarea] decimal( 13) NULL , [TrActividades_Nombre] nchar(100) NULL , [TrActividades_Descripcion] NVARCHAR(MAX) NULL , [TrActividades_FechaInicio] datetime NULL , [TrActividades_FechaFin] datetime NULL , [TrActividades_FechaCreacion] datetime NULL , [TrActividades_FechaModificacion] datetime NULL , [TrActividades_Estado] smallint NULL )
+SET IDENTITY_INSERT TABLERO.[GXA0004] ON
+INSERT INTO TABLERO.[GXA0004] ([TrActividades_ID], [TrActividades_IDTarea], [TrActividades_Nombre], [TrActividades_Descripcion], [TrActividades_FechaInicio], [TrActividades_FechaFin], [TrActividades_FechaCreacion], [TrActividades_FechaModificacion], [TrActividades_Estado]) SELECT [TrActividades_ID], [TrActividades_IDTarea], [TrActividades_Nombre], [TrActividades_Descripcion], [TrActividades_FechaInicio], [TrActividades_FechaFin], [TrActividades_FechaCreacion], [TrActividades_FechaModificacion], [TrActividades_Estado] FROM TABLERO.[TrActividades] T1
+SET IDENTITY_INSERT TABLERO.[GXA0004] OFF
+DROP TABLE TABLERO.[TrActividades]
+sp_rename 'TABLERO.[GXA0004]', 'TrActividades'
+ALTER TABLE TABLERO.[TrActividades] ADD PRIMARY KEY([TrActividades_ID])
+CREATE NONCLUSTERED INDEX [ITRACTIVIDADES1] ON TABLERO.[TrActividades] ([TrActividades_IDTarea] )
 
-ALTER TABLE TABLERO.[TrTareaComentarios] ADD CONSTRAINT [ITRTAREACOMENTARIOS1] FOREIGN KEY ([TrTareaComentarios_IDTarea]) REFERENCES TABLERO.[TrGestionTareas] ([TrGestionTareas_ID])
+ALTER TABLE TABLERO.[TrActividadesLevel1] ADD CONSTRAINT [ITRACTIVIDADESLEVEL2] FOREIGN KEY ([TrActividades_ID]) REFERENCES TABLERO.[TrActividades] ([TrActividades_ID])
+
+ALTER TABLE TABLERO.[TrActividades] ADD CONSTRAINT [ITRACTIVIDADES1] FOREIGN KEY ([TrActividades_IDTarea]) REFERENCES TABLERO.[TrGestionTareas] ([TrGestionTareas_ID])
 

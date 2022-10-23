@@ -307,7 +307,7 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 20,'',false,'',0)\"";
          ClassString = "BtnSelect";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Select", bttBtn_select_Jsonclick, 4, "Select", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0050.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRTAREACOMENTARIOS_ID"+"'), id:'"+"TRTAREACOMENTARIOS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrTareaComentarios.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_select_Internalname, "", "Seleccionar", bttBtn_select_Jsonclick, 4, "Seleccionar", "", StyleString, ClassString, bttBtn_select_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ESELECT."+"'", TempTags, "gx.popup.openPrompt('"+"gx0050.aspx"+"',["+"{Ctrl:gx.dom.el('"+"TRTAREACOMENTARIOS_ID"+"'), id:'"+"TRTAREACOMENTARIOS_ID"+"'"+",IOType:'out',isKey:true,isLastKey:true}"+"],"+"null"+","+"'', false"+","+"true"+");"+"return false;", 2, "HLP_TrTareaComentarios.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -414,7 +414,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 48,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrTareaComentarios_FechaCreacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrTareaComentarios_FechaCreacion_Internalname, context.localUtil.Format(A38TrTareaComentarios_FechaCreacion, "99/99/9999"), context.localUtil.Format( A38TrTareaComentarios_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,48);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrTareaComentarios_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrTareaComentarios_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrTareaComentarios.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrTareaComentarios_FechaCreacion_Internalname, context.localUtil.Format(A38TrTareaComentarios_FechaCreacion, "99/99/9999"), context.localUtil.Format( A38TrTareaComentarios_FechaCreacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,48);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrTareaComentarios_FechaCreacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrTareaComentarios_FechaCreacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrTareaComentarios.htm");
          GxWebStd.gx_bitmap( context, edtTrTareaComentarios_FechaCreacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrTareaComentarios_FechaCreacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrTareaComentarios.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -434,7 +434,7 @@ namespace GeneXus.Programs {
          /* Single line edit */
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 53,'',false,'',0)\"";
          context.WriteHtmlText( "<div id=\""+edtTrTareaComentarios_FechaModificacion_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-         GxWebStd.gx_single_line_edit( context, edtTrTareaComentarios_FechaModificacion_Internalname, context.localUtil.Format(A39TrTareaComentarios_FechaModificacion, "99/99/9999"), context.localUtil.Format( A39TrTareaComentarios_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'MDY',0,12,'eng',false,0);"+";gx.evt.onblur(this,53);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrTareaComentarios_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrTareaComentarios_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrTareaComentarios.htm");
+         GxWebStd.gx_single_line_edit( context, edtTrTareaComentarios_FechaModificacion_Internalname, context.localUtil.Format(A39TrTareaComentarios_FechaModificacion, "99/99/9999"), context.localUtil.Format( A39TrTareaComentarios_FechaModificacion, "99/99/9999"), TempTags+" onchange=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 10,'DMY',0,24,'spa',false,0);"+";gx.evt.onblur(this,53);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtTrTareaComentarios_FechaModificacion_Jsonclick, 0, "Attribute", "", "", "", "", 1, edtTrTareaComentarios_FechaModificacion_Enabled, 0, "text", "", 10, "chr", 1, "row", 10, 0, 0, 0, 1, -1, 0, true, "FechaCompleta", "right", false, "", "HLP_TrTareaComentarios.htm");
          GxWebStd.gx_bitmap( context, edtTrTareaComentarios_FechaModificacion_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(edtTrTareaComentarios_FechaModificacion_Enabled==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_TrTareaComentarios.htm");
          context.WriteHtmlTextNl( "</div>") ;
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -452,21 +452,21 @@ namespace GeneXus.Programs {
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 58,'',false,'',0)\"";
          ClassString = "BtnEnter";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirm", bttBtn_enter_Jsonclick, 5, "Confirm", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareaComentarios.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_enter_Internalname, "", "Confirmar", bttBtn_enter_Jsonclick, 5, "Confirmar", "", StyleString, ClassString, bttBtn_enter_Visible, bttBtn_enter_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EENTER."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareaComentarios.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 60,'',false,'',0)\"";
          ClassString = "BtnCancel";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancel", bttBtn_cancel_Jsonclick, 1, "Cancel", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareaComentarios.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_cancel_Internalname, "", "Cancelar", bttBtn_cancel_Jsonclick, 1, "Cancelar", "", StyleString, ClassString, bttBtn_cancel_Visible, 1, "standard", "'"+""+"'"+",false,"+"'"+"ECANCEL."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareaComentarios.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          /* Div Control */
          GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "gx-button", "left", "top", "", "", "div");
          TempTags = "  onfocus=\"gx.evt.onfocus(this, 62,'',false,'',0)\"";
          ClassString = "BtnDelete";
          StyleString = "";
-         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Delete", bttBtn_delete_Jsonclick, 5, "Delete", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareaComentarios.htm");
+         GxWebStd.gx_button_ctrl( context, bttBtn_delete_Internalname, "", "Eliminar", bttBtn_delete_Jsonclick, 5, "Eliminar", "", StyleString, ClassString, bttBtn_delete_Visible, bttBtn_delete_Enabled, "standard", "'"+""+"'"+",false,"+"'"+"EDELETE."+"'", TempTags, "", context.GetButtonType( ), "HLP_TrTareaComentarios.htm");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
          GxWebStd.gx_div_end( context, "left", "top", "div");
@@ -560,7 +560,7 @@ namespace GeneXus.Programs {
             n37TrTareaComentarios_Estado = false;
             AssignAttri("", false, "A37TrTareaComentarios_Estado", StringUtil.LTrimStr( (decimal)(A37TrTareaComentarios_Estado), 4, 0));
             n37TrTareaComentarios_Estado = ((0==A37TrTareaComentarios_Estado) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrTareaComentarios_FechaCreacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrTareaComentarios_FechaCreacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Tarea Comentarios_Fecha Creacion"}), 1, "TRTAREACOMENTARIOS_FECHACREACION");
                AnyError = 1;
@@ -573,12 +573,12 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A38TrTareaComentarios_FechaCreacion = context.localUtil.CToD( cgiGet( edtTrTareaComentarios_FechaCreacion_Internalname), 1);
+               A38TrTareaComentarios_FechaCreacion = context.localUtil.CToD( cgiGet( edtTrTareaComentarios_FechaCreacion_Internalname), 2);
                n38TrTareaComentarios_FechaCreacion = false;
                AssignAttri("", false, "A38TrTareaComentarios_FechaCreacion", context.localUtil.Format(A38TrTareaComentarios_FechaCreacion, "99/99/9999"));
             }
             n38TrTareaComentarios_FechaCreacion = ((DateTime.MinValue==A38TrTareaComentarios_FechaCreacion) ? true : false);
-            if ( context.localUtil.VCDate( cgiGet( edtTrTareaComentarios_FechaModificacion_Internalname), 1) == 0 )
+            if ( context.localUtil.VCDate( cgiGet( edtTrTareaComentarios_FechaModificacion_Internalname), 2) == 0 )
             {
                GX_msglist.addItem(context.GetMessage( "GXM_faildate", new   object[]  {"Tr Tarea Comentarios_Fecha Modificacion"}), 1, "TRTAREACOMENTARIOS_FECHAMODIFICACION");
                AnyError = 1;
@@ -591,7 +591,7 @@ namespace GeneXus.Programs {
             }
             else
             {
-               A39TrTareaComentarios_FechaModificacion = context.localUtil.CToD( cgiGet( edtTrTareaComentarios_FechaModificacion_Internalname), 1);
+               A39TrTareaComentarios_FechaModificacion = context.localUtil.CToD( cgiGet( edtTrTareaComentarios_FechaModificacion_Internalname), 2);
                n39TrTareaComentarios_FechaModificacion = false;
                AssignAttri("", false, "A39TrTareaComentarios_FechaModificacion", context.localUtil.Format(A39TrTareaComentarios_FechaModificacion, "99/99/9999"));
             }
@@ -878,7 +878,7 @@ namespace GeneXus.Programs {
          {
             if ( ! ( (0==A34TrTareaComentarios_IDTarea) ) )
             {
-               GX_msglist.addItem("No matching 'Tr Gestion Tareas2_STG'.", "ForeignKeyNotFound", 1, "TRTAREACOMENTARIOS_IDTAREA");
+               GX_msglist.addItem("No existe 'Tr Gestion Tareas2_STG'.", "ForeignKeyNotFound", 1, "TRTAREACOMENTARIOS_IDTAREA");
                AnyError = 1;
                GX_FocusControl = edtTrTareaComentarios_IDTarea_Internalname;
                AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -887,21 +887,21 @@ namespace GeneXus.Programs {
          pr_default.close(2);
          if ( ! ( ( A37TrTareaComentarios_Estado == 1 ) || ( A37TrTareaComentarios_Estado == 2 ) || ( A37TrTareaComentarios_Estado == 3 ) || (0==A37TrTareaComentarios_Estado) ) )
          {
-            GX_msglist.addItem("Field Tr Tarea Comentarios_Estado is out of range", "OutOfRange", 1, "TRTAREACOMENTARIOS_ESTADO");
+            GX_msglist.addItem("Campo Tr Tarea Comentarios_Estado fuera de rango", "OutOfRange", 1, "TRTAREACOMENTARIOS_ESTADO");
             AnyError = 1;
             GX_FocusControl = cmbTrTareaComentarios_Estado_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( (DateTime.MinValue==A38TrTareaComentarios_FechaCreacion) || ( A38TrTareaComentarios_FechaCreacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Tarea Comentarios_Fecha Creacion is out of range", "OutOfRange", 1, "TRTAREACOMENTARIOS_FECHACREACION");
+            GX_msglist.addItem("Campo Tr Tarea Comentarios_Fecha Creacion fuera de rango", "OutOfRange", 1, "TRTAREACOMENTARIOS_FECHACREACION");
             AnyError = 1;
             GX_FocusControl = edtTrTareaComentarios_FechaCreacion_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
          }
          if ( ! ( (DateTime.MinValue==A39TrTareaComentarios_FechaModificacion) || ( A39TrTareaComentarios_FechaModificacion >= context.localUtil.YMDToD( 1753, 1, 1) ) ) )
          {
-            GX_msglist.addItem("Field Tr Tarea Comentarios_Fecha Modificacion is out of range", "OutOfRange", 1, "TRTAREACOMENTARIOS_FECHAMODIFICACION");
+            GX_msglist.addItem("Campo Tr Tarea Comentarios_Fecha Modificacion fuera de rango", "OutOfRange", 1, "TRTAREACOMENTARIOS_FECHAMODIFICACION");
             AnyError = 1;
             GX_FocusControl = edtTrTareaComentarios_FechaModificacion_Internalname;
             AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -925,7 +925,7 @@ namespace GeneXus.Programs {
          {
             if ( ! ( (0==A34TrTareaComentarios_IDTarea) ) )
             {
-               GX_msglist.addItem("No matching 'Tr Gestion Tareas2_STG'.", "ForeignKeyNotFound", 1, "TRTAREACOMENTARIOS_IDTAREA");
+               GX_msglist.addItem("No existe 'Tr Gestion Tareas2_STG'.", "ForeignKeyNotFound", 1, "TRTAREACOMENTARIOS_IDTAREA");
                AnyError = 1;
                GX_FocusControl = edtTrTareaComentarios_IDTarea_Internalname;
                AssignAttri("", false, "GX_FocusControl", GX_FocusControl);
@@ -1685,14 +1685,14 @@ namespace GeneXus.Programs {
          }
          context.AddJavascriptSource("jquery.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("gxgral.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("gxcfg.js", "?202210202136453", false, true);
+         context.AddJavascriptSource("gxcfg.js", "?202210211744292", false, true);
          if ( context.isSpaRequest( ) )
          {
             enableOutput();
          }
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 947160), false, true);
-         context.AddJavascriptSource("calendar-en.js", "?"+context.GetBuildNumber( 947160), false, true);
+         context.AddJavascriptSource("calendar-es.js", "?"+context.GetBuildNumber( 947160), false, true);
          context.WriteHtmlText( Form.Headerrawhtml) ;
          context.CloseHtmlHeader();
          if ( context.isSpaRequest( ) )
@@ -1861,7 +1861,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?202210202136456", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((String)Form.Jscriptsrc.Item(idxLst))), "?20221021174430", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1876,8 +1876,8 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("messages.eng.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("trtareacomentarios.js", "?202210202136456", false, true);
+         context.AddJavascriptSource("messages.spa.js", "?"+GetCacheInvalidationToken( ), false, true);
+         context.AddJavascriptSource("trtareacomentarios.js", "?20221021174430", false, true);
          /* End function include_jscripts */
       }
 
@@ -2049,7 +2049,7 @@ namespace GeneXus.Programs {
          {
             if ( ! ( (0==A34TrTareaComentarios_IDTarea) ) )
             {
-               GX_msglist.addItem("No matching 'Tr Gestion Tareas2_STG'.", "ForeignKeyNotFound", 1, "TRTAREACOMENTARIOS_IDTAREA");
+               GX_msglist.addItem("No existe 'Tr Gestion Tareas2_STG'.", "ForeignKeyNotFound", 1, "TRTAREACOMENTARIOS_IDTAREA");
                AnyError = 1;
                GX_FocusControl = edtTrTareaComentarios_IDTarea_Internalname;
             }
